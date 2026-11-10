@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.scott.epicfishy",
+      "sha256_cert_fingerprints": [
+        "39:7D:AA:D9:AB:9E:2F:33:0E:4A:27:2C:58:45:20:FD:B5:20:44:8D:FA:AC:4C:82:44:A2:AD:19:7C:0E:58:DA"
+      ]
+    }
+  }
+]
