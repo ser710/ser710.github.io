@@ -1,8 +1,8 @@
 {
-  "version": "1.5.29",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.29/Aerion-Commercial-Setup-1.5.29.exe",
-  "sha256": "31d5ace372ca75e0541cede4e99e0b36a84ddeade47124a74ec6785ca1050176",
-  "size": 85177957,
-  "notes": "Automatic updates. Proper elbows at duct bends, click a duct anywhere to select it, Align tool fixes, air moving through the ducts in the airflow simulation.",
+  "version": "1.5.30",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.30/Aerion-Commercial-Setup-1.5.30.exe",
+  "sha256": "c8e1f4d095630c835a3d9727e347349a3ce39f92903f236f78b2856c71dc1996",
+  "size": 85177866,
+  "notes": "Heat loss for rooms with doors entered as a count now takes the door off the wall area, as Manual J asks.",
   "date": "2026-11-17"
 }

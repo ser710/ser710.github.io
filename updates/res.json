@@ -1,8 +1,8 @@
 {
-  "version": "1.5.29",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.29/Aerion-HVAC-Design-Studio-Setup-1.5.29.exe",
-  "sha256": "262513015ab69a082f249628858024e101ca308ba7fc26ab0180480cd50db1c2",
-  "size": 85176882,
-  "notes": "Automatic updates. Proper elbows at duct bends, click a duct anywhere to select it, Align tool fixes, air moving through the ducts in the airflow simulation.",
+  "version": "1.5.30",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.30/Aerion-HVAC-Design-Studio-Setup-1.5.30.exe",
+  "sha256": "5d41426d992f207f8c8fe29fb53029a1a5081ee0151bac2db4cff6de94c884fd",
+  "size": 85177180,
+  "notes": "Heat loss for rooms with doors entered as a count now takes the door off the wall area, as Manual J asks.",
   "date": "2026-11-17"
 }
