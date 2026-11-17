@@ -1,8 +1,8 @@
 {
-  "version": "1.5.30",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.30/Aerion-HVAC-Design-Studio-Setup-1.5.30.exe",
-  "sha256": "5d41426d992f207f8c8fe29fb53029a1a5081ee0151bac2db4cff6de94c884fd",
-  "size": 85177180,
-  "notes": "Heat loss for rooms with doors entered as a count now takes the door off the wall area, as Manual J asks.",
+  "version": "1.5.31",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.31/Aerion-HVAC-Design-Studio-Setup-1.5.31.exe",
+  "sha256": "406f67af950832f55256e32d167da7b5a36c4ec8c1da9892c92786013ba9e3ce",
+  "size": 85180873,
+  "notes": "Room pressure with the door shut, in pascals: in the room editor (with your own door sizes and transfer grilles), the design checks and the permit report.",
   "date": "2026-11-17"
 }
