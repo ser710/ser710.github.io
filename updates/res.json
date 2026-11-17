@@ -1,8 +1,8 @@
 {
-  "version": "1.5.31",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.31/Aerion-HVAC-Design-Studio-Setup-1.5.31.exe",
-  "sha256": "406f67af950832f55256e32d167da7b5a36c4ec8c1da9892c92786013ba9e3ce",
-  "size": 85180873,
-  "notes": "Room pressure with the door shut, in pascals: in the room editor (with your own door sizes and transfer grilles), the design checks and the permit report.",
+  "version": "1.5.32",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.32/Aerion-HVAC-Design-Studio-Setup-1.5.32.exe",
+  "sha256": "ae9eb266afdbdf8e83357525be750bf0d3009eb3b1d3621f71bd2f20fd16cdc1",
+  "size": 85181684,
+  "notes": "A step-by-step guide on the Reports page for printing the permit report from another load program.",
   "date": "2026-11-17"
 }
