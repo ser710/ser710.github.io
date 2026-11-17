@@ -80,3 +80,5 @@ footer a{color:var(--muted)}
 @media (max-width:860px){.row,.row.flip{grid-template-columns:1fr;gap:22px;margin-top:48px}.row.flip .txt{order:0}.duo{grid-template-columns:1fr}nav.links a:not(.btn){display:none}section{padding-top:52px;padding-bottom:52px}.hero{padding-top:52px}}
 .price .yrlink{display:block;text-align:center;margin-top:8px;font-size:14px;opacity:.8}
 .price .yrlink:hover{opacity:1}
+.launch{display:inline-block;margin:14px auto 26px;padding:8px 14px;border-radius:14px;border:1px solid rgba(34,211,238,.45);background:rgba(34,211,238,.08);font-size:15px}
+.launch code{font-family:"IBM Plex Mono",monospace;font-weight:600;letter-spacing:.04em}
