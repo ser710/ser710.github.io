@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Your Aerion license · Aerion HVAC Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+<style>
+  .keybox{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 6px}
+  .key{font:600 22px/1.3 ui-monospace,Consolas,monospace;letter-spacing:.04em;padding:12px 16px;border-radius:10px;border:1px solid var(--line,#333);background:var(--card,#16181d);user-select:all;word-break:break-all}
+  .steps2{margin:18px 0 0;padding-left:20px;line-height:1.7}
+  .muted{opacity:.72}
+  .wait::after{content:"";display:inline-block;width:12px;height:12px;margin-left:8px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .8s linear infinite;vertical-align:-1px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+</style>
+<script src="store.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./#features">Features</a><a href="./#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+  <h1>Thank you</h1>
+  <div id="out"><p class="wait">Confirming your payment</p></div>
+  <noscript><p>This page needs JavaScript to show your license key. Reply to your receipt email and we will send it.</p></noscript>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved. Aerion™ and Epic Stuff, Things &amp; Co.™ are trademarks of Epic Stuff, Things &amp; Co.</span>
+  <nav><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refunds.html">Refunds</a></nav>
+</div></footer>
+<script>
+(function () {
+  const S = window.AERION_STORE || {}, out = document.getElementById("out");
+  const id = new URLSearchParams(location.search).get("session_id") || "";
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  if (!/^cs_(test|live)_\w{10,200}$/.test(id)) {
+    out.innerHTML = "<p>This page shows your license key right after checkout. If you closed it, reply to your receipt email and we will send your key.</p>";
+    return;
+  }
+  let tries = 0;
+  async function look() {
+    tries++;
+    let r = null, j = {};
+    try {
+      r = await fetch(S.license.replace(/\/$/, "") + "/checkout/key?session_id=" + encodeURIComponent(id));
+      j = await r.json();
+    } catch (e) {}
+    if (r && r.ok && j.key) return show(j);
+    if (tries < 40 && (!r || r.status === 404 || r.status >= 500)) return setTimeout(look, tries < 10 ? 1500 : 4000);
+    out.innerHTML = "<p>" + esc(j.error || "Your payment went through, but the key is taking longer than usual.") + "</p><p>Keep this page open and refresh it in a minute, or reply to your receipt email and we will send your key.</p>";
+  }
+  function show(j) {
+    const app = /complete/i.test(j.plan) ? "both" : /commercial/i.test(j.plan) ? "com" : "res";
+    const dl = S.download || {}, links = [];
+    if ((app === "res" || app === "both") && dl.res) links.push('<a class="btn p" href="' + esc(dl.res) + '">Download Aerion HVAC Design Studio</a>');
+    if ((app === "com" || app === "both") && dl.com) links.push('<a class="btn p" href="' + esc(dl.com) + '">Download Aerion Commercial</a>');
+    out.innerHTML =
+      "<p>Your " + esc(j.plan || "Aerion") + " plan is ready. This is your license key:</p>" +
+      '<div class="keybox"><span class="key" id="key">' + esc(j.key) + '</span><button class="btn" id="copy" type="button">Copy</button></div>' +
+      '<p class="muted">Save it somewhere safe. If you lose it, reply to your receipt email and we will send it again.</p>' +
+      (links.length ? '<div class="cta" style="margin-top:16px">' + links.join("") + "</div>" : '<p>Reply to your receipt email for the installer download link.</p>') +
+      '<ol class="steps2"><li>Install Aerion and open it.</li><li>Go to <b>Options › License</b>.</li><li>Enter <b>' + esc(j.email) + "</b> as the purchase email, paste the key, and click <b>Activate</b>.</li></ol>" +
+      (S.portal ? '<p class="muted" style="margin-top:18px">To cancel, change your card or get receipts, use <a href="' + esc(S.portal) + '">your billing page</a>.</p>' : "");
+    document.getElementById("copy").onclick = async function () {
+      try { await navigator.clipboard.writeText(j.key); this.textContent = "Copied"; } catch (e) { getSelection().selectAllChildren(document.getElementById("key")); }
+    };
+  }
+  look();
+})();
+</script>
+</body>
+</html>

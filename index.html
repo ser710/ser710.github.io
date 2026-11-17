@@ -18,18 +18,19 @@
 <link rel="stylesheet" href="site.css">
 <link rel="icon" type="image/svg+xml" href="img/logo.svg">
 <link rel="apple-touch-icon" href="img/icon-180.png">
+<script src="store.js"></script>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="./"><img src="img/logo.svg" alt="">Aerion</a>
-  <nav class="links"><a href="#tour">Tour</a><a href="#features">Features</a><a href="#commercial">Commercial</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn p" href="https://aerion.lemonsqueezy.com">Start free trial</a></nav>
+  <nav class="links"><a href="#tour">Tour</a><a href="#features">Features</a><a href="#commercial">Commercial</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn p" href="#pricing">Start free trial</a></nav>
 </div></header>
 <main>
 <div class="wrap hero">
   <div class="eyebrow">HVAC design software for Windows</div>
   <h1>From floor plan to shop drawings in one program.</h1>
   <p class="lead">Aerion™ HVAC Design Studio does the loads, the equipment, the duct design, the plans, the 3D and the paperwork from one drawing. Built by a residential HVAC designer with nine years of load calculations and system design behind it.</p>
-  <div class="cta"><a class="btn p" href="https://aerion.lemonsqueezy.com">Try it free for 14 days</a><a class="btn" href="#tour">Take the tour</a></div>
+  <div class="cta"><a class="btn p" href="#pricing">Try it free for 14 days</a><a class="btn" href="#tour">Take the tour</a></div>
   <p class="fine">Plans from $49 a month. Cancel any time.</p>
   <div class="win"><div class="bar"><i></i><i></i><i></i><span>Aerion HVAC Design Studio · Layout</span></div><img src="img/plan.jpg" width="1920" height="1200" alt="Aerion Layout page: a single-story house with a supply trunk down the hall, branches to every register, return ducts and all design checks clear"></div>
   <div class="strip"><span>Loads</span><span>Equipment</span><span>Duct design</span><span>Plenums</span><span>Airflow</span><span>Plan markup</span><span>Plan reader</span><span>3D</span><span>Controls</span><span>Code checks</span><span>Shop package</span><span>Price book</span><span>Field</span><span>Bids</span></div>
@@ -66,24 +67,24 @@
   <div class="grid">
     <div class="card price"><h3>Aerion Design</h3><div class="amt">$49 <small>/ month</small></div><div class="yr">or $490 / year</div>
       <ul><li>Loads, equipment and air filters</li><li>Duct layout, plenums and sizing</li><li>Plan markup and plan reader</li><li>3D view and airflow simulation</li><li>Code checks and reports</li></ul>
-      <a class="btn" href="https://aerion.lemonsqueezy.com">Start free trial</a></div>
+      <a class="btn" data-buy="design-month" href="./#pricing">Start free trial</a><a class="yrlink" data-buy="design-year" href="./#pricing">or pay yearly</a></div>
     <div class="card price feat"><h3>Aerion Pro <span class="tag">Most popular</span></h3><div class="amt">$89 <small>/ month</small></div><div class="yr">or $890 / year</div>
       <ul><li>Everything in Design</li><li>Shop package and cut lists</li><li>Field start-up and service records</li><li>Clients, bids and submittals</li><li>Team seats and shared projects</li></ul>
-      <a class="btn p" href="https://aerion.lemonsqueezy.com">Start free trial</a></div>
+      <a class="btn p" data-buy="pro-month" href="./#pricing">Start free trial</a><a class="yrlink" data-buy="pro-year" href="./#pricing">or pay yearly</a></div>
     <div class="card price"><h3>Aerion Commercial</h3><div class="amt">$129 <small>/ month</small></div><div class="yr">or $1,290 / year</div>
       <ul><li>Commercial and multifamily loads</li><li>Rooftop and VAV systems</li><li>Ventilation and exhaust</li><li>Commercial energy code checks</li><li>DXF cut files for the shop</li></ul>
-      <a class="btn" href="https://aerion.lemonsqueezy.com">Start free trial</a></div>
+      <a class="btn" data-buy="commercial-month" href="./#pricing">Start free trial</a><a class="yrlink" data-buy="commercial-year" href="./#pricing">or pay yearly</a></div>
     <div class="card price"><h3>Aerion Complete</h3><div class="amt">$179 <small>/ month</small></div><div class="yr">or $1,790 / year</div>
       <ul><li>Aerion Pro and Aerion Commercial</li><li>Both apps on one license</li><li>Residential and commercial jobs</li></ul>
-      <a class="btn" href="https://aerion.lemonsqueezy.com">Start free trial</a></div>
+      <a class="btn" data-buy="complete-month" href="./#pricing">Start free trial</a><a class="yrlink" data-buy="complete-year" href="./#pricing">or pay yearly</a></div>
   </div>
 </div></section>
 
 <section><div class="wrap">
-  <div class="center"><h2>How it works</h2><p class="sub">Checkout, tax and receipts are handled by our payment partner, Lemon Squeezy.</p></div>
+  <div class="center"><h2>How it works</h2><p class="sub">Checkout and receipts are handled by Stripe, our payment processor.</p></div>
   <div class="steps">
     <div class="card"><h3>Pick a plan</h3><p>Choose a plan in the store. The 14-day trial starts right away.</p></div>
-    <div class="card"><h3>Get your key</h3><p>Your license key and download link arrive by email.</p></div>
+    <div class="card"><h3>Get your key</h3><p>Your license key shows on screen as soon as checkout finishes, with the download link.</p></div>
     <div class="card"><h3>Install and activate</h3><p>Install Aerion, open Options › License, and enter your email and key.</p></div>
     <div class="card"><h3>Design</h3><p>Your key renews itself with each payment. Move it to a new computer from the same screen.</p></div>
   </div>
@@ -95,15 +96,15 @@
   <details><summary>Can I try it before paying?</summary><p>Yes. Every plan has a 14-day free trial. Until a license is active, design work stays open; saving, printing and exports unlock with the license.</p></details>
   <details><summary>Which calculation methods does it use?</summary><p>Loads, equipment selection and duct sizing follow the industry-standard residential methods, and every result shows the inputs behind it so you can check it. Aerion is going through software approval now; until that is complete, confirm with your building department which software reports it accepts.</p></details>
   <details><summary>How many computers can I use?</summary><p>Each license runs on one computer at a time. Use Move to another computer in Options › License to switch. Businesses can add seats for each designer.</p></details>
-  <details><summary>Can I cancel?</summary><p>Yes, any time from your order page. Your license keeps working to the end of the period you paid for. See the <a href="refunds.html">refund policy</a>.</p></details>
+  <details><summary>Can I cancel?</summary><p>Yes, any time from your billing page (the link is in every receipt email). Your license keeps working to the end of the period you paid for. See the <a href="refunds.html">refund policy</a>.</p></details>
   <details><summary>Where does the data come from?</summary><p>Outdoor design conditions, climate zones, degree days and code adoption records are built in from published government and industry sources. Licensed tables that cannot be bundled can be loaded from your own copy.</p></details>
-  <details><summary>How do I get help?</summary><p>Reply to your purchase or receipt email and it comes straight to us. You can also reach us from your order page.</p></details>
+  <details><summary>How do I get help?</summary><p>Reply to your purchase or receipt email and it comes straight to us. Your receipt email has a link to your billing page too.</p></details>
 </div></section>
 
 <section class="final"><div class="wrap">
   <h2>Design your next job in Aerion</h2>
   <p class="sub" style="margin-left:auto;margin-right:auto">Fourteen days free, on your own plans.</p>
-  <div class="cta"><a class="btn p" href="https://aerion.lemonsqueezy.com">Start free trial</a><a class="btn" href="#pricing">See pricing</a></div>
+  <div class="cta"><a class="btn p" href="#pricing">Start free trial</a><a class="btn" href="#pricing">See pricing</a></div>
 </div></section>
 </main>
 <footer><div class="wrap">
