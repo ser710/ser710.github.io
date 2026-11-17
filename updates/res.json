@@ -1,8 +1,8 @@
 {
-  "version": "1.5.32",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.32/Aerion-HVAC-Design-Studio-Setup-1.5.32.exe",
-  "sha256": "ae9eb266afdbdf8e83357525be750bf0d3009eb3b1d3621f71bd2f20fd16cdc1",
-  "size": 85181684,
-  "notes": "A step-by-step guide on the Reports page for printing the permit report from another load program.",
+  "version": "1.5.33",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.33/Aerion-HVAC-Design-Studio-Setup-1.5.33.exe",
+  "sha256": "3ed62fcff156bed7433396b5e66063eeec4f02d4c238c7b04c4fa213a7265d3b",
+  "size": 85195188,
+  "notes": "High wall units on the plan, 3D model import (OBJ and glTF) for the plan underlay, and a code data check in Options.",
   "date": "2026-11-17"
 }
