@@ -1,8 +1,8 @@
 {
-  "version": "1.5.43",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.43/Aerion-HVAC-Design-Studio-Setup-1.5.43.exe",
-  "sha256": "4844b094d4af0844e275d64a933eb8c91d4d773ffa21d5a3f982bb9ba64af8cf",
-  "size": 85228635,
-  "notes": "Aerion AI now sends your project data in fewer tokens, so answers come sooner and the monthly allowance goes further.",
+  "version": "1.5.49",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.49/Aerion-HVAC-Design-Studio-Setup-1.5.49.exe",
+  "sha256": "e7e28d2abfbda719df138388f83806a09ac41b5b198e3d780d24f1b216ec259d",
+  "size": 85239965,
+  "notes": "Load calculation corrections: duct gain charged only where ducts are outside the house, ventilation and blower heat on each system, new design checks, and commercial rooftop unit capacity checks. Loads on some projects will change; see the README.",
   "date": "2026-11-18"
 }
