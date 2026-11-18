@@ -1,8 +1,8 @@
 {
-  "version": "1.5.40",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.40/Aerion-Commercial-Setup-1.5.40.exe",
-  "sha256": "c96a75fbd86b307d82b11ea0c096cc6b0713bf5ca128cbeed6f39df2c3082114",
-  "size": 85222961,
-  "notes": "The Aerion AI add-on button now opens the current checkout. Open AI, choose Get the AI add-on, then Check again.",
+  "version": "1.5.41",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.41/Aerion-Commercial-Setup-1.5.41.exe",
+  "sha256": "b0273d0eedfae0ef7f94f9021dbe73cb837dd3c314021662b126e5bbfb6c0e69",
+  "size": 85225885,
+  "notes": "Aerion AI can now use an AI on your own computer (with the AI add-on): Options, Aerion AI on this PC.",
   "date": "2026-11-18"
 }

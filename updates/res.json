@@ -1,8 +1,8 @@
 {
-  "version": "1.5.40",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.40/Aerion-HVAC-Design-Studio-Setup-1.5.40.exe",
-  "sha256": "fcf39ace1e3e1f0dc9d1819550ea0648a9a4cb4f8a0eb90c8cc9cf7b273817a0",
-  "size": 85222068,
-  "notes": "The Aerion AI add-on button now opens the current checkout. Open AI, choose Get the AI add-on, then Check again.",
+  "version": "1.5.41",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.41/Aerion-HVAC-Design-Studio-Setup-1.5.41.exe",
+  "sha256": "a2a555afede74fc4dfa9f7f6717f712246d8cec3c4f7e696dc760e048be0da43",
+  "size": 85224739,
+  "notes": "Aerion AI can now use an AI on your own computer (with the AI add-on): Options, Aerion AI on this PC.",
   "date": "2026-11-18"
 }
