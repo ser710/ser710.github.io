@@ -1,8 +1,8 @@
 {
-  "version": "1.5.39",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.39/Aerion-Commercial-Setup-1.5.39.exe",
-  "sha256": "e77cce32393ac8c7649c82b8ff261d73bcb619843af12f1cdbbf38d70d924835",
-  "size": 85222860,
-  "notes": "Aerion AI can now be added to your license: open AI, choose Get the AI add-on, then Check again.",
+  "version": "1.5.40",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.40/Aerion-Commercial-Setup-1.5.40.exe",
+  "sha256": "c96a75fbd86b307d82b11ea0c096cc6b0713bf5ca128cbeed6f39df2c3082114",
+  "size": 85222961,
+  "notes": "The Aerion AI add-on button now opens the current checkout. Open AI, choose Get the AI add-on, then Check again.",
   "date": "2026-11-18"
 }
