@@ -1,8 +1,8 @@
 {
-  "version": "1.5.34",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.34/Aerion-Commercial-Setup-1.5.34.exe",
-  "sha256": "51b8614d37f3867300301875280acf680a12d00d949b2da18922e68e66a13305",
-  "size": 85196402,
-  "notes": "Fixes license activation: keys from a purchase are now accepted.",
+  "version": "1.5.35",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.35/Aerion-Commercial-Setup-1.5.35.exe",
+  "sha256": "efa0ba93e94ac3b37dfa5c16c6a2ea06071e9f0ee85269bd63b1c3606cd58a0f",
+  "size": 85200771,
+  "notes": "Aerion now tells you about updates in its own window: a notice with Restart and update, and an Updates section in Options.",
   "date": "2026-11-18"
 }

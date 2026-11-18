@@ -1,8 +1,8 @@
 {
-  "version": "1.5.34",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.34/Aerion-HVAC-Design-Studio-Setup-1.5.34.exe",
-  "sha256": "d368361bcbaca4e4f559f186f8d20dccc8918ef6e8c4ebf1cc229db5ed6acf08",
-  "size": 85195150,
-  "notes": "Fixes license activation: keys from a purchase are now accepted.",
+  "version": "1.5.35",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.35/Aerion-HVAC-Design-Studio-Setup-1.5.35.exe",
+  "sha256": "6ec320e964f12f3ae1a9116f266541bbe533bd129809e92f895e590ce04cfd97",
+  "size": 85199287,
+  "notes": "Aerion now tells you about updates in its own window: a notice with Restart and update, and an Updates section in Options.",
   "date": "2026-11-18"
 }
