@@ -1,8 +1,8 @@
 {
-  "version": "1.5.33",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.33/Aerion-HVAC-Design-Studio-Setup-1.5.33.exe",
-  "sha256": "3ed62fcff156bed7433396b5e66063eeec4f02d4c238c7b04c4fa213a7265d3b",
-  "size": 85195188,
-  "notes": "High wall units on the plan, 3D model import (OBJ and glTF) for the plan underlay, and a code data check in Options.",
-  "date": "2026-11-17"
+  "version": "1.5.34",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.34/Aerion-HVAC-Design-Studio-Setup-1.5.34.exe",
+  "sha256": "d368361bcbaca4e4f559f186f8d20dccc8918ef6e8c4ebf1cc229db5ed6acf08",
+  "size": 85195150,
+  "notes": "Fixes license activation: keys from a purchase are now accepted.",
+  "date": "2026-11-18"
 }

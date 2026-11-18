@@ -1,8 +1,8 @@
 {
-  "version": "1.5.33",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.33/Aerion-Commercial-Setup-1.5.33.exe",
-  "sha256": "0a576a57b8408e9635b408980d981d0baad37ea0ee589520800c6d430f85d2c8",
-  "size": 85196693,
-  "notes": "High wall units on the plan, 3D model import (OBJ and glTF) for the plan underlay, and a code data check in Options.",
-  "date": "2026-11-17"
+  "version": "1.5.34",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.34/Aerion-Commercial-Setup-1.5.34.exe",
+  "sha256": "51b8614d37f3867300301875280acf680a12d00d949b2da18922e68e66a13305",
+  "size": 85196402,
+  "notes": "Fixes license activation: keys from a purchase are now accepted.",
+  "date": "2026-11-18"
 }
