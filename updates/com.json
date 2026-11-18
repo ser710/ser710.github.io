@@ -1,8 +1,8 @@
 {
-  "version": "1.5.42",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.42/Aerion-Commercial-Setup-1.5.42.exe",
-  "sha256": "78bd065e540446ea495f680b8ae09658327e6b0feb039f463da017fe2ccd521c",
-  "size": 85226957,
-  "notes": "With the Aerion AI add-on you can now use your own AI key: Options, Your own AI key.",
+  "version": "1.5.43",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.43/Aerion-Commercial-Setup-1.5.43.exe",
+  "sha256": "1d13ad267dae4c0a21c4fcbcaa42a9f3674821da4f6a41b2209f0c411bf3ba08",
+  "size": 85230043,
+  "notes": "Aerion AI now sends your project data in fewer tokens, so answers come sooner and the monthly allowance goes further.",
   "date": "2026-11-18"
 }
