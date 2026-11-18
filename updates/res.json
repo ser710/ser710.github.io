@@ -1,8 +1,8 @@
 {
-  "version": "1.5.38",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.38/Aerion-HVAC-Design-Studio-Setup-1.5.38.exe",
-  "sha256": "ce2ecfab155362056caac5c624c60ae287645b2d85a617404938fe06ef3326e3",
-  "size": 85221806,
-  "notes": "Scope of work letter, wall openings and floor penetrations, insulation thickness on ducts, the imported model in 3D, and full or half labor on the estimate.",
+  "version": "1.5.39",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.39/Aerion-HVAC-Design-Studio-Setup-1.5.39.exe",
+  "sha256": "385e521fe5fa62d54291f9035d50611525bf9cbd75773f31e68093bc64ed8f18",
+  "size": 85222183,
+  "notes": "Aerion AI can now be added to your license: open AI, choose Get the AI add-on, then Check again.",
   "date": "2026-11-18"
 }
