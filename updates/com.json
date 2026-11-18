@@ -1,8 +1,8 @@
 {
-  "version": "1.5.41",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.41/Aerion-Commercial-Setup-1.5.41.exe",
-  "sha256": "b0273d0eedfae0ef7f94f9021dbe73cb837dd3c314021662b126e5bbfb6c0e69",
-  "size": 85225885,
-  "notes": "Aerion AI can now use an AI on your own computer (with the AI add-on): Options, Aerion AI on this PC.",
+  "version": "1.5.42",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.42/Aerion-Commercial-Setup-1.5.42.exe",
+  "sha256": "78bd065e540446ea495f680b8ae09658327e6b0feb039f463da017fe2ccd521c",
+  "size": 85226957,
+  "notes": "With the Aerion AI add-on you can now use your own AI key: Options, Your own AI key.",
   "date": "2026-11-18"
 }

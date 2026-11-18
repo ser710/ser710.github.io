@@ -1,8 +1,8 @@
 {
-  "version": "1.5.41",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.41/Aerion-HVAC-Design-Studio-Setup-1.5.41.exe",
-  "sha256": "a2a555afede74fc4dfa9f7f6717f712246d8cec3c4f7e696dc760e048be0da43",
-  "size": 85224739,
-  "notes": "Aerion AI can now use an AI on your own computer (with the AI add-on): Options, Aerion AI on this PC.",
+  "version": "1.5.42",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.42/Aerion-HVAC-Design-Studio-Setup-1.5.42.exe",
+  "sha256": "87aad5706797bb96b9f2c5de9d0db8be4623aa2ed1d12f0245c3fa2913ce6bd9",
+  "size": 85225916,
+  "notes": "With the Aerion AI add-on you can now use your own AI key: Options, Your own AI key.",
   "date": "2026-11-18"
 }
