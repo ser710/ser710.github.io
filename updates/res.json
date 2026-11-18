@@ -1,8 +1,8 @@
 {
-  "version": "1.5.36",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.36/Aerion-HVAC-Design-Studio-Setup-1.5.36.exe",
-  "sha256": "853c02681c8509c3a034e574ec67fbe57d7c56899015975f7707586de682c5fc",
-  "size": 85203121,
-  "notes": "Set your own keys for the Layout tools in Options, Keyboard shortcuts.",
+  "version": "1.5.38",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.38/Aerion-HVAC-Design-Studio-Setup-1.5.38.exe",
+  "sha256": "ce2ecfab155362056caac5c624c60ae287645b2d85a617404938fe06ef3326e3",
+  "size": 85221806,
+  "notes": "Scope of work letter, wall openings and floor penetrations, insulation thickness on ducts, the imported model in 3D, and full or half labor on the estimate.",
   "date": "2026-11-18"
 }

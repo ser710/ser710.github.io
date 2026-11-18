@@ -1,8 +1,8 @@
 {
-  "version": "1.5.36",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.36/Aerion-Commercial-Setup-1.5.36.exe",
-  "sha256": "93cd6b4ae12b13515e00064e1c3b4f8e3accac335e26096a7820659f35122eb6",
-  "size": 85203932,
-  "notes": "Set your own keys for the Layout tools in Options, Keyboard shortcuts.",
+  "version": "1.5.38",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.38/Aerion-Commercial-Setup-1.5.38.exe",
+  "sha256": "5189d309e02d4f78141b1f4161aac9feaf9df146c5830d9cc722460134ab94a2",
+  "size": 85223084,
+  "notes": "Scope of work letter, wall openings and floor penetrations, insulation thickness on ducts, the imported model in 3D, and full or half labor on the estimate.",
   "date": "2026-11-18"
 }
