@@ -1,8 +1,8 @@
 {
-  "version": "1.5.49",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.49/Aerion-Commercial-Setup-1.5.49.exe",
-  "sha256": "a35e34b1132f9106e6847c374e7862a12dffd0362afbb09d425c0ba89b30b786",
-  "size": 85242062,
-  "notes": "Load calculation corrections: duct gain charged only where ducts are outside the house, ventilation and blower heat on each system, new design checks, and commercial rooftop unit capacity checks. Loads on some projects will change; see the README.",
-  "date": "2026-11-18"
+  "version": "1.5.50",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.50/Aerion-Commercial-Setup-1.5.50.exe",
+  "sha256": "09ec44944eeb5048765d6e90efefed3e0c0c54ac07953c14648376d6089df55c",
+  "size": 90144074,
+  "notes": "AI agents in Agent mode (QA/QC review, load check, room pressure, duct insulation, permit, proposal, estimate and outdoor air reviews) and a Price book agent that prices the estimate from the price book and looks for better deals on the web. Your own AI key can now be from OpenAI, Google Gemini, xAI, Mistral, DeepSeek, Groq, OpenRouter or any OpenAI-compatible service. Inside doors on shared walls, used by room pressure. The airflow simulation no longer shows air going through walls, and the air in the ducts follows the duct calculation's CFM and pressure drop. The Price book page no longer freezes, and the Layout 3D view is about twice as smooth while it moves.",
+  "date": "2026-11-19"
 }
