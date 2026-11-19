@@ -1,8 +1,8 @@
 {
-  "version": "1.5.50",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.50/Aerion-Commercial-Setup-1.5.50.exe",
-  "sha256": "09ec44944eeb5048765d6e90efefed3e0c0c54ac07953c14648376d6089df55c",
-  "size": 90144074,
-  "notes": "AI agents in Agent mode (QA/QC review, load check, room pressure, duct insulation, permit, proposal, estimate and outdoor air reviews) and a Price book agent that prices the estimate from the price book and looks for better deals on the web. Your own AI key can now be from OpenAI, Google Gemini, xAI, Mistral, DeepSeek, Groq, OpenRouter or any OpenAI-compatible service. Inside doors on shared walls, used by room pressure. The airflow simulation no longer shows air going through walls, and the air in the ducts follows the duct calculation's CFM and pressure drop. The Price book page no longer freezes, and the Layout 3D view is about twice as smooth while it moves.",
+  "version": "1.5.51",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.51/Aerion-Commercial-Setup-1.5.51.exe",
+  "sha256": "d453d5d2de48eabd8c4bd46f7acd176776e69fef67c4e8db66a6df5715b182b3",
+  "size": 90152843,
+  "notes": "Your license key now stays put between starts (no more entering it again). The price book has prices from five online HVAC stores. Commercial loads use ASHRAE's radiant time series tables. A Snip button in Plans & markup snips part of a sheet to copy, save or paste. The AI on this PC takes a model name typed with a space.",
   "date": "2026-11-19"
 }
