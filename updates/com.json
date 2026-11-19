@@ -1,8 +1,8 @@
 {
-  "version": "1.5.52",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.52/Aerion-Commercial-Setup-1.5.52.exe",
-  "sha256": "13fa080d8088e16f0b77e2915df6b197f05acf6c16febf63bc761ff95506f051",
-  "size": 90155854,
-  "notes": "New Rotate tool on the Layout: turn rooms, ducts, registers and equipment to any angle by dragging (15-degree steps, Shift for any angle) or by typing the angle. Window facings and loads follow the new angle. Also in Plans & markup: a Snip button, from 1.5.51.",
+  "version": "1.5.53",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.53/Aerion-Commercial-Setup-1.5.53.exe",
+  "sha256": "1b1cb085b6f9eea5a23283c3aabce10e3add0abca7cac4d0079920bbc2100a62",
+  "size": 90157859,
+  "notes": "The plan reader no longer reads posts, beams, headers, rafters, steel, piers, columns, windows or tiles as duct sizes; duct callouts are still read. Also from 1.5.52: a Rotate tool on the Layout turns rooms, ducts, registers and equipment to any angle.",
   "date": "2026-11-19"
 }
