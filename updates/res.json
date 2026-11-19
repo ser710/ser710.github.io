@@ -1,8 +1,8 @@
 {
-  "version": "1.5.53",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.53/Aerion-HVAC-Design-Studio-Setup-1.5.53.exe",
-  "sha256": "1ba7bee0530c9f0634c295bf49e1a713701c67b9beed3f25e7f0e7a5b9e9b619",
-  "size": 90155988,
-  "notes": "The plan reader no longer reads posts, beams, headers, rafters, steel, piers, columns, windows or tiles as duct sizes; duct callouts are still read. Also from 1.5.52: a Rotate tool on the Layout turns rooms, ducts, registers and equipment to any angle.",
+  "version": "1.5.54",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.54/Aerion-HVAC-Design-Studio-Setup-1.5.54.exe",
+  "sha256": "0427484778b9c126da59a9c32e9d46e20b9217f665eb6be8e79d1cb4a1b02035",
+  "size": 90156687,
+  "notes": "The plan reader no longer reads door, window, transom, post, tile or room sizes on architectural sheets as duct sizes (a 32-sheet house set went from 39 false sizes to none). Open a plan set again to get the corrected list.",
   "date": "2026-11-19"
 }
