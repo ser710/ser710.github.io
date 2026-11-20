@@ -1,8 +1,8 @@
 {
-  "version": "1.5.55",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.55/Aerion-Commercial-Setup-1.5.55.exe",
-  "sha256": "1ef797ab870afc5cabbc3798890f8dd3c23f4e83e26d1bb9fb49ffb3a8ecf671",
-  "size": 90162655,
-  "notes": "The plan reader now builds a sheet with several floor plans (first, second, mezzanine) as separate floors, lined up so they stack. In Aerion Commercial, plenum return grilles now show return air in the airflow simulation, and room pressure no longer flags rooms that return to the plenum.",
+  "version": "1.5.56",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.56/Aerion-Commercial-Setup-1.5.56.exe",
+  "sha256": "e26af2cb76d9ecff2fe7f8d44201ffe7c08eba4b5a01cbf498164d50632f1760",
+  "size": 90167196,
+  "notes": "Duct labels are now written along their duct: a sideways or slanted duct has its size label turned to match, and labels move along the duct to stay clear of each other.",
   "date": "2026-11-20"
 }
