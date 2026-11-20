@@ -1,8 +1,8 @@
 {
-  "version": "1.5.56",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.56/Aerion-Commercial-Setup-1.5.56.exe",
-  "sha256": "e26af2cb76d9ecff2fe7f8d44201ffe7c08eba4b5a01cbf498164d50632f1760",
-  "size": 90167196,
-  "notes": "Duct labels are now written along their duct: a sideways or slanted duct has its size label turned to match, and labels move along the duct to stay clear of each other.",
+  "version": "1.5.57",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.57/Aerion-Commercial-Setup-1.5.57.exe",
+  "sha256": "f2b243880e27def37860e9adb9fee2e18d7c7735759bb014930a9180355437fe",
+  "size": 90169518,
+  "notes": "Duct labels are now written inside their duct where it is wide enough, along its centerline. New Tidy labels button on the Layout toolbar puts dragged labels back in place.",
   "date": "2026-11-20"
 }
