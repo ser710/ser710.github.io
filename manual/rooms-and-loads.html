@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rooms and loads · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/rooms-and-loads.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1>Rooms and loads</h1>
+<p><a href="index.html">Contents</a></p>
+<h2>Build rooms from a sheet with several floors</h2>
+<p><strong>What it is for.</strong> Some sheets show two or more floor plans on one page (first floor, second floor, mezzanine). <strong>Build rooms</strong> puts each plan on its own floor, lined up so the floors stack.</p>
+<p><strong>Where.</strong> The <strong>Plan reader</strong> page. Open a plan set PDF and pick a sheet. The <strong>Build rooms from this sheet</strong> card is with that sheet's callouts. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Open the plan set on the <strong>Plan reader</strong> page and pick the sheet.</li><li>In <strong>Build rooms from this sheet</strong>, check <strong>Scale</strong>. The card shows the scale it read on the sheet.</li><li>When the sheet has two or more floor titles, the card says so, for example "2 floors on this sheet: First floor, Second floor. Build rooms puts each on its own floor, lined up so they stack."</li><li>Leave <strong>Build the whole sheet as one floor</strong> clear to build each plan on its own floor. Tick it to build the whole sheet as one floor, the plans side by side.</li><li>Press <strong>Build rooms</strong>.</li></ol>
+<p><strong>What you get.</strong></p>
+<ul><li>A message that says what was built, for example "2 floors from A-1: First floor 2 rooms, Second floor 2 rooms, lined up by the grid bubbles."</li><li>Each floor gets its own rooms and its own Layout underlay. The underlay is only that floor's drawing, without the page border, title block or site around it.</li><li>Each part goes on an existing floor with that name, on the first floor for the lowest one, or on a new floor named from its title.</li><li>The floors are lined up by the grid bubbles and other short labels that repeat on every plan. Where there are none, they are lined up by the top left corner of the walls.</li><li>Switch floors at the top of the Layout.</li></ul>
+<p><strong>Limits.</strong></p>
+<ul><li>A floor title is large text such as FIRST FLOOR, SECOND FLOOR PLAN, MEZZANINE, LEVEL 2 or BASEMENT. Notes such as "ceramic floor" are not titles.</li><li>The sheet is split between the titles, along the emptiest line of drawing between them. Check that each floor got the right rooms.</li><li>Existing rooms are kept; labels inside them are skipped.</li><li>Check the scale and how the floors line up against the drawings.</li></ul>
+<h2>Room pressure with the door shut</h2>
+<p><strong>What it is for.</strong> A room that gets more supply air than its own return takes back pushes the difference out under its door. With the door shut, the room's pressure rises. This section shows how much.</p>
+<p><strong>Where.</strong> The <strong>Load calculator</strong> page: pick a room, and the room editor has the <strong>Room pressure, door shut</strong> section. Both editions.</p>
+<p><strong>What you get.</strong> The room's supply, return and the air that leaves under the door (cfm), the opening (sq in), the pressure in Pa against the limit, and the transfer free area to add.</p>
+<p><strong>Method and defaults.</strong> Flow through an opening, Q = 4005 x Cd x A x sqrt(dP) (ASHRAE Handbook, Fundamentals, ch. 16). The limit is 3 Pa by default; the app gives ENERGY STAR Certified Homes v3 (room pressure balancing with doors closed) as its source. Change it in <strong>Pressure limit, door shut</strong> in the project defaults. The door width of 32 in, the 3/4 in undercut and the discharge coefficient of 0.6 are defaults: replace them with the job's doors. The section has fields for the room's door and for the project defaults.</p>
+<p><strong>Plenum returns (commercial).</strong> A room with a ceiling return grille that has no duct behind it sends its air up into the ceiling plenum, not under the door. See <a href="commercial.html">Commercial</a>.</p>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>
