@@ -1,8 +1,8 @@
 {
-  "version": "1.5.54",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.54/Aerion-HVAC-Design-Studio-Setup-1.5.54.exe",
-  "sha256": "0427484778b9c126da59a9c32e9d46e20b9217f665eb6be8e79d1cb4a1b02035",
-  "size": 90156687,
-  "notes": "The plan reader no longer reads door, window, transom, post, tile or room sizes on architectural sheets as duct sizes (a 32-sheet house set went from 39 false sizes to none). Open a plan set again to get the corrected list.",
-  "date": "2026-11-19"
+  "version": "1.5.55",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.55/Aerion-HVAC-Design-Studio-Setup-1.5.55.exe",
+  "sha256": "3d8628ab9b81f563fc76035156db25929b22bdbd4d9c080b1ec4f39f2987e3f3",
+  "size": 90160482,
+  "notes": "The plan reader now builds a sheet with several floor plans (first, second, mezzanine) as separate floors, lined up so they stack. In Aerion Commercial, plenum return grilles now show return air in the airflow simulation, and room pressure no longer flags rooms that return to the plenum.",
+  "date": "2026-11-20"
 }
