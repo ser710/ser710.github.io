@@ -1,8 +1,8 @@
 {
-  "version": "1.5.60",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.60/Aerion-Commercial-Setup-1.5.60.exe",
-  "sha256": "266b09a407a34e2d24e7ff61ac21843e3f4385477f0bcc9a069c1e0074794336",
-  "size": 90175778,
-  "notes": "Ducts held to the minimum rectangular width or height now use the bigger rectangle for friction, pressure drop and velocity.",
+  "version": "1.5.61",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.61/Aerion-Commercial-Setup-1.5.61.exe",
+  "sha256": "a847f68fd422237a31089a20fcd754a717cf0b73e4f1999fde4f68c7be61826a",
+  "size": 90185934,
+  "notes": "Return air pathways you can place in walls, or in the ceiling across several rooms. The airflow simulation now moves air through the openings you draw. Loads refresh when you change which way the front faces.",
   "date": "2026-11-21"
 }

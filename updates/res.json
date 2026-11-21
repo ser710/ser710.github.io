@@ -1,8 +1,8 @@
 {
-  "version": "1.5.60",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.60/Aerion-HVAC-Design-Studio-Setup-1.5.60.exe",
-  "sha256": "577e0e903238bd67b3f7f7c2243b9aab096347405bfb636c98503fbb99f7fde2",
-  "size": 90168218,
-  "notes": "Ducts held to the minimum rectangular width or height now use the bigger rectangle for friction, pressure drop and velocity.",
+  "version": "1.5.61",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.61/Aerion-HVAC-Design-Studio-Setup-1.5.61.exe",
+  "sha256": "beb9882267ab5bb4f1f04ba8c446aa0530a6763992af75d6fcb65ea37da5b4b0",
+  "size": 90175353,
+  "notes": "Return air pathways you can place in walls, or in the ceiling across several rooms. The airflow simulation now moves air through the openings you draw. Loads refresh when you change which way the front faces.",
   "date": "2026-11-21"
 }
