@@ -1,8 +1,8 @@
 {
-  "version": "1.5.59",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.59/Aerion-Commercial-Setup-1.5.59.exe",
-  "sha256": "436e8f26406cbd399eb193d350c5bf8a3eee2cc6571a4efab4feba684e60cf43",
-  "size": 90174388,
-  "notes": "Front faces control on the Layout, next to the plan, with a FRONT tag on the plan edge. Snip > Copy image now works. New Minimum rectangular width and height settings in Duct design.",
+  "version": "1.5.60",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.60/Aerion-Commercial-Setup-1.5.60.exe",
+  "sha256": "266b09a407a34e2d24e7ff61ac21843e3f4385477f0bcc9a069c1e0074794336",
+  "size": 90175778,
+  "notes": "Ducts held to the minimum rectangular width or height now use the bigger rectangle for friction, pressure drop and velocity.",
   "date": "2026-11-21"
 }
