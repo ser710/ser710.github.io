@@ -1,8 +1,8 @@
 {
-  "version": "1.5.58",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.58/Aerion-HVAC-Design-Studio-Setup-1.5.58.exe",
-  "sha256": "401e270a4379a551fa6440b8f95d6da30f566d974446b407376214806aaafe28",
-  "size": 90166123,
-  "notes": "New: Front of the house faces. Pick which way the front of the house (or building) faces on Design conditions, and the loads change with the sun: windows, walls, doors, skylights and the roof turn with it. Shown on the load and permit reports.",
+  "version": "1.5.59",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.59/Aerion-HVAC-Design-Studio-Setup-1.5.59.exe",
+  "sha256": "9e79610dd109ab3c9ee4e2aec462fba69347d9544d310b6ca3153070870e3113",
+  "size": 90167464,
+  "notes": "Front faces control on the Layout, next to the plan, with a FRONT tag on the plan edge. Snip > Copy image now works. New Minimum rectangular width and height settings in Duct design.",
   "date": "2026-11-21"
 }
