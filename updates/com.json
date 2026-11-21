@@ -1,8 +1,8 @@
 {
-  "version": "1.5.57",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.57/Aerion-Commercial-Setup-1.5.57.exe",
-  "sha256": "f2b243880e27def37860e9adb9fee2e18d7c7735759bb014930a9180355437fe",
-  "size": 90169518,
-  "notes": "Duct labels are now written inside their duct where it is wide enough, along its centerline. New Tidy labels button on the Layout toolbar puts dragged labels back in place.",
-  "date": "2026-11-20"
+  "version": "1.5.58",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.58/Aerion-Commercial-Setup-1.5.58.exe",
+  "sha256": "c5e815e243e8aec5abe2908a7d3b91f4796ecc8aca18f3514c92925ab5314bd9",
+  "size": 90171743,
+  "notes": "New: Front of the house faces. Pick which way the front of the house (or building) faces on Design conditions, and the loads change with the sun: windows, walls, doors, skylights and the roof turn with it. Shown on the load and permit reports.",
+  "date": "2026-11-21"
 }
