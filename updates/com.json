@@ -1,8 +1,8 @@
 {
-  "version": "1.5.62",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.62/Aerion-Commercial-Setup-1.5.62.exe",
-  "sha256": "6851bf3fe9f55713aa1e18afb94aa46b5c6f272ca181e5ed1f14e4918fa0d7c9",
-  "size": 90211249,
-  "notes": "Manual S checked at design conditions from the maker's data (compressor limits, backup heat). Plan review, duct layout comparisons, terminal aiming and AI suggestions. Send a suggestion from the Help menu. BIM models: a Your models list that opens IFC, DWG, DXF and BAK files.",
+  "version": "1.5.63",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.63/Aerion-Commercial-Setup-1.5.63.exe",
+  "sha256": "3cf64546586cd258c323a626fc3f714c821a0476deb5252be6a5a4b8bd2a0a45",
+  "size": 90220659,
+  "notes": "Building framing shows across Aerion's views, and roof and floor framing is read from structural sheets.",
   "date": "2026-11-22"
 }

@@ -1,8 +1,8 @@
 {
-  "version": "1.5.62",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.62/Aerion-HVAC-Design-Studio-Setup-1.5.62.exe",
-  "sha256": "862041b0144dadb8bc83acbd6d2759a603d608912c805c3c7538bd438c0f3e75",
-  "size": 90209477,
-  "notes": "Manual S checked at design conditions from the maker's data (compressor limits, backup heat). Plan review, duct layout comparisons, terminal aiming and AI suggestions. Send a suggestion from the Help menu. BIM models: a Your models list that opens IFC, DWG, DXF and BAK files.",
+  "version": "1.5.63",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.63/Aerion-HVAC-Design-Studio-Setup-1.5.63.exe",
+  "sha256": "584a2a92a2d94a74fce81f7fb7c3da949bf4005465ec99342cb989cae9ba1bc8",
+  "size": 90218965,
+  "notes": "Building framing shows across Aerion's views, and roof and floor framing is read from structural sheets.",
   "date": "2026-11-22"
 }
