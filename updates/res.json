@@ -1,8 +1,8 @@
 {
-  "version": "1.5.61",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.61/Aerion-HVAC-Design-Studio-Setup-1.5.61.exe",
-  "sha256": "beb9882267ab5bb4f1f04ba8c446aa0530a6763992af75d6fcb65ea37da5b4b0",
-  "size": 90175353,
-  "notes": "Return air pathways you can place in walls, or in the ceiling across several rooms. The airflow simulation now moves air through the openings you draw. Loads refresh when you change which way the front faces.",
-  "date": "2026-11-21"
+  "version": "1.5.62",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.62/Aerion-HVAC-Design-Studio-Setup-1.5.62.exe",
+  "sha256": "862041b0144dadb8bc83acbd6d2759a603d608912c805c3c7538bd438c0f3e75",
+  "size": 90209477,
+  "notes": "Manual S checked at design conditions from the maker's data (compressor limits, backup heat). Plan review, duct layout comparisons, terminal aiming and AI suggestions. Send a suggestion from the Help menu. BIM models: a Your models list that opens IFC, DWG, DXF and BAK files.",
+  "date": "2026-11-22"
 }
