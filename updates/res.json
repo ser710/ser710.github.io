@@ -1,11 +1,16 @@
 {
-  "version": "1.5.67",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.67/Aerion-HVAC-Design-Studio-Setup-1.5.67.exe",
-  "sha256": "98a9e47f1f4b5cec93195f1273cc3ab2e4c535ab0b457f6f6e35c77aa953b6e4",
-  "size": 130189759,
-  "notes": "Pick any framing members to show: a box for each kind (rafters, ridges, hips, valleys, truss chords and webs, joists, plates, studs, jack studs, headers, cripples, sills) under Options > Building framing.",
+  "version": "1.5.68",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.68/Aerion-HVAC-Design-Studio-Setup-1.5.68.exe",
+  "sha256": "a46cbce2c03cb9a6da37909f8bdbbb861cad3863c6a34f8e0c5b2abeba69c8fc",
+  "size": 130190781,
+  "notes": "Read all pages with AI: in Plan set to 3D, Read roof and floor framing can now read every page of your plan set for framing, framing sheets first, with a table of what each page has. Also: an updated website.",
   "date": "2026-11-24",
   "history": [
+    {
+      "version": "1.5.68",
+      "date": "2026-11-24",
+      "notes": "Read all pages with AI: in Plan set to 3D, Read roof and floor framing can now read every page of your plan set for framing, framing sheets first, with a table of what each page has. Also: an updated website."
+    },
     {
       "version": "1.5.67",
       "date": "2026-11-24",
@@ -150,11 +155,6 @@
       "version": "1.5.37",
       "date": "",
       "notes": "Scope of work letter, more Aerion AI, duct insulation on the plan"
-    },
-    {
-      "version": "1.5.36",
-      "date": "",
-      "notes": "Your own keys for the Layout tools"
     }
   ]
 }
