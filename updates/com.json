@@ -1,11 +1,16 @@
 {
-  "version": "1.5.64",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.64/Aerion-Commercial-Setup-1.5.64.exe",
-  "sha256": "4ded7c2ee2af0c9544f7ff21878b0d0ae41cc7fc0da03acc8c410bb871f6efc1",
-  "size": 90275551,
-  "notes": "Room pressure follows ENERGY STAR targets, with plenum returns and exhaust; Manual S at design conditions with heat pump balance point; residential sizing and code checks; new IMC, IBC and Florida code checks; room labels you can move, Tidy selected labels, keyboard moves; takeoffs kept off reducers and trunk end caps; a usability pass; alignment guides and fitting previews; and an update could no longer crash the app.",
+  "version": "1.5.65",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.65/Aerion-Commercial-Setup-1.5.65.exe",
+  "sha256": "568097fa7e6c44532f4a958df1971bc55cc8c41e7d2fa7b3d3f10f8bed0a77d8",
+  "size": 130170714,
+  "notes": "Roof shapes for the building framing: hip, Dutch gable, cross gable, shed, flat, gambrel and mansard, with valleys, overhangs and an AI roof suggestion; the desktop app moves to Electron 45; commercial Start-up shows the Equipment list, and toilet exhaust reads 50 cfm continuous, 70 intermittent.",
   "date": "2026-11-24",
   "history": [
+    {
+      "version": "1.5.65",
+      "date": "2026-11-24",
+      "notes": "Roof shapes for the building framing: hip, Dutch gable, cross gable, shed, flat, gambrel and mansard, with valleys, overhangs and an AI roof suggestion; the desktop app moves to Electron 45; commercial Start-up shows the Equipment list, and toilet exhaust reads 50 cfm continuous, 70 intermittent."
+    },
     {
       "version": "1.5.64",
       "date": "2026-11-24",
@@ -150,11 +155,6 @@
       "version": "1.5.34",
       "date": "",
       "notes": "The license public key"
-    },
-    {
-      "version": "1.5.30",
-      "date": "",
-      "notes": "Net wall area for counted doors"
     }
   ]
 }
