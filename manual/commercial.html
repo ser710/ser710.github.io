@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commercial · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/commercial.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1>Commercial</h1>
+<p><a href="index.html">Contents</a></p>
+<p>This page covers what is different in the commercial edition. The tools in the other pages of this manual work in both editions unless they say otherwise.</p>
+<h2>Plenum returns in the airflow simulation and room pressure</h2>
+<p><strong>What it is for.</strong> On many commercial floors the return air goes up through ceiling return grilles into the ceiling plenum, with no duct behind the grille. The airflow simulation and the room pressure check take these grilles as returns.</p>
+<p><strong>Where.</strong></p>
+<ul><li>The <strong>Layout</strong> page, the <strong>Airflow</strong> button (Airflow simulation).</li><li>The <strong>Load calculator</strong> page, the room editor, the <strong>Room pressure, door shut</strong> section.</li></ul>
+<p><strong>What you get.</strong></p>
+<ul><li><strong>Airflow simulation.</strong> Each ceiling return grille with no duct behind it takes its share of the floor's supply that the ducted returns do not take back, shared by face area. Return air moves to these grilles in the simulation.</li><li><strong>Room pressure.</strong> A room with one of these grilles sends its air up into the plenum, not under the door, so it is not flagged for door-shut pressure.</li></ul>
+<p><strong>Limits.</strong></p>
+<ul><li>This is only in the simulation and the room pressure check. The grilles' own airflow, the return sizing and the schedules do not change.</li><li>Floors with ducted returns work as before.</li><li>A room with no return grille drawn in it still pushes its supply under the door. Where a room has a ceiling return grille, draw it in that room.</li></ul>
+<h2>Where the commercial edition differs (for the features in this manual)</h2>
+<ul><li><strong>Snip, Rotate, duct labels, Tidy labels, the plan reader and Build rooms</strong> work the same in both editions.</li><li><strong>Aerion AI on this PC.</strong> In a customer copy of either edition, the card is there only when the license has the AI add-on.</li></ul>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>

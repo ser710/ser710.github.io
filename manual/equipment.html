@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equipment · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/equipment.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1>Equipment</h1>
+<p><a href="index.html">Contents</a></p>
+<h2>Pick the equipment size for a system</h2>
+<p><strong>What it is for.</strong> Compare equipment sizes with the system's load and pick one.</p>
+<p><strong>Where.</strong> The <strong>Equipment</strong> page, the <strong>Equipment inputs</strong> and <strong>Equipment selection</strong> cards. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>In <strong>Equipment inputs</strong>, pick the <strong>System</strong> (each air handler or unit, or Whole house).</li><li>Pick the system type in the second <strong>System</strong> list (for example Heat pump (strip backup) or AC + gas furnace; the commercial edition has no gas furnace choice here).</li><li>Leave <strong>Nominal size</strong> on <strong>Automatic</strong>, or pick a size.</li><li>Set <strong>Airflow per ton</strong> and, if you need it, <strong>Airflow override (0 = auto)</strong>.</li></ol>
+<p><strong>What you get.</strong> <strong>Equipment selection</strong> shows the total load, the size selected, the system airflow and the heating load, with a table of each nominal size: total BTU/h, % of load, sensible, latent and a verdict. On the ranch sample, picking 3 ton changes Selected to 3 ton and System airflow to 1,200 cfm.</p>
+<p><strong>Limits.</strong></p>
+<ul><li>The nominal sizes are nominal capacities, not the maker's data at your design conditions. Use the model's rated or expanded data for the final pick.</li><li>The equipment checks are being changed; this section will be updated when that work ships.</li><li>The designer of record checks the selection against ACCA Manual S.</li></ul>
+<h2>Load a certified model</h2>
+<p><strong>What it is for.</strong> Put a certified outdoor unit and indoor unit match on the system.</p>
+<p><strong>Where.</strong> The <strong>Equipment</strong> page, <strong>Equipment inputs</strong>, the <strong>Brand</strong>, <strong>Type</strong>, <strong>Series</strong> and <strong>Size</strong> lists and the <strong>Use model …</strong> buttons. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Pick <strong>Brand</strong>, <strong>Type</strong>, <strong>Series</strong> and <strong>Size</strong>.</li><li>Press <strong>Use model …</strong> (the button names the model). The model number goes into the model fields.</li></ol>
+<p><strong>Other ways.</strong></p>
+<ul><li><strong>ENERGY STAR heat pump directory</strong>: set <strong>Tons</strong>, <strong>SEER2 ≥</strong> and <strong>Cold climate</strong>, pick a type and press <strong>Search</strong>, then load a match.</li><li><strong>Read certificate</strong> and <strong>Use these rated points</strong> read an AHRI certificate.</li><li><strong>Equipment database</strong>: <strong>Import AHRI matches</strong> and <strong>Import expanded performance</strong> take an AHRI Directory export or a maker's table as CSV or Excel. They stay in this browser for every project.</li></ul>
+<h2>Air filter pressure drop</h2>
+<p><strong>What it is for.</strong> Find the pressure drop of an air filter at your airflow and size.</p>
+<p><strong>Where.</strong> The <strong>Equipment</strong> page, the <strong>Air filter database</strong> card. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>In <strong>Airflow from</strong>, pick the system, or <strong>Typed airflow</strong> and type the <strong>Airflow</strong> in cfm.</li><li>Pick <strong>Size</strong>, <strong>How many</strong>, and <strong>Design for</strong> (Clean (initial), Mid-life or At change-out).</li><li>Filter the list by <strong>Type</strong>, <strong>MERV</strong>, <strong>Show</strong> and <strong>Sort by</strong>, or <strong>Search</strong>.</li><li>Press <strong>Curve</strong> on up to eight filters to chart them in <strong>Pressure drop vs airflow</strong>.</li></ol>
+<p><strong>What you get.</strong> Each filter's drop, read from that filter's own published data. † marks a value outside the published data, extrapolated. The <strong>Sources and method</strong> card says where the data comes from.</p>
+<p><strong>Add your own filter.</strong> In <strong>Add a filter</strong>, type the points from the maker's sheet and press <strong>Add the filter</strong>. It is saved with this project.</p>
+<h2>Commercial and hydronic equipment (commercial)</h2>
+<p><strong>Where.</strong> The <strong>Equipment</strong> page, the <strong>Commercial and hydronic equipment</strong> card. Commercial edition only.</p>
+<p><strong>What it is for.</strong> Pick a packaged rooftop unit, VRF outdoor unit, air handler (CHW coil), air-cooled or water-cooled chiller, or condensing boiler from a generic catalog, sized against the system's load.</p>
+<p><strong>Steps.</strong> Press the type, set <strong>Min capacity</strong> and <strong>Max capacity</strong> (× load), then <strong>Select</strong>.</p>
+<p><strong>Limits.</strong> The card says it: the catalog is generic, at standard rating conditions. Confirm the final pick with the maker's data. Rooftop unit sizing is being changed; this section will be updated when that work ships. <strong>Open Commercial loads</strong> on <strong>Equipment inputs</strong> goes to the <strong>Commercial loads</strong> page.</p>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>

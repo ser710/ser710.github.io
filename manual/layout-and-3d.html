@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layout and 3D · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/layout-and-3d.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1>Layout and 3D</h1>
+<p><a href="index.html">Contents</a></p>
+<h2>Turn items to any angle (Rotate)</h2>
+<p><strong>What it is for.</strong> Turn rooms, ducts, registers and equipment on the plan by any angle, not only by 90°.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> page, the <strong>Rotate</strong> button on the toolbar, after <strong>Move</strong>. Both editions.</p>
+<p><strong>Steps: drag.</strong></p>
+<ol><li>Select what to turn, or press <strong>Rotate</strong> and click one item.</li><li>With <strong>Rotate</strong> on, drag on the plan. The selection turns about its centre in 15° steps.</li><li>Hold Shift while you drag to turn by any angle.</li><li>Press Esc during the drag to put it back.</li></ol>
+<p><strong>Steps: type an angle.</strong></p>
+<ol><li>Select what to turn and press <strong>Rotate</strong>. A bar shows over the plan.</li><li>Type the angle in degrees in the <strong>° clockwise</strong> box. A negative angle turns counterclockwise.</li><li>Press <strong>Turn</strong>. Pick <strong>Select</strong> on the toolbar to close the bar.</li></ol>
+<p><strong>Other ways.</strong></p>
+<ul><li>Right-click a selection, a register or an air handler and pick <strong>Rotate any angle…</strong>.</li><li>Right-click a selection and pick <strong>Rotate 90° right</strong> or <strong>Rotate 90° left</strong>.</li><li>With items selected, press <code>]</code> to turn 90° right and <code>[</code> to turn 90° left.</li></ul>
+<p><strong>What turns.</strong> Room walls, windows and doors, ducts and their elbows, registers and grilles, junctions, air handlers with their cabinet, and notes. One register, air handler, outdoor unit or loose duct piece turns in place about its own centre.</p>
+<p><strong>What you get.</strong></p>
+<ul><li>Each window's facing is worked out again, so the loads follow the new angle. Room areas and wall lengths do not change.</li><li>Each turn is one undo step (Ctrl+Z).</li></ul>
+<p><strong>Limits.</strong> Check the window facings and the loads after a turn.</p>
+<h2>Duct size labels along and inside the duct</h2>
+<p><strong>What it is for.</strong> Duct size labels (for example 8 x 6 · R-8, or 5" R-6, and the cfm) are written the way sizes are written on drawings.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> page, on the plan. Both editions. There is nothing to set.</p>
+<p><strong>What you get.</strong></p>
+<ul><li>A label is written along its duct, at the duct's angle: level on a level duct, up the side of an upright duct (reading bottom to top), slanted with a slanted duct. It is never upside down.</li><li>Where the duct is drawn wide enough for its text at the zoom on screen, the label is written inside the duct, along its centerline. Zoom in and more labels go inside.</li><li>A label that does not fit the duct's length slides along it, or shows the size alone (for example 14 x 12 without the insulation).</li><li>A duct drawn too thin, or one with a tag or room name in the way, keeps its label beside it, clear of the other labels.</li><li>Where there is no room for a turned label, it is written level, so no label is hidden by turning.</li><li>A label you drag turns with its duct too.</li></ul>
+<h2>Put dragged labels back (Tidy labels)</h2>
+<p><strong>What it is for.</strong> Put every label you dragged on this floor back in its own place.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> page, the <strong>Tidy labels</strong> button on the toolbar. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Press <strong>Tidy labels</strong>.</li><li>To get the dragged spots back, press Undo (Ctrl+Z).</li></ol>
+<p><strong>What you get.</strong> Every dragged label on this floor goes back to its own place: inside its duct where it fits, and clear of the other labels. It is one undo step. With no label dragged, it changes nothing.</p>
+<p><strong>Limits.</strong> It works on the floor on screen only.</p>
+<h2>Airflow simulation</h2>
+<p><strong>What it is for.</strong> See where the supply air goes in each room and how it gets back to the returns.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> page, the <strong>Airflow</strong> button (Airflow simulation). Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Draw the rooms and place the supply registers and return grilles.</li><li>Press <strong>Airflow</strong> to start the simulation.</li></ol>
+<p><strong>Room pressure.</strong> The simulation uses the same doors, transfer openings and limit as the <strong>Room pressure, door shut</strong> section of the room editor. See <a href="rooms-and-loads.html#room-pressure-with-the-door-shut">Rooms and loads</a>.</p>
+<p><strong>Commercial plenum returns.</strong> A ceiling return grille with no duct behind it is a return in the simulation. See <a href="commercial.html">Commercial</a>.</p>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>

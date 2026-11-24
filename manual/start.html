@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Start: plans · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/start.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1>Start: plans</h1>
+<p><a href="index.html">Contents</a></p>
+<h2>Snip part of a plan sheet</h2>
+<p><strong>What it is for.</strong> Cut out part of a sheet as a picture: to paste into an email or another program, to save as a PNG file, or to paste onto a sheet as a picture markup.</p>
+<p><strong>Where.</strong> The <strong>Plans &amp; markup</strong> page, the <strong>Snip</strong> button. The same tool is in the markup tools as <strong>Snip (snipping tool)</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Open <strong>Plans &amp; markup</strong> and open a sheet. <strong>Snip</strong> stays off until a sheet is open.</li><li>Press <strong>Snip</strong>.</li><li>Drag a box over the part of the sheet you want.</li><li>The <strong>Snip</strong> window opens with the picture. Pick one:<ul><li><strong>Copy image</strong>: puts the picture on the clipboard, to paste into an email or another program.</li><li><strong>Save PNG</strong>: saves the picture as a PNG file.</li><li><strong>Paste here</strong>: puts the picture on the sheet as a picture markup.</li></ul></li></ol>
+<p><strong>What you get.</strong> A picture of the part of the sheet inside the box.</p>
+<p><strong>Limits.</strong></p>
+<ul><li>It takes what is drawn on the sheet on screen; it does not read the sheet's text or sizes.</li><li><strong>Copy image</strong> does not work at present: the message says the system clipboard refused the image. Use <strong>Save PNG</strong> and attach the file, or <strong>Paste here</strong> to put the picture on a sheet.</li></ul>
+<h2>How the plan reader picks out duct sizes</h2>
+<p><strong>What it is for.</strong> The <strong>Plan reader</strong> page reads a plan set and lists the HVAC and mechanical callouts it finds. A size like <code>14x8</code> is only listed as a duct when it reads as a duct size.</p>
+<p><strong>Where.</strong> The <strong>Plan reader</strong> page. Both editions. There is nothing to set: this is how the reader works.</p>
+<p><strong>What it leaves out.</strong> A "number x number" is not taken as a duct when:</p>
+<ul><li>it has a third part, as steel does (<code>6x6x1/4</code>);</li><li>it follows a steel or lumber mark (HSS, LVL, GLB, DF, PT, DBL and the like);</li><li>it sits next to a framing, structure or opening word (post, column, beam, header, joist, rafter, footing, pier, @ 16" O.C., window, door, hatch, tile and the like);</li><li>it is followed by cm, mm or ft, or by a room or floor-finish word;</li><li>it is on a structural sheet.</li></ul>
+<p>A duct word next to the size keeps it in (duct, supply, return, SA, RA, CFM, trunk, register, up, down and the like), so "14x8 return in joist bay" is still read as a duct.</p>
+<p>On a sheet that is not mechanical (an A, S or I sheet, for example), a size needs a duct word next to it. On a sheet with no sheet number, a bare size counts only when the sheet has other HVAC callouts.</p>
+<p><strong>Limits.</strong> The reader goes by the words printed next to a size. A duct size with no duct word next to it, on a sheet that is not mechanical, is left out. Check the list against the drawings.</p>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>
