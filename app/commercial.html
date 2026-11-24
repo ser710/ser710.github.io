@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="manifest" href="commercial.webmanifest"><meta name="theme-color" content="#0a0a0b"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Aerion Com"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-commercial-192.png"><link rel="apple-touch-icon" href="icons/icon-commercial-180.png"><script>window.AERION_WEB={"version":"1.5.67","edition":"com","sw":"sw.js"}</script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="manifest" href="commercial.webmanifest"><meta name="theme-color" content="#0a0a0b"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Aerion Com"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-commercial-192.png"><link rel="apple-touch-icon" href="icons/icon-commercial-180.png"><script>window.AERION_WEB={"version":"1.5.68","edition":"com","sw":"sw.js"}</script>
 <title>Aerion Commercial HVAC Design</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -10804,7 +10804,9 @@ void main(){
       '<label>Source sheet <select id="p3d-structure-sheet">' +
       sheets.map(s => '<option value="' + s.n + '"' + (s === active?.sheet ? " selected" : "") + '>' + E(label(s)) + '</option>').join("") +
       '</select></label> <button class="b sm" data-p3d="structure"' + (!available || active?.pending ? " disabled" : "") +
-      '>Read framing with AI</button><p class="note">Sends this sheet to your configured AI. Findings are marked on the source drawing for review before use.</p>' +
+      '>Read framing with AI</button> <button class="b sm" data-p3d="structureAll"' + (!available || active?.pending || U.structureAll?.pending ? " disabled" : "") +
+      '>Read all pages with AI</button><p class="note">Sends this sheet, or every page of the set one by one (framing candidates first), to your configured AI. Findings are marked on the source drawing for review before use.</p>' +
+      allPagesHTML(P, label) +
       (active?.pending ? '<p role="status">Reading framing\u2026 <button class="b sm" data-p3d="structureClear">Stop</button></p>' : "") +
       (active?.error ? '<p role="status">' + E(active.error) + '</p>' : "") +
       (active?.found ? '<p><b>' + E(label(active.sheet)) + '</b></p><canvas id="p3d-structure-preview" style="display:block;width:100%;max-width:1100px;height:auto" aria-label="Framing on the source sheet"></canvas>' +
@@ -10812,6 +10814,64 @@ void main(){
         (active.found.traces.length && window.AerionStructuralLayout ? '<button class="b sm" data-p3d="structureAlign">Align in Layout</button> ' : "") +
         '<button class="b sm" data-p3d="structureClear">Clear review</button>' : "") +
       '</details>';
+  }
+  /* every page read for framing: progress while it runs, then a row per page with what was found and Show */
+  function allPagesHTML(P, label) {
+    const run = U.structureAll?.project === P ? U.structureAll : null;
+    if (!run) return "";
+    const rows = run.order.map((sh) => {
+      const r = run.results.get(sh.n);
+      const what = !r ? (run.pending ? "waiting" : "not read") : r.error ? "could not read: " + r.error :
+        r.found.traces.length ? Object.keys(framingKinds).map((k) => [k, r.found.traces.filter((t) => t.kind === k).length]).filter((x) => x[1])
+          .map((x) => x[1] + " \u00d7 " + framingKinds[x[0]][0]).join(", ") : "no framing lines";
+      const show = r && r.found && r.found.traces.length ? ' <button class="b sm" data-p3d="structureShow" data-n="' + sh.n + '">Show</button>' : "";
+      return "<tr><td>" + E(label(sh)) + "</td><td>" + E(what) + show + "</td></tr>";
+    }).join("");
+    const done = run.order.filter((sh) => run.results.has(sh.n)).length, found = [...run.results.values()].filter((r) => r.found && r.found.traces.length).length;
+    return '<div class="note" style="margin-top:6px" data-p3d-allpages>' +
+      (run.pending ? '<p role="status">Reading page ' + Math.min(done + 1, run.order.length) + " of " + run.order.length + '\u2026 <button class="b sm" data-p3d="structureAllStop">Stop</button></p>' :
+        "<p>" + done + " of " + run.order.length + " pages read" + (run.stopped ? " (stopped)" : "") + ", framing found on " + found + ".</p>") +
+      '<div class="tw" style="max-height:260px;overflow:auto"><table class="t"><tr><th style="text-align:left">Page</th><th style="text-align:left">Framing found</th></tr>' + rows + "</table></div></div>";
+  }
+  /* read one page's framing: the sheet drawn, sent to the AI with its printed text */
+  async function readFramingPage(sheet, signal) {
+    const bg = await background(sheet);
+    if (!bg) throw Error("the page could not be drawn");
+    const image = reviewImage(bg.c, {plans: 1});
+    const printed = framingText((U.pages?.find(p => p.n === sheet.n)?.ph || []).map(p => p.s));
+    const raw = await askDrawing(image.data, "framing-review", signal, printed);
+    return { found: framingFindings(raw, printed), image: image.canvas };
+  }
+  async function reviewAllPages() {
+    const project = st();
+    if (!project.sheets.length || U.source !== project || (!U.doc && !U.img)) return;
+    clearStructure();
+    U.structureAll?.abort.abort();
+    const order = project.sheets.slice().sort((a, b) => Number(structuralSheet(b)) - Number(structuralSheet(a)) || a.n - b.n);
+    const run = U.structureAll = { project, order, results: new Map(), abort: new AbortController(), pending: true, stopped: false };
+    const current = () => U.structureAll === run && st() === project && U.source === project;
+    paint();
+    for (const sheet of order) {
+      if (!current() || run.abort.signal.aborted) break;
+      try {
+        run.results.set(sheet.n, await readFramingPage(sheet, run.abort.signal));
+      } catch (e) {
+        if (run.abort.signal.aborted) break;
+        run.results.set(sheet.n, { error: String((e && e.message) || e).slice(0, 160) });
+      }
+      if (current()) paint();
+    }
+    run.pending = false;
+    if (current()) paint();
+  }
+  /* one page's findings in the preview above, so it can be checked and aligned in Layout like a single read */
+  function showPageFindings(n) {
+    const run = U.structureAll, project = st();
+    const r = run && run.project === project && run.results.get(n), sheet = project.sheets.find((x) => x.n === n);
+    if (!r || !r.found || !sheet) return;
+    clearStructure();
+    U.structure = { project, sheet, abort: new AbortController(), pending: false, found: r.found, image: r.image };
+    paint();
   }
   const structuralSheet = s => /ROOF|FRAMING|JOIST|TRUSS|STRUCTURAL|BEAM/i.test(s.title || "") ||
     /^S-?\d/i.test(s.sheet || "");
@@ -12397,6 +12457,14 @@ void main(){
     }
     if (a === "aiReview") return void reviewSheet(L);
     if (a === "structure") return void reviewStructure(Number(document.getElementById("p3d-structure-sheet")?.value));
+    if (a === "structureAll") return void reviewAllPages();
+    if (a === "structureAllStop" && U.structureAll) {
+      U.structureAll.abort.abort();
+      U.structureAll.stopped = true;
+      U.structureAll.pending = false;
+      return paint();
+    }
+    if (a === "structureShow") return showPageFindings(Number(t.dataset.n));
     if (a === "structureAlign" && U.structure?.project === P) {
       const {found, image, sheet} = U.structure;
       return alignStructure(found, image, {file: P.file, hash: P.fileHash, sheet: sheet.sheet, title: sheet.title, page: sheet.n});
