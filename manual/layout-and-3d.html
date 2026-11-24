@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Layout and 3D · Aerion manual</title>
+<title>Layout: 3D, sections, airflow and framing · Aerion manual</title>
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/layout-and-3d.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
@@ -15,40 +15,54 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Layout and 3D</h1>
+<h1>Layout: 3D, sections, airflow and framing</h1>
 <p><a href="index.html">Contents</a></p>
-<h2>Turn items to any angle (Rotate)</h2>
-<p><strong>What it is for.</strong> Turn rooms, ducts, registers and equipment on the plan by any angle, not only by 90°.</p>
-<p><strong>Where.</strong> The <strong>Layout</strong> page, the <strong>Rotate</strong> button on the toolbar, after <strong>Move</strong>. Both editions.</p>
-<p><strong>Steps: drag.</strong></p>
-<ol><li>Select what to turn, or press <strong>Rotate</strong> and click one item.</li><li>With <strong>Rotate</strong> on, drag on the plan. The selection turns about its centre in 15° steps.</li><li>Hold Shift while you drag to turn by any angle.</li><li>Press Esc during the drag to put it back.</li></ol>
-<p><strong>Steps: type an angle.</strong></p>
-<ol><li>Select what to turn and press <strong>Rotate</strong>. A bar shows over the plan.</li><li>Type the angle in degrees in the <strong>° clockwise</strong> box. A negative angle turns counterclockwise.</li><li>Press <strong>Turn</strong>. Pick <strong>Select</strong> on the toolbar to close the bar.</li></ol>
-<p><strong>Other ways.</strong></p>
-<ul><li>Right-click a selection, a register or an air handler and pick <strong>Rotate any angle…</strong>.</li><li>Right-click a selection and pick <strong>Rotate 90° right</strong> or <strong>Rotate 90° left</strong>.</li><li>With items selected, press <code>]</code> to turn 90° right and <code>[</code> to turn 90° left.</li></ul>
-<p><strong>What turns.</strong> Room walls, windows and doors, ducts and their elbows, registers and grilles, junctions, air handlers with their cabinet, and notes. One register, air handler, outdoor unit or loose duct piece turns in place about its own centre.</p>
-<p><strong>What you get.</strong></p>
-<ul><li>Each window's facing is worked out again, so the loads follow the new angle. Room areas and wall lengths do not change.</li><li>Each turn is one undo step (Ctrl+Z).</li></ul>
-<p><strong>Limits.</strong> Check the window facings and the loads after a turn.</p>
-<h2>Duct size labels along and inside the duct</h2>
-<p><strong>What it is for.</strong> Duct size labels (for example 8 x 6 · R-8, or 5" R-6, and the cfm) are written the way sizes are written on drawings.</p>
-<p><strong>Where.</strong> The <strong>Layout</strong> page, on the plan. Both editions. There is nothing to set.</p>
-<p><strong>What you get.</strong></p>
-<ul><li>A label is written along its duct, at the duct's angle: level on a level duct, up the side of an upright duct (reading bottom to top), slanted with a slanted duct. It is never upside down.</li><li>Where the duct is drawn wide enough for its text at the zoom on screen, the label is written inside the duct, along its centerline. Zoom in and more labels go inside.</li><li>A label that does not fit the duct's length slides along it, or shows the size alone (for example 14 x 12 without the insulation).</li><li>A duct drawn too thin, or one with a tag or room name in the way, keeps its label beside it, clear of the other labels.</li><li>Where there is no room for a turned label, it is written level, so no label is hidden by turning.</li><li>A label you drag turns with its duct too.</li></ul>
-<h2>Put dragged labels back (Tidy labels)</h2>
-<p><strong>What it is for.</strong> Put every label you dragged on this floor back in its own place.</p>
-<p><strong>Where.</strong> The <strong>Layout</strong> page, the <strong>Tidy labels</strong> button on the toolbar. Both editions.</p>
+<p>This page covers the views of the Layout beyond the plan: the 3D view, split views, section views, the airflow simulation, the building framing and structural traces. Everything here is in both editions.</p>
+<h2>Look at the design in 3D</h2>
+<p><strong>What it is for.</strong> Check the ducts, equipment and rooms in three dimensions, and set duct heights.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>3D</strong> on the toolbar. Both editions.</p>
 <p><strong>Steps.</strong></p>
-<ol><li>Press <strong>Tidy labels</strong>.</li><li>To get the dragged spots back, press Undo (Ctrl+Z).</li></ol>
-<p><strong>What you get.</strong> Every dragged label on this floor goes back to its own place: inside its duct where it fits, and clear of the other labels. It is one undo step. With no label dragged, it changes nothing.</p>
-<p><strong>Limits.</strong> It works on the floor on screen only.</p>
-<h2>Airflow simulation</h2>
-<p><strong>What it is for.</strong> See where the supply air goes in each room and how it gets back to the returns.</p>
-<p><strong>Where.</strong> The <strong>Layout</strong> page, the <strong>Airflow</strong> button (Airflow simulation). Both editions.</p>
+<ol><li>Press <strong>3D</strong>.</li><li>Drag to orbit. Shift-drag (or two fingers) to pan. Scroll to zoom.</li><li>Use the bar: <strong>Plan</strong> (back to the plan), <strong>Fit</strong>, <strong>Iso</strong>, <strong>Top</strong>, <strong>Front</strong>, <strong>Rooms</strong>, <strong>All floors</strong> and <strong>Realistic</strong> (a more lifelike look).</li><li>Tap a duct to edit it. Drag the arrows to move it; the blue arrow sets its height.</li><li><strong>Draw supply</strong> and <strong>Draw return</strong> draw ducts in 3D.</li></ol>
+<p><strong>What you get.</strong> The ducts at their sizes and heights, fittings, registers, the air handlers with their plenums, and the rooms. Insulation on the outside of a duct shows as a see-through shell that thick all round. Wall openings and floor penetrations show as frames. An imported 3D model shows see-through where its plan was made (<strong>Layers</strong>, <strong>Imported 3D model (in the 3D view)</strong> turns it off).</p>
+<p><strong>Limits.</strong> While the view moves, it may draw at a lower resolution and leave out shadows and thin edge lines; it draws them again when it stops. This changes nothing in the design.</p>
+<h2>Split views</h2>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>View</strong>. Both editions.</p>
+<p><strong>Steps.</strong> Under <strong>View</strong>, pick <strong>Single view</strong>, <strong>Plan | 3D</strong>, <strong>Plan | Section</strong>, <strong>Plan + 3D + Section</strong> or <strong>Four views</strong>.</p>
+<p><strong>What you get.</strong> The plan beside the 3D view and a section, so a change in one shows in the others.</p>
+<h2>Section views</h2>
+<p><strong>What it is for.</strong> Cut a vertical section through the design to check heights and clearances.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Notes</strong> group, <strong>Section</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
-<ol><li>Draw the rooms and place the supply registers and return grilles.</li><li>Press <strong>Airflow</strong> to start the simulation.</li></ol>
-<p><strong>Room pressure.</strong> The simulation uses the same doors, transfer openings and limit as the <strong>Room pressure, door shut</strong> section of the room editor. See <a href="rooms-and-loads.html#room-pressure-with-the-door-shut">Rooms and loads</a>.</p>
-<p><strong>Commercial plenum returns.</strong> A ceiling return grille with no duct behind it is a return in the simulation. See <a href="commercial.html">Commercial</a>.</p>
+<ol><li>Pick <strong>Section</strong> and click two points to draw the section line.</li><li>The section view opens, looking toward the arrow. Flip it there.</li><li>Later, click a section head with <strong>Select</strong> to open it again.</li></ol>
+<h2>Color the plan by what you want to check</h2>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>View</strong>, <strong>Color by</strong>. The same choices are in <strong>Options</strong>, <strong>Drawing and display</strong>. Both editions.</p>
+<p><strong>Ducts by:</strong> <strong>Supply / return</strong>, <strong>System</strong>, <strong>Duct size</strong>, <strong>Velocity</strong>, <strong>Friction rate</strong>, <strong>Airflow (cfm)</strong>, <strong>Material</strong>, <strong>Trunk / branch</strong>, <strong>Black (print style)</strong> or <strong>Insulation</strong> (bare ducts stand out, with a legend).</p>
+<p><strong>Rooms by:</strong> <strong>Rooms: plain</strong>, <strong>Rooms: airflow balance</strong>, <strong>Rooms: load density</strong> or <strong>Rooms: system</strong>.</p>
+<p><strong>Layers</strong> turns each layer on and off: grid, the CAD or image underlay, rooms, room labels, windows and doors, ducts, duct sizes, registers and equipment, notes, the duct color legend, sheet metal joints and takeoffs, supply register throw, duct insulation, wall openings and floor penetrations, the imported 3D model, structural sheet traces and building framing. <strong>Visible in view</strong> turns categories and systems on and off. <strong>Print duct colors on the plan set</strong> carries the colors to the PDF.</p>
+<h2>Run the airflow simulation</h2>
+<p><strong>What it is for.</strong> See where the supply air goes in each room and how it gets back to the returns, before anything is installed.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>View</strong>, <strong>Airflow</strong> (Airflow simulation). The <strong>Airflow simulation</strong> card opens. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Draw the rooms, place the supply registers and return grilles, and set each register's throw (see <a href="duct-layout.html">Layout: equipment, registers and ducts</a>).</li><li>Press <strong>View</strong>, then <strong>Airflow</strong>.</li><li>Turn the layers on and off: <strong>Velocity map</strong>, <strong>Particles</strong>, <strong>Air in the ducts</strong>, <strong>Return air</strong>, <strong>50 / 100 fpm lines</strong>, and in 3D <strong>Envelopes (3D)</strong> and <strong>Occupied zone (3D)</strong>. Pick <strong>Cooling</strong> or <strong>Heating</strong>.</li><li>Point at the plan to read the speed, the direction and a return's pull there.</li><li>Press <strong>Stop</strong> to end it.</li></ol>
+<p><strong>What you get.</strong></p>
+<ul><li>A room table: <strong>Room</strong>, <strong>CFM</strong>, <strong>Regs</strong>, <strong>T50/L</strong>, <strong>ADPI</strong>, <strong>Still</strong> and <strong>Drafty</strong>, with notes such as "throw short of the wall", "throw overshoots: drafts off the far wall", "large still area" or "no return in room: air leaves under the door".</li><li>A return table: each grille's room, cfm, face velocity and how far it pulls (50 and 15 fpm).</li><li>A door-shut table: each room's supply, return, the air under the door, the pressure with the door shut and the opening to add. It uses the same numbers as the room editor's <strong>Room pressure, door shut</strong> section (see <a href="rooms-and-loads.html">Rooms and loads</a>).</li><li>On the plan, supply air in speed colors and return air in its own color, from the jets as they slow down, through the doors and into the returns. Lines mark 50 and 100 fpm (the end of the throw and the drafty edge).</li><li>With <strong>Air in the ducts</strong> on, the air moves through each duct at that duct's velocity from the duct calculation (shown at about a third of the real speed so the eye can follow), splitting at tees by each branch's cfm. A duct over its velocity limit stands out. Point at a duct for its size, cfm, velocity, friction, pressure drop and the total drop to its far end.</li></ul>
+<p><strong>How it is modeled.</strong> The floor is cut into small cells. Each register throws along its pattern with the throw data from its card, walls turn jets into wall jets, and returns pull like a sink (a half sphere near the grille, a cylinder of room height farther out, never faster than its face). Return air follows drawn door openings and placed return pathways; a closed door passes air only at its undercut, and wall and ceiling transfers carry air through without drawing a trail through the wall. The simulation is steady and isothermal: it shows coverage and conflicts, not temperatures. It runs on the graphics card when it can, with fewer particles on the processor when it cannot.</p>
+<p><strong>Fixing a room.</strong> The card says it: turn the register, change its pattern or size, move it, or add one. ADPI peaks near T50/L 1.3 for sidewall and floor registers and 0.8 for ceiling diffusers, as the card states.</p>
+<p><strong>Limits.</strong> The simulation is a picture to guide the layout, not a measurement. The running simulation rebuilds when the duct network's calculated airflow changes. Commercial plenum returns are in <a href="commercial.html">Commercial</a>.</p>
+<h2>Show the building framing (schematic)</h2>
+<p><strong>What it is for.</strong> See joists, rafters and walls around the ducts while you route them.</p>
+<p><strong>Where.</strong> <strong>Layers</strong>, <strong>Building framing (schematic)</strong> on the Layout, and <strong>Options</strong>, card <strong>Building framing</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Turn on <strong>Building framing (schematic)</strong> (or tick <strong>Show schematic framing</strong> in Options).</li><li>In <strong>Options</strong>, <strong>Building framing</strong>, pick <strong>Framing to show</strong>: <strong>All members</strong>, <strong>Roof only</strong>, <strong>Joists only</strong> or <strong>Wall framing only</strong>.</li><li>Pick a <strong>Floor</strong> and set its <strong>Joist and rafter direction</strong> (<strong>From plan or drawing default</strong>, <strong>Left right</strong>, <strong>Top bottom</strong>), <strong>Spacing on center (in.)</strong> and <strong>Roof rise per 12 in. of run</strong>. Clear an override to go back to the plan or drawing default.</li></ol>
+<p><strong>What you get.</strong> The same framing in the plan, the 3D view and section views, and on the Layout PDF and DXF exports while the layer is on. In <strong>Best duct layout</strong>, Auto uses a floor direction you set when it routes under joists. In <strong>Plan set to 3D</strong>, <strong>Include schematic framing in the 3D snapshot</strong> adds a framing category to the generated model.</p>
+<p><strong>Limits.</strong> The card says it: the drawing uses members 16 in. on center and a 6/12 roof pitch unless you set others, and lumber sizes and heights are drawing defaults to replace with the project's framing schedule. Use the structural drawings to confirm member locations, sizes and openings before routing ducts. The overlay does not size structural members or say where they may be drilled or cut. A framing direction and spacing read from the plan can be used (see <a href="plans.html">Plans and the plan reader</a>).</p>
+<h2>Place structural traces in the Layout</h2>
+<p><strong>What it is for.</strong> Bring reviewed traces from a structural sheet (beams, headers, bearing lines) onto the Layout floor, at their heights, to check duct crossings.</p>
+<p><strong>Where.</strong> <strong>BIM models</strong>, <strong>Plan set to 3D</strong>, <strong>Align in Layout</strong>. The <strong>Structural sheet placement</strong> panel. <strong>Layers</strong>, <strong>Structural sheet traces</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>In <strong>Plan set to 3D</strong>, review the traces on the sheet and press <strong>Align in Layout</strong>.</li><li><strong>Choose a floor</strong> of the Layout.</li><li>Pick two matching points on the sheet and on the floor plan.</li><li>Tick the <strong>Traces to place</strong>. Type the <strong>Start elevation above floor (ft)</strong> and, for a sloped trace, the <strong>End elevation above floor (ft)</strong> from the drawing (centerline; 0 for the floor itself).</li><li>Check the dashed preview against the Layout plan, then press <strong>Confirm placement</strong>.</li></ol>
+<p><strong>What you get.</strong> The traces on the floor. <strong>Open source sheet</strong> opens the sheet they came from when the drawing is attached. A duct centerline that crosses a trace in plan is flagged as a crossing for clearance review. <strong>Remove</strong> takes a placement off.</p>
+<p><strong>Limits.</strong> Sheet traces carry no solid member size. A crossing in plan is a flag to check, not a clash result.</p>
 </main>
 <footer><div class="wrap">
   <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
