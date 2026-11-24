@@ -1,11 +1,16 @@
 {
-  "version": "1.5.66",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.66/Aerion-Commercial-Setup-1.5.66.exe",
-  "sha256": "626bdd5603931c8de62db28ec95a86fbed973d5efe6a476bae3f95aa2f5928fd",
-  "size": 130190916,
-  "notes": "More roof styles (pyramid, saltbox, jerkinhead, bonnet, clerestory, butterfly, M roof, arched) and roof trusses (king post, Fink, scissor, attic and more); doors and windows framed as built; doors and return air pathways read from your drawings and used; doors into garages counted in the loads; elbows and moving air in 3D; and a usability pass.",
+  "version": "1.5.67",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.67/Aerion-Commercial-Setup-1.5.67.exe",
+  "sha256": "0d11f78dda74d9e8114a135ef138b6af932cb2454f1c98e38020491ba9fd013a",
+  "size": 130191718,
+  "notes": "Pick any framing members to show: a box for each kind (rafters, ridges, hips, valleys, truss chords and webs, joists, plates, studs, jack studs, headers, cripples, sills) under Options > Building framing.",
   "date": "2026-11-24",
   "history": [
+    {
+      "version": "1.5.67",
+      "date": "2026-11-24",
+      "notes": "Pick any framing members to show: a box for each kind (rafters, ridges, hips, valleys, truss chords and webs, joists, plates, studs, jack studs, headers, cripples, sills) under Options > Building framing."
+    },
     {
       "version": "1.5.66",
       "date": "2026-11-24",
@@ -150,11 +155,6 @@
       "version": "1.5.36",
       "date": "",
       "notes": "Your own keys for the Layout tools"
-    },
-    {
-      "version": "1.5.35",
-      "date": "",
-      "notes": "The update notice and Options > Updates"
     }
   ]
 }
