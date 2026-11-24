@@ -59,6 +59,8 @@
     const dl = S.download || {}, links = [];
     if ((app === "res" || app === "both") && dl.res) links.push('<a class="btn p" href="' + esc(dl.res) + '">Download Aerion HVAC Design Studio</a>');
     if ((app === "com" || app === "both") && dl.com) links.push('<a class="btn p" href="' + esc(dl.com) + '">Download Aerion Commercial</a>');
+    if (app === "res" || app === "both") links.push('<a class="btn" href="app/">Open in your browser</a>');
+    if (app === "com" || app === "both") links.push('<a class="btn" href="app/commercial.html">Open Commercial in your browser</a>');
     out.innerHTML =
       "<p>Your " + esc(j.plan || "Aerion") + " plan is ready. This is your license key:</p>" +
       '<div class="keybox"><span class="key" id="key">' + esc(j.key) + '</span><button class="btn" id="copy" type="button">Copy</button></div>' +
