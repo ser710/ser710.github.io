@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layout: drawing the plan · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/layout.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1>Layout: drawing the plan</h1>
+<p><a href="index.html">Contents</a></p>
+<p>The <strong>Layout</strong> page is the drawing. Each floor has its own underlay, rooms, equipment and ducts. This page covers the floors, the underlay, rooms, windows and doors, and the tools to select, move, turn and label. Equipment, registers and ducts are in <a href="duct-layout.html">Layout: equipment, registers and ducts</a>. The 3D view, sections, the airflow simulation and building framing are in <a href="layout-and-3d.html">Layout: 3D, sections, airflow and framing</a>. Everything here is in both editions unless it says otherwise.</p>
+<h2>Find your way around the Layout</h2>
+<p><strong>Where.</strong> The <strong>Layout</strong> page. Both editions.</p>
+<p><strong>The toolbar.</strong> The tool groups are <strong>Plan</strong> (scale, underlay, rooms, doors and windows), <strong>HVAC</strong> (equipment, registers, ducts, condensers, line sets, controls), <strong>Notes</strong> (sections, notes, align, erase) and <strong>All</strong> (every tool). These are always there: <strong>Select</strong>, <strong>Move</strong>, <strong>Rotate</strong>, <strong>Tidy labels</strong>, <strong>Tidy selected labels</strong>, <strong>Info</strong>, <strong>Pan</strong>, <strong>Undo</strong>, <strong>Redo</strong>, <strong>Ortho</strong>, <strong>Snap</strong>, <strong>Design checks</strong>, <strong>Layers</strong>, <strong>3D</strong>, <strong>View</strong>, <strong>Shortcuts</strong>, <strong>Zoom in</strong>, <strong>Zoom out</strong> and <strong>Fit</strong>. Each tool's tip shows its key.</p>
+<p><strong>The side cards.</strong> <strong>Return air pathways</strong>, <strong>Design checks</strong>, <strong>Floors</strong>, <strong>Underlay</strong>, <strong>Selection</strong> and <strong>Layout tools</strong>.</p>
+<p><strong>On the plan.</strong> A floor list at the top. <strong>Front faces</strong> and <strong>Review room load changes</strong> at the bottom of the plan (see <a href="rooms-and-loads.html">Rooms and loads</a>). The status line says what a click does with the tool you have.</p>
+<p><strong>First hint.</strong> The first time, a hint says: double-click anywhere to start a duct, or on a duct to branch off it; right-click anything for quick options. <strong>Got it</strong> hides it.</p>
+<p><strong>Moving around.</strong> Drag empty space to pan. Right-drag or Space-drag pans anywhere. <strong>Zoom in</strong> (+), <strong>Zoom out</strong> (-) and <strong>Fit</strong> (F). With nothing selected, the arrow keys move the view.</p>
+<p><strong>A second monitor.</strong> <strong>Pop out</strong> in the top bar opens the Layout in its own window. The right-click menu works there too.</p>
+<h2>Set up the floors</h2>
+<p><strong>What it is for.</strong> Give each floor its own plan.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, card <strong>Floors</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Press <strong>Add floor</strong>.</li><li>Name each floor and set its <strong>Ht</strong> (floor to floor, in ft). The height is used for risers.</li><li>Pick the floor to work on from the list at the top of the plan.</li></ol>
+<p><strong>What you get.</strong> Each floor has its own CAD or image underlay, rooms and ducts. The loads and equipment cover the whole house. Use the <strong>Riser</strong> tool to connect ducts between floors (see <a href="duct-layout.html">Layout: equipment, registers and ducts</a>).</p>
+<h2>Bring in the floor plan (underlay)</h2>
+<p><strong>What it is for.</strong> Put the architect's plan under the drawing, to trace over.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, card <strong>Underlay</strong>. Both editions.</p>
+<p><strong>Ways to bring it in.</strong></p>
+<ul><li><strong>Import DXF</strong>: a CAD drawing.</li><li><strong>Import DWG</strong>: in the desktop app, when a DWG converter is installed (ODA File Converter, which is free, or LibreDWG dwg2dxf). Otherwise save the drawing as DXF first.</li><li><strong>Floor plan image</strong>: a picture of the plan.</li><li><strong>PDF via Markup</strong>: opens the architect's PDF in <strong>Plans &amp; markup</strong>; set its scale there and send the sheet here (see <a href="plans.html">Plans and the plan reader</a>).</li><li><strong>Import 3D model</strong>: cuts an OBJ, glTF or GLB model level and uses the cut as the plan (below).</li></ul>
+<p><strong>Then.</strong> Use <strong>Set scale</strong> (K) on a picture or PDF underlay: click two points a known distance apart, such as a dimensioned wall, and type the distance. Use <strong>Move underlay</strong> (U) to drag it under your rooms and ducts.</p>
+<p><strong>Limits.</strong> BIM programs can export a plan view to DXF or PDF. A PDF plan can also be saved as an image.</p>
+<h2>Use a 3D model as the plan</h2>
+<p><strong>What it is for.</strong> Draw over a level cut through a building model.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, card <strong>Underlay</strong>, <strong>Import 3D model</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Press <strong>Import 3D model</strong> and pick a Wavefront OBJ, a glTF (the .gltf with its .bin, picked together) or a binary glTF (.glb).</li><li>Check <strong>Model units</strong> (glTF is always meters; an OBJ carries none, so the units are guessed from the model's size), the <strong>Up axis</strong>, <strong>This floor above the model's lowest point</strong> (the card lists the level surfaces it finds) and <strong>Cut above the floor</strong> (4 ft to start with).</li><li>Press <strong>Make the plan for this floor</strong>. Change a setting and press it again.</li></ol>
+<p><strong>What you get.</strong> The cut becomes the floor's underlay, with two layers: MODEL-CUT (what the cut plane passes through) and MODEL-BELOW (a faint outline of what is below the cut: counters, stairs, sills). Snapping and room tracing work on it. In the 3D view the model shows, see-through, where its plan was made.</p>
+<p><strong>Limits.</strong></p>
+<ul><li>For a model with several floors, make each floor's plan at that floor's height.</li><li>SketchUp's own file is not read: export OBJ or glTF from SketchUp. Compressed glTF, quantized positions, lines and points are not read.</li><li>The model itself is not kept in the project file, only the underlay. Open it again to cut another floor or to see it in 3D after the app is closed.</li><li>A model with more than 9,000 triangles shows its 9,000 largest surfaces in 3D.</li><li>The 4 ft cut height and the units guess are drawing defaults, not design values.</li></ul>
+<h2>Draw rooms</h2>
+<p><strong>What it is for.</strong> Trace each room, so it carries its area, walls, windows and doors into the loads.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, the <strong>Room</strong> tool (R) in the <strong>Plan</strong> group. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Pick <strong>Room</strong>. Pick the <strong>Mode</strong>: <strong>Click inside (CAD)</strong>, <strong>Trace corners</strong> or <strong>Rectangle</strong>.</li><li><strong>Rectangle</strong>: click two opposite corners. Corners snap to CAD endpoints, intersections and lines.</li><li><strong>Trace corners</strong>: click each corner.</li><li><strong>Click inside (CAD)</strong>: click inside a room on a CAD underlay. The outline follows the inside face of the walls. <strong>Door and opening gap to close</strong> closes openings up to that gap where a wall line stops and goes on across the opening. <strong>Grow outline outward</strong> measures to wall centers (enter half the wall thickness: about 2.75 in for 2x4, 4 in for 2x6 or block plus furring, as the card says). <strong>Name rooms from CAD text</strong> names the room from the text inside it.</li><li>To change a room's outline, select it: drag a corner to move it (it snaps to CAD and other rooms), drag or click a + to add a corner, and double-click a corner to remove it.</li></ol>
+<p><strong>What you get.</strong> The room on the plan and in the Load calculator, with its exterior walls worked out from the plan.</p>
+<p><strong>Limits.</strong> Turn off furniture, dimension and hatch layers on the underlay so they do not split rooms.</p>
+<h2>Place windows, exterior doors and skylights</h2>
+<p><strong>What it is for.</strong> Put glass and doors on the right wall, so their facing comes from the plan.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Plan</strong> group: <strong>Window</strong> (W), <strong>Door</strong> (D) and <strong>Skylight</strong> (L). Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li><strong>Window</strong>: set the <strong>Size code</strong> and <strong>Blinds / shades</strong> in the side panel, then click an outside wall of a traced room.</li><li><strong>Door</strong>: set the size and <strong>Type</strong> (<strong>Opaque door</strong>, <strong>Sliding glass door</strong>, <strong>Glass swing / French</strong>), then click an outside wall. On a wall two rooms share, the Door tool puts an inside door (see <a href="rooms-and-loads.html">Rooms and loads</a>).</li><li><strong>Skylight</strong>: pick the <strong>Size</strong>, <strong>Mounting</strong> (<strong>On the roof slope</strong> or <strong>Flat roof / curb</strong>) and <strong>Glazing</strong>, then click inside a room. Drag it to move it; <strong>Rotate 90°</strong> in Selection turns it.</li></ol>
+<p><strong>What you get.</strong> The facing comes from the wall direction and plan north. Edit U, SHGC, shading and quantity on the Load calculator. A skylight adds to that room's skylight load (roof solar from the roof azimuth and pitch).</p>
+<p><strong>Limits.</strong> Windows and exterior doors go on outside walls only. A room with conditioned space above cannot take a skylight.</p>
+<h2>Mirror a floor</h2>
+<p><strong>Where.</strong> The <strong>Layout</strong>, card <strong>Layout tools</strong>: <strong>Mirror whole floor ↔</strong> and <strong>Mirror whole floor ↕</strong>. Both editions.</p>
+<p><strong>What it is for.</strong> Flip a plan that is built mirrored on its lot.</p>
+<p><strong>Limits.</strong> Check the window facings and the loads after a mirror.</p>
+<h2>Select items</h2>
+<p><strong>What it is for.</strong> Pick what to edit, move, turn or delete.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Select</strong> (V). Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ul><li>Click a room, register, duct or other item to select it. Its <strong>Selection</strong> card opens. A duct can be picked anywhere on its body, its elbows too. Registers, the unit, junctions and notes are picked first.</li><li>Shift-click to add items. Shift-drag a box to select several.</li><li><strong>Layers</strong> has <strong>Select all visible</strong> and <strong>Select same type</strong>. Matching fittings of other sizes are included unless <strong>Match exact size</strong> is on. The selection follows the floor you are on and the layers you can see.</li><li><strong>Delete</strong> removes the selection.</li></ul>
+<p><strong>Hide and isolate.</strong> The <strong>Selection</strong> card has <strong>Visibility</strong>: <strong>Hide</strong>, <strong>Isolate</strong>, <strong>Hide category</strong> and <strong>Hide in view</strong>. <strong>View</strong> has <strong>Hide</strong>.</p>
+<h2>Move items</h2>
+<p><strong>What it is for.</strong> Move what is selected, by dragging or by the keyboard.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Select</strong> or <strong>Move</strong> (M). Both editions.</p>
+<p><strong>Steps: drag.</strong> Drag a register, note, or the selected room or duct. A room's label can be dragged on its own (below).</p>
+<p><strong>Steps: keyboard.</strong></p>
+<ol><li>Select the items.</li><li>Press an arrow key: 1 in. a press. Shift+arrow: 12 in. With the grid on, an arrow moves one grid step and Shift+arrow one major step.</li><li>Ctrl+arrow moves a fine 1/4 in., grid or not.</li></ol>
+<p><strong>What moves.</strong> Rooms, a box of several items, registers and diffusers, the air handler, ducts (with their ends), notes, VAV boxes and fire dampers, a condenser, a thermostat, the electrical panel, a loose duct piece, a line set's bends, the lot line, and an exhaust fan (commercial). A window, door or tap stays on its wall or trunk: drag it.</p>
+<p><strong>What you get.</strong> Holding a key down is one undo step. An Undo, or picking something else, starts a new undo step. The Selection card says so while nothing is selected, and the Move hint says "Arrows move it".</p>
+<p><strong>Limits.</strong> The arrows are left to Best duct layout's list, the cut file viewer, menus and dialogs while they are open, and to any box you are typing in.</p>
+<p><strong>Registers and notes move with rooms.</strong> <strong>Layers</strong> has <strong>Registers and notes move with rooms</strong>, and Options has <strong>Moving room carries its registers and notes</strong>.</p>
+<h2>Turn items to any angle (Rotate)</h2>
+<p><strong>What it is for.</strong> Turn rooms, ducts, registers and equipment on the plan by any angle, not only by 90°.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Rotate</strong> on the toolbar, after <strong>Move</strong>. Both editions.</p>
+<p><strong>Steps: drag.</strong></p>
+<ol><li>Select what to turn, or press <strong>Rotate</strong> and click one item.</li><li>With <strong>Rotate</strong> on, drag on the plan. The selection turns about its centre in 15° steps.</li><li>Hold Shift while you drag to turn by any angle. Press Esc during the drag to put it back.</li></ol>
+<p><strong>Steps: type an angle.</strong></p>
+<ol><li>Select what to turn and press <strong>Rotate</strong>. A bar shows over the plan.</li><li>Type the angle in degrees in the <strong>° clockwise</strong> box. A negative angle turns counterclockwise.</li><li>Press <strong>Turn</strong>. <strong>Done</strong> closes the bar.</li></ol>
+<p><strong>Other ways.</strong> Right-click a selection, a register or an air handler and pick <strong>Rotate any angle…</strong>. Right-click a selection and pick <strong>Rotate 90° right</strong> or <strong>Rotate 90° left</strong>. With items selected, press <code>]</code> to turn 90° right and <code>[</code> to turn 90° left.</p>
+<p><strong>What turns.</strong> Room walls, windows and doors, ducts and their bends, registers and grilles, junctions, air handlers and furnaces with their cabinet, and notes. One register, air handler, outdoor unit or loose duct piece turns in place about its own centre.</p>
+<p><strong>What you get.</strong></p>
+<ul><li>Each window's facing is worked out again, so the loads follow the new angle. Glass listed by facing (rooms whose windows are not drawn on a wall) turns with the room to the nearest compass point.</li><li>Room areas and wall lengths do not change. A moved room label keeps its place beside its room.</li><li>With several floors, only this floor's items turn. A riser's end on another floor moves with its end here, so the riser stays plumb.</li><li><strong>Underlay too</strong> on the bar turns the floor's underlay with the rooms. It is ticked by itself when every room on the floor is selected. The underlay turns when the turn is done.</li><li>Each turn is one undo step (Ctrl+Z).</li></ul>
+<p><strong>Limits.</strong> Check the window facings and the loads after a turn.</p>
+<h2>The right-click menu</h2>
+<p><strong>What it is for.</strong> Quick options for what is under the pointer.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> plan: right-click without dragging (a right-drag still pans). Both editions.</p>
+<p><strong>What it offers.</strong></p>
+<ul><li>A duct: branch a duct from here, split it here, change it to flex, round or rectangular, put a VAV box or a fire damper on it (commercial), details, delete.</li><li>A register or grille: draw a duct from it, rotate it, select it to edit, details, delete.</li><li>The unit: draw its supply or return, Best duct layout, equipment settings, details, delete.</li><li>A room: place a register or grille here, start a duct here, an exhaust fan (commercial), place the room's registers, room details, select, delete.</li><li>Open floor: start a supply or return duct, place a unit or a note, Best duct layout, fit, zoom, select all, ortho and snap.</li><li>While a duct is being drawn: finish, back one piece, cancel, flex on or off.</li><li>Several things selected: rotate, duplicate, delete, clear the selection.</li></ul>
+<p>Undo and Redo are at the bottom of every menu. The arrow keys move through it, Enter runs, Esc closes.</p>
+<h2>Move room labels</h2>
+<p><strong>What it is for.</strong> Drag a room's name off the drawing where it is in the way.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, with <strong>Select</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>With the room not selected, drag its label (the name and the ft² and cfm line move together).</li><li>To put it back, select the room and press <strong>Put the label back</strong> in its card, or press <strong>Tidy labels</strong>.</li></ol>
+<p><strong>What you get.</strong> The label stays where you put it, at any zoom, and is saved with the project. A thin line runs from a moved label back to the middle of its room. Clicking the label without dragging selects the room. Ctrl+Z undoes the drag.</p>
+<p><strong>Limits.</strong> A register, note or window under a label in its own place is picked first. A selected room is dragged by its name, as before. The PDF plan set and the DXF do not use a moved room label's spot yet.</p>
+<h2>Duct size labels along and inside the duct</h2>
+<p><strong>What it is for.</strong> Duct size labels (for example 8 x 6 · R-8, or 5" R-6 1-5/8", and the cfm) are written the way sizes are written on drawings.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> plan. Both editions. <strong>Layers</strong> has <strong>Duct sizes</strong>; <strong>Duct insulation (R-value, thickness, drawn to scale)</strong> adds the insulation to the label.</p>
+<p><strong>What you get.</strong></p>
+<ul><li>A label is written along its duct, at the duct's angle: level on a level duct, up the side of an upright duct (reading bottom to top), slanted with a slanted duct. It is never upside down. Each label is written once, at its own duct's angle, including where the duct is rerouted at registers and air handlers.</li><li>Where the duct is drawn wide and long enough for its text at the zoom on screen, the label goes inside the duct, along its centerline. Zoom in and more labels go inside.</li><li>A label that does not fit inside the duct's length slides along it, or shows the size alone (14 x 12 without the insulation). Beside a duct the whole label, with the R-value, is written.</li><li>A duct too thin for its text never has its label on it. A duct with a tag or room name in the way keeps its label beside it, clear of the other labels. A label with no room beside its duct tries a line further out before it goes back to level.</li><li>A label you drag stays where you put it and turns with its duct; its leader line ends at the label.</li></ul>
+<h2>Put labels back (Tidy labels and Tidy selected labels)</h2>
+<p><strong>What it is for.</strong> Put labels you dragged back in their own place.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong> toolbar: <strong>Tidy labels</strong> and <strong>Tidy selected labels</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ul><li><strong>Tidy labels</strong>: every dragged label on this floor (duct, device and room labels) goes back to its own place, inside its duct where it fits and clear of the others.</li><li><strong>Tidy selected labels</strong>: select a duct or labelled device, Shift-click to add others, then press it. Only those labels go back.</li><li>Press Undo (Ctrl+Z) to get the dragged spots back.</li></ul>
+<p><strong>What you get.</strong> One undo step. With no label dragged, nothing changes.</p>
+<p><strong>Limits.</strong> <strong>Tidy labels</strong> works on the floor on screen only.</p>
+<h2>Notes, align and erase</h2>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Notes</strong> group. Both editions.</p>
+<ul><li><strong>Note</strong> (N): click on the plan to place a note box, then type its text in Selection. Notes print on the plan sheets as callouts.</li><li><strong>Erase</strong> (E): tap anything to delete it, or drag a box to delete everything inside it on this floor. Undo brings it back.</li><li><strong>Section</strong>: see <a href="layout-and-3d.html">Layout: 3D, sections, airflow and framing</a>.</li><li><strong>Field</strong>: see <a href="field-and-service.html">Field and service</a>.</li></ul>
+<h2>Line items up (Align and alignment guides)</h2>
+<p><strong>What it is for.</strong> Line ducts, registers, junctions, notes and loose fittings up with a reference.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Notes</strong> group, <strong>Align</strong> (AL). Both editions.</p>
+<p><strong>Steps: align to an item.</strong></p>
+<ol><li>Pick <strong>Align</strong>. Click a reference: a duct centerline or side, a wall, a register or a junction.</li><li>Click each item to line it up with it. A tag at the pointer says whether a click picks the reference or lines an item up.</li><li>Esc clears the reference.</li></ol>
+<p><strong>Steps: draw a guide.</strong></p>
+<ol><li>Pick <strong>Align</strong>, then <strong>Draw guide</strong> in the <strong>Alignment guide</strong> card.</li><li>Click two points. Hold Shift on the second click for a level or upright guide.</li><li>Click a parallel duct, register, junction, note or loose fitting to line it up with the guide.</li></ol>
+<p><strong>What you get.</strong> Clicking a piece of a straight run moves the whole straight run onto the line, so it stays straight. Shift-click moves one piece only. The reference follows the item it came from after an undo, a redo or a move. Each floor saves its own guide; redraw it or clear it.</p>
+<p><strong>Limits.</strong> Pieces that land on the unit stay put. Changing tools clears the reference.</p>
+<h2>The design checks panel</h2>
+<p><strong>What it is for.</strong> See every flag on the design in one list, and go to it.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Design checks</strong> on the toolbar and the <strong>Design checks</strong> card. The same list is in <strong>Job review</strong> on the Reports page. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Pick <strong>All floors</strong> or <strong>Current floor</strong>.</li><li>Read the count, for example "0 to fix · 6 to review · 3 notes".</li><li>Press <strong>Show</strong> on a check to find and select the room, register or duct it is about.</li></ol>
+<p><strong>What you get.</strong> Each check names its floor, the item and the figures, and what to do. A check that repeats says how many were found. Sources are given where the check has one.</p>
+<h2>Return air pathways</h2>
+<p><strong>What it is for.</strong> Place the transfer grilles and ceiling transfers that let air back from a closed room, sized from the room pressure target.</p>
+<p><strong>Where.</strong> The <strong>Layout</strong>, card <strong>Return air pathways</strong>: <strong>In-wall pathway</strong>, <strong>Ceiling transfer</strong> and <strong>Mark anywhere</strong>. Both editions.</p>
+<p><strong>Steps.</strong></p>
+<ol><li><strong>In-wall pathway</strong>: place an in-wall transfer on a wall two rooms share.</li><li><strong>Ceiling transfer</strong>: pick one outlet and one or more source rooms on the same floor, then <strong>Finish ceiling transfer</strong>.</li><li><strong>Mark anywhere</strong>: pick the pathway type, then place a marker on an underlay or outside traced rooms.</li></ol>
+<p><strong>What you get.</strong></p>
+<ul><li>The minimum net free area for each linked pathway, worked from the room pressure target. It is shown in the permit report and listed in Materials.</li><li>Linked pathways count in room pressure. Unlinked markers show on the Layout and plan PDFs only and do not affect room pressure or airflow.</li><li>A traced room can feed more than one linked pathway. Aerion splits the area and airflow evenly between them as a sizing default.</li><li>A closed receiving room needs enough spare return airflow for all its incoming pathways before Aerion counts them in room pressure.</li></ul>
+<p><strong>Method.</strong> The pathways use the room pressure opening equation; pressure drops of openings in series add at the same airflow. An in-wall pathway gives half the target to each grille. A ceiling transfer keeps one third of the target for the duct route and one third for each end grille. Equal shares are a sizing default, not a product rating (see the ENERGY STAR HVAC Quality Installation Guidebook, room pressure balancing detail).</p>
+<p><strong>Limits.</strong> Pick grilles by their net free area, and check the installed closed-door pressure.</p>
+<h2>Keyboard shortcuts</h2>
+<p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Shortcuts</strong> (?), and <strong>Options</strong>, card <strong>Keyboard shortcuts</strong>, where you can change the keys (see <a href="options.html">Options and tables</a>).</p>
+<table><thead><tr><th>Tool</th><th>Key</th><th>Tool</th><th>Key</th></tr></thead><tbody>
+<tr><td>Select</td><td>V</td><td>Supply duct</td><td>1</td></tr>
+<tr><td>Move</td><td>M</td><td>Return duct</td><td>2</td></tr>
+<tr><td>Pan</td><td>H</td><td>Wye</td><td>Y</td></tr>
+<tr><td>Set scale</td><td>K</td><td>Riser</td><td>I</td></tr>
+<tr><td>Move underlay</td><td>U</td><td>Condenser</td><td>O</td></tr>
+<tr><td>Room</td><td>R</td><td>Line set</td><td>J</td></tr>
+<tr><td>Window</td><td>W</td><td>Lot line</td><td>P</td></tr>
+<tr><td>Door</td><td>D</td><td>Thermostat</td><td>T</td></tr>
+<tr><td>Skylight</td><td>L</td><td>Zones</td><td>Z</td></tr>
+<tr><td>AHU</td><td>A</td><td>Note</td><td>N</td></tr>
+<tr><td>Supply</td><td>S</td><td>Align</td><td>Q (and AL)</td></tr>
+<tr><td>Return</td><td>G</td><td>Erase</td><td>E</td></tr>
+<tr><td>Flex on / off</td><td>X</td><td>Fit view</td><td>F</td></tr>
+</tbody></table>
+<p>Rotate, Info, High wall, Plenum, Pieces, Typicals, Panel, Section and Field have no key to start with. Fixed keys: Delete, Esc, Enter, Space, the arrows, <code>[</code> and <code>]</code> (rotate), + and - (zoom) and the Ctrl shortcuts (Ctrl+Z undo, Ctrl+Y redo).</p>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>
