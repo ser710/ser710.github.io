@@ -1,8 +1,8 @@
 {
-  "version": "1.5.58",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.58/Aerion-HVAC-Design-Studio-Setup-1.5.58.exe",
-  "sha256": "401e270a4379a551fa6440b8f95d6da30f566d974446b407376214806aaafe28",
-  "size": 90166123,
-  "notes": "New: Front of the house faces. Pick which way the front of the house (or building) faces on Design conditions, and the loads change with the sun: windows, walls, doors, skylights and the roof turn with it. Shown on the load and permit reports.",
-  "date": "2026-11-21"
+  "version": "1.5.63",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.63/Aerion-HVAC-Design-Studio-Setup-1.5.63.exe",
+  "sha256": "584a2a92a2d94a74fce81f7fb7c3da949bf4005465ec99342cb989cae9ba1bc8",
+  "size": 90218965,
+  "notes": "Building framing shows across Aerion's views, and roof and floor framing is read from structural sheets.",
+  "date": "2026-11-22"
 }
