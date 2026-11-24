@@ -1,8 +1,160 @@
 {
-  "version": "1.5.63",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.63/Aerion-Commercial-Setup-1.5.63.exe",
-  "sha256": "3cf64546586cd258c323a626fc3f714c821a0476deb5252be6a5a4b8bd2a0a45",
-  "size": 90220659,
-  "notes": "Building framing shows across Aerion's views, and roof and floor framing is read from structural sheets.",
-  "date": "2026-11-22"
+  "version": "1.5.64",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.64/Aerion-Commercial-Setup-1.5.64.exe",
+  "sha256": "4ded7c2ee2af0c9544f7ff21878b0d0ae41cc7fc0da03acc8c410bb871f6efc1",
+  "size": 90275551,
+  "notes": "Room pressure follows ENERGY STAR targets, with plenum returns and exhaust; Manual S at design conditions with heat pump balance point; residential sizing and code checks; new IMC, IBC and Florida code checks; room labels you can move, Tidy selected labels, keyboard moves; takeoffs kept off reducers and trunk end caps; a usability pass; alignment guides and fitting previews; and an update could no longer crash the app.",
+  "date": "2026-11-24",
+  "history": [
+    {
+      "version": "1.5.64",
+      "date": "2026-11-24",
+      "notes": "Room pressure follows ENERGY STAR targets, with plenum returns and exhaust; Manual S at design conditions with heat pump balance point; residential sizing and code checks; new IMC, IBC and Florida code checks; room labels you can move, Tidy selected labels, keyboard moves; takeoffs kept off reducers and trunk end caps; a usability pass; alignment guides and fitting previews; and an update could n…"
+    },
+    {
+      "version": "1.5.63",
+      "date": "",
+      "notes": "Building framing"
+    },
+    {
+      "version": "1.5.62",
+      "date": "",
+      "notes": "Manual S at design conditions; Plan review, duct layout comparisons, AI suggestions, customer suggestions; Your models list on the BIM models page"
+    },
+    {
+      "version": "1.5.61",
+      "date": "",
+      "notes": "Return air pathways, simulation through openings, facing load refresh"
+    },
+    {
+      "version": "1.5.59",
+      "date": "",
+      "notes": "Front faces on the Layout, Snip copy fixed, minimum rectangular duct size"
+    },
+    {
+      "version": "1.5.58",
+      "date": "",
+      "notes": "Front of the house faces"
+    },
+    {
+      "version": "1.5.57",
+      "date": "",
+      "notes": "Duct labels inside the duct, and Tidy labels"
+    },
+    {
+      "version": "1.5.56",
+      "date": "",
+      "notes": "Duct labels follow their duct on the Layout"
+    },
+    {
+      "version": "1.5.55",
+      "date": "",
+      "notes": "Commercial airflow simulation and room pressure with plenum returns; Plan reader: several floors on one sheet are built as separate floors that stack"
+    },
+    {
+      "version": "1.5.54",
+      "date": "",
+      "notes": "Plan reader: duct sizes, not lumber, steel or columns"
+    },
+    {
+      "version": "1.5.52",
+      "date": "",
+      "notes": "Rotate tool on the Layout (any angle)"
+    },
+    {
+      "version": "1.5.51",
+      "date": "",
+      "notes": "A snipping tool in Plans & markup, and the AI on this PC takes \"chicken scoot\"; Commercial loads use ASHRAE's radiant time series tables; The license key stays put between starts"
+    },
+    {
+      "version": "1.5.50",
+      "date": "",
+      "notes": "Speed, Price book and the Layout 3D view; Inside doors; The Price book agent; Aerion AI with any AI company; Aerion AI agents"
+    },
+    {
+      "version": "1.5.49",
+      "date": "",
+      "notes": "Design checks against sourced rules"
+    },
+    {
+      "version": "1.5.48",
+      "date": "",
+      "notes": "Commercial rooftop units: capacity checks, sizing figures, the unit's full load, outdoor air shown as used"
+    },
+    {
+      "version": "1.5.47",
+      "date": "",
+      "notes": "Ducts charged where they are; the duct gain settled; inputs checked (residential)"
+    },
+    {
+      "version": "1.5.46",
+      "date": "",
+      "notes": "The building's load and each system's load by the same rule (residential)"
+    },
+    {
+      "version": "1.5.45",
+      "date": "",
+      "notes": "Ventilation load on the equipment in full; a note for rooms with a load and no outlet"
+    },
+    {
+      "version": "1.5.44",
+      "date": "",
+      "notes": "The scope letter's floor area and load add up"
+    },
+    {
+      "version": "1.5.43",
+      "date": "",
+      "notes": "Aerion AI token saver"
+    },
+    {
+      "version": "1.5.42",
+      "date": "",
+      "notes": "Add-on customers can use their own AI key"
+    },
+    {
+      "version": "1.5.41",
+      "date": "",
+      "notes": "Aerion AI on this PC"
+    },
+    {
+      "version": "1.5.40",
+      "date": "",
+      "notes": "The AI add-on's checkout link comes from the license server"
+    },
+    {
+      "version": "1.5.39",
+      "date": "",
+      "notes": "The Aerion AI add-on can be bought and used"
+    },
+    {
+      "version": "1.5.38",
+      "date": "",
+      "notes": "Insulation thickness, wall openings and floor penetrations, the model in 3D, full or half labor"
+    },
+    {
+      "version": "1.5.37",
+      "date": "",
+      "notes": "Scope of work letter, more Aerion AI, duct insulation on the plan"
+    },
+    {
+      "version": "1.5.36",
+      "date": "",
+      "notes": "Your own keys for the Layout tools"
+    },
+    {
+      "version": "1.5.35",
+      "date": "",
+      "notes": "The update notice and Options > Updates"
+    },
+    {
+      "version": "1.5.34",
+      "date": "",
+      "notes": "The license public key"
+    },
+    {
+      "version": "1.5.30",
+      "date": "",
+      "notes": "Net wall area for counted doors"
+    }
+  ]
 }
