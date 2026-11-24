@@ -1,11 +1,16 @@
 {
-  "version": "1.5.65",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.65/Aerion-HVAC-Design-Studio-Setup-1.5.65.exe",
-  "sha256": "90d9b02b361a5bd7df67972ad2ff5e9f0d76f639ee8127ab7e2edbd8219c82ba",
-  "size": 130167579,
-  "notes": "Roof shapes for the building framing: hip, Dutch gable, cross gable, shed, flat, gambrel and mansard, with valleys, overhangs and an AI roof suggestion; the desktop app moves to Electron 45; commercial Start-up shows the Equipment list, and toilet exhaust reads 50 cfm continuous, 70 intermittent.",
+  "version": "1.5.66",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.66/Aerion-HVAC-Design-Studio-Setup-1.5.66.exe",
+  "sha256": "712018fd0653b06eb1790f5e6cc307957225ecc216d146a412fdb0d88d489357",
+  "size": 130188948,
+  "notes": "More roof styles (pyramid, saltbox, jerkinhead, bonnet, clerestory, butterfly, M roof, arched) and roof trusses (king post, Fink, scissor, attic and more); doors and windows framed as built; doors and return air pathways read from your drawings and used; doors into garages counted in the loads; elbows and moving air in 3D; and a usability pass.",
   "date": "2026-11-24",
   "history": [
+    {
+      "version": "1.5.66",
+      "date": "2026-11-24",
+      "notes": "More roof styles (pyramid, saltbox, jerkinhead, bonnet, clerestory, butterfly, M roof, arched) and roof trusses (king post, Fink, scissor, attic and more); doors and windows framed as built; doors and return air pathways read from your drawings and used; doors into garages counted in the loads; elbows and moving air in 3D; and a usability pass."
+    },
     {
       "version": "1.5.65",
       "date": "2026-11-24",
@@ -150,11 +155,6 @@
       "version": "1.5.35",
       "date": "",
       "notes": "The update notice and Options > Updates"
-    },
-    {
-      "version": "1.5.34",
-      "date": "",
-      "notes": "The license public key"
     }
   ]
 }
