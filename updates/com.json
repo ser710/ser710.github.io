@@ -1,11 +1,16 @@
 {
-  "version": "1.5.69",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.69/Aerion-Commercial-Setup-1.5.69.exe",
-  "sha256": "f0c4fa84878d29589505975c672e33c94f8b885ba81d726bdad77b78c3667870",
-  "size": 130609066,
-  "notes": "Your PC and your phone linked: link one phone or tablet from the PC and your jobs stay in step on both. Aerion in the web browser at aerionhvacdesign.com/app. Files from other programs open with nothing to install (DWG, DXF, IFC, SketchUp DAE, glTF, OBJ, STL, gbXML, Excel), and one-click exports for AutoCAD, Revit and BIM, SketchUp, energy programs and estimating. Saving options: auto-save on or off, backups, a project file in a folder. Faster AI answers. Engineering values checked against their sources. The load calculator's Cooling numbers no longer cut off.",
+  "version": "1.5.70",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.70/Aerion-Commercial-Setup-1.5.70.exe",
+  "sha256": "68da3de2e22d3c6903c96ec0a8c8ce5551696f45070b1c9073aba7f4dae91711",
+  "size": 130612676,
+  "notes": "A one-person account now sees Linked jobs instead of team and business wording: the tab, buttons and messages for keeping your jobs on your PC and your phone in step. Invite someone and the team wording comes back.",
   "date": "2026-11-25",
   "history": [
+    {
+      "version": "1.5.70",
+      "date": "2026-11-25",
+      "notes": "A one-person account now sees Linked jobs instead of team and business wording: the tab, buttons and messages for keeping your jobs on your PC and your phone in step. Invite someone and the team wording comes back."
+    },
     {
       "version": "1.5.69",
       "date": "2026-11-25",
@@ -150,11 +155,6 @@
       "version": "1.5.39",
       "date": "",
       "notes": "The Aerion AI add-on can be bought and used"
-    },
-    {
-      "version": "1.5.38",
-      "date": "",
-      "notes": "Insulation thickness, wall openings and floor penetrations, the model in 3D, full or half labor"
     }
   ]
 }
