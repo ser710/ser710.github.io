@@ -94,3 +94,13 @@ table.cmp{width:100%;border-collapse:collapse;font-size:15px}
 .cmp td:first-child{color:var(--muted);width:42%}
 #compare .cta{margin-top:30px}
 @media (max-width:600px){.cmp td:first-child{width:auto}.cmp th,.cmp td{padding:10px 12px}}
+
+/* job site phones and narrow screenshots */
+.phones{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;margin-top:44px}
+.phones figure{width:min(270px,100%)}
+.phone{border:1px solid var(--line);border-radius:26px;padding:8px;background:#05080c;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.phone img{display:block;width:100%;height:auto;border-radius:18px}
+.phones figcaption{color:var(--muted);font-size:14px;margin-top:10px;text-align:center}
+.win.slim{max-width:380px;justify-self:center;width:100%}
+figure.slim .win{max-width:420px;margin:0 auto}
+figure.slim figcaption{text-align:left;max-width:520px;margin:14px auto 0;line-height:1.55}
