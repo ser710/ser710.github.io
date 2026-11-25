@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/ducts.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,10 +15,10 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Ducts and duct sizing</h1>
+<h1 id="ducts-and-duct-sizing">Ducts and duct sizing</h1>
 <p><a href="index.html">Contents</a></p>
 <p>Duct sizes come from the drawn layout. The inputs are on the <strong>Design conditions</strong> page, card <strong>Duct design</strong>. The results are on the <strong>Duct sizing</strong> page. Any single duct can override the inputs when it is selected on the Layout (see <a href="duct-layout.html">Layout: equipment, registers and ducts</a>). Everything here is in both editions unless it says otherwise.</p>
-<h2>Set the duct design inputs</h2>
+<h2 id="set-the-duct-design-inputs">Set the duct design inputs</h2>
 <p><strong>What it is for.</strong> Set the static, friction, velocity, sizes, insulation, materials and fabrication the duct sizing uses.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Duct design</strong>. <strong>Duct design inputs</strong> on the Duct sizing page opens it. Both editions.</p>
 <p><strong>Air handler.</strong> <strong>New air handlers start as</strong> picks the arrangement for new units (upflow with top supply and side return, return on a platform, filter box, closet return box, return from behind, horizontal in the attic, downflow and others). Each unit can be changed on its own on the Layout.</p>
@@ -36,7 +36,7 @@
 <p><strong>Equipment selection.</strong> The Manual S limits (see <a href="equipment.html">Equipment</a>).</p>
 <p><strong>Limits.</strong></p>
 <ul><li>The velocity limits, component drops, minimum round sizes, register spacing and fabrication lengths are starting values. Replace them with your own and the job's specified figures.</li><li>The minimum rectangular width and height are your choice: Manual D and SMACNA do not set one.</li><li>Flex is sized with its friction factor, so it comes out larger than metal at the same friction rate. The factors and the fitting equivalent lengths are on the <strong>Tables</strong> page.</li></ul>
-<h2>Read the duct sizing</h2>
+<h2 id="read-the-duct-sizing">Read the duct sizing</h2>
 <p><strong>What it is for.</strong> See the size, airflow, velocity and pressure loss of every duct section, and the static against the blower.</p>
 <p><strong>Where.</strong> The <strong>Duct sizing</strong> page, card <strong>Duct sizing</strong>. Both editions.</p>
 <p><strong>What you get.</strong></p>
@@ -46,15 +46,15 @@
 <p><strong>Minimum rectangular sizes.</strong> A rectangular duct raised to the minimum width or height gets its friction, pressure drop and velocity from the bigger rectangle (its equivalent round size). A size you typed on a duct is kept. A note says how many ducts were held to the minimum. When the width limit leaves a section too small, Aerion warns and works the losses from its actual size.</p>
 <p><strong>Carried sizes.</strong> A section whose bigger size is carried for fitting clearance at a takeoff says so in the Notes (see <a href="duct-layout.html">Layout: equipment, registers and ducts</a>). The sizes, airflow and pressure drop do not change.</p>
 <p><strong>Limits.</strong> The designer of record checks the sizes, the static and the velocities against Manual D.</p>
-<h2>Code items that use the duct sizing (residential)</h2>
+<h2 id="code-items-that-use-the-duct-sizing-residential">Code items that use the duct sizing (residential)</h2>
 <ul><li><strong>IRC M1601.1, ducts sized by ACCA Manual D</strong>: the check passes only when every system's static is within its rating and no duct's velocity is over its limit on the Duct sizing page.</li><li><strong>Friction rate worksheet</strong> in the permit report: when you set a fixed friction rate, it is labelled "fixed rate", not ASP x 100 / TEL, and the Manual D figure for each system is shown beside it. A fixed rate above the Manual D figure is called out.</li><li><strong>Flex runs</strong> longer than the limit you set are flagged in the design checks.</li></ul>
-<h2>Fitting equivalent lengths and material factors</h2>
+<h2 id="fitting-equivalent-lengths-and-material-factors">Fitting equivalent lengths and material factors</h2>
 <p><strong>What it is for.</strong> Set the equivalent length of each fitting and the friction factor of each duct material.</p>
 <p><strong>Where.</strong> The <strong>Tables</strong> page, cards <strong>Fitting equivalent lengths</strong> and <strong>Duct material friction factors</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>In <strong>Fitting equivalent lengths</strong>, type the <strong>Branch ft</strong> and <strong>Trunk ft</strong> for each fitting (plenum takeoff, wyes, elbows, tees, the three takeoff kinds, boots and grilles, balancing damper, transitions, flex collar, reducer), with a <strong>Source / note</strong>. Branch values apply to sections serving one register; trunk values to sections serving two or more, and to returns.</li><li><strong>Add a balancing damper supply branch</strong> adds the damper's equivalent length. Turn it on only if you do not count the damper in the component losses on Design conditions.</li><li><strong>Reset fittings to starter values</strong> puts them back.</li><li>In <strong>Duct material friction factors</strong>, type each material's factor (a multiplier on the galvanized metal friction rate for the same diameter and airflow).</li></ol>
 <p><strong>Limits.</strong> The card says it: the fitting values are generic starter values, and the flex factors are starter numbers. Replace them with the Manual D appendix numbers for the fittings you specify, and the Manual D flex compression correction for your sizes, and note the source.</p>
-<h2>Duct schedule and duct DXF</h2>
+<h2 id="duct-schedule-and-duct-dxf">Duct schedule and duct DXF</h2>
 <p><strong>Where.</strong> The <strong>Reports</strong> page, <strong>Export</strong>: <strong>Duct schedule (.csv)</strong>, <strong>Sheet metal shop list (.csv)</strong> and <strong>Duct layout for CAD (DXF)</strong>. Both editions.</p>
 <p><strong>What you get.</strong> The duct DXF is in feet, with SUPPLY, RETURN, ROOMS, REGISTERS and TEXT layers, ready to bring into your CAD program as a link. See <a href="reports-and-letters.html">Reports and letters</a> and, for the shop, <a href="shop.html">Shop</a>.</p>
 </main>

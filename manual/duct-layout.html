@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/duct-layout.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,17 +15,17 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Layout: equipment, registers and ducts</h1>
+<h1 id="layout-equipment-registers-and-ducts">Layout: equipment, registers and ducts</h1>
 <p><a href="index.html">Contents</a></p>
 <p>This page covers the HVAC tools on the <strong>Layout</strong>: the air handler and other equipment, registers and grilles, drawing ducts, duct pieces, plenums, risers and the automatic layouts. The tools are in the <strong>HVAC</strong> group of the toolbar (or <strong>All</strong>). Everything here is in both editions unless it says otherwise; the commercial edition calls registers diffusers.</p>
-<h2>Place the air handler</h2>
+<h2 id="place-the-air-handler">Place the air handler</h2>
 <p><strong>What it is for.</strong> Put each system's indoor unit on the plan. Each unit is a system: it is sized on the rooms its supply ducts reach.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>AHU</strong> (A). Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick <strong>AHU</strong> and click where the unit goes.</li><li>Select it. In its <strong>Selection</strong> card set the <strong>Tag</strong>, <strong>Area served</strong> and <strong>Rated external static (0 = project)</strong> (in. w.c.).</li><li>Under <strong>Equipment for</strong> the unit, pick the <strong>Type</strong> (Air handler / fan coil (multi-position), Gas furnace + cased coil, Ducted mini-split / slim duct, Packaged unit (residential)), a <strong>Preset</strong> (upflow, horizontal or downflow arrangements with their supply and return positions), a <strong>Standard size</strong> or <strong>Custom</strong>, the <strong>Airflow</strong> direction (Upflow, Downflow, Horizontal) and which way the unit <strong>Front faces</strong>.</li><li>Check <strong>Width</strong>, <strong>Depth</strong>, <strong>Height</strong> and <strong>Platform / stand height</strong>.</li><li>Set the <strong>Supply plenum</strong> (position, type, material, height, width) and the <strong>Return</strong> (position, type, material, depth, height, width).</li><li>Open <strong>Filter and static</strong>, <strong>Condensate and service</strong> and <strong>Accessories</strong> for the rest.</li></ol>
 <p><strong>What you get.</strong> The card gives what the unit serves (rooms, ft², loads), its size and airflow, the friction rate and the worst static. The plenums are drawn to the sizes shown and rise to meet the ducts. <strong>Rotate 90°</strong> turns the whole unit. The card lists the <strong>Connected ducts</strong>, each with <strong>Select</strong> and <strong>Disconnect</strong>.</p>
 <p><strong>Limits.</strong> The card says it: the standard sizes are a typical size class; check them with the submittal. New units start as the arrangement set in <strong>Design conditions</strong>, <strong>Duct design</strong>, <strong>New air handlers start as</strong>.</p>
-<h2>Place a ductless high wall unit</h2>
+<h2 id="place-a-ductless-high-wall-unit">Place a ductless high wall unit</h2>
 <p><strong>What it is for.</strong> Put a ductless wall-mounted indoor unit in a room.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>High wall</strong> (in the HVAC tools, beside AHU). Both editions.</p>
 <p><strong>Steps.</strong></p>
@@ -33,22 +33,22 @@
 <p><strong>What you get.</strong> The card shows the room it serves and that room's cooling and heating load, the size and the size as a percent of the load, and the unit's width, depth, height and mounting height. A room served by a high wall unit no longer shows "no supply register". The permit report lists the units after the room pressure table.</p>
 <p><strong>Sizing rule.</strong> The unit's nominal cooling capacity against the room's total cooling load (sensible plus latent), with the 90% to 115% range ACCA Manual S gives for cooling equipment. A unit under 90% is flagged. One over 115% gets a note: often the smallest size made is still oversized for a small room. A unit that is not in a room is flagged. The nominal sizes are the ductless wall units in the equipment list (6,000 to 36,000 BTU/h). Heating capacity depends on the model and the outdoor temperature, so check the room's heating load against the model's data.</p>
 <p><strong>Limits.</strong> The unit's drawn size (32 x 9 x 12 in, mounted 7 ft to the bottom) is a default to replace with the model's dimensions. The unit is not yet in the 3D view, its line set to the condenser, the estimate or the schedules.</p>
-<h2>Place the condenser, line set, lot line, thermostat and panel</h2>
+<h2 id="place-the-condenser-line-set-lot-line-thermostat-and-panel">Place the condenser, line set, lot line, thermostat and panel</h2>
 <p><strong>Where.</strong> The <strong>Layout</strong>, HVAC tools. Both editions.</p>
 <ul><li><strong>Condenser</strong> (O): the condenser or heat pump outside.</li><li><strong>Line set</strong> (J): the refrigerant line set from the condenser to the unit. Its length goes to the materials list.</li><li><strong>Lot line</strong> (P): the property line, for the clearance checks.</li><li><strong>Thermostat</strong> (T): one per system. <strong>Place thermostats</strong> on the Controls page places them for you.</li><li><strong>Panel</strong>: the electrical panel, to measure the power runs (see <a href="controls-and-schedules.html">Controls and schedules</a>).</li></ul>
-<h2>Put rooms in zones</h2>
+<h2 id="put-rooms-in-zones">Put rooms in zones</h2>
 <p><strong>What it is for.</strong> Group rooms into zones of a system, with dampers and a thermostat each.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Zones</strong> (Z). Both editions. The full settings are on the <strong>Controls</strong> page.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick <strong>Zones</strong>. Pick a zone in the panel. Tick <strong>Turn on zoning</strong> for the system if it is off.</li><li>Click rooms on the plan, or drag across them, to move them into the zone. Shift-click takes a room out of every zone.</li></ol>
 <p><strong>What you get.</strong> Dampers, thermostats and the excess-air check update as you go.</p>
-<h2>Place supply registers and return grilles</h2>
+<h2 id="place-supply-registers-and-return-grilles">Place supply registers and return grilles</h2>
 <p><strong>What it is for.</strong> Put each room's supply outlets and the return grilles on the plan.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Supply</strong> (S) and <strong>Return</strong> (G). <strong>Auto-place supply registers</strong> is in the <strong>Layout tools</strong> card. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick <strong>Supply</strong> and click in a room, or press <strong>Auto-place supply registers</strong> with the <strong>cfm per register</strong> you want. Auto-place uses the spacing set in <strong>Design conditions</strong>, <strong>Duct design</strong>, <strong>Registers and layout</strong> (cfm per supply register, distance in from the wall).</li><li>Pick <strong>Return</strong> and click where each return grille goes.</li><li>Select a register to set it up (below).</li></ol>
 <p><strong>What you get.</strong> Each register takes its room's airflow, shared between the room's registers. A note in the duct sizing says when a room needs another register, for example "Primary bed: 184 CFM per register. Consider adding a register."</p>
-<h2>Set up a register or grille</h2>
+<h2 id="set-up-a-register-or-grille">Set up a register or grille</h2>
 <p><strong>Where.</strong> Select the register or grille on the <strong>Layout</strong>. Its <strong>Selection</strong> card. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li><strong>Size (W x H in)</strong> and <strong>Model / type</strong>. <strong>Use suggested</strong> fills the suggested size. Type "8 round" for a round diffuser.</li><li><strong>Tag</strong>: blank gives the automatic tag (S-1, R-1). A typed tag overrides the numbering.</li><li><strong>Rotate 90°</strong> and <strong>Border (face larger than size, overall)</strong>.</li><li><strong>Connection</strong>: pick the <strong>Boot or box</strong> and its <strong>Collar size</strong> (blank uses the duct size). Each boot shows its equivalent length on the run.</li><li><strong>Throw</strong> (supply): pick <strong>Throw direction</strong> (Auto from duct, Up, Right, Down, Left) or press <strong>Aim on plan</strong> and click where the air should go. Pick the <strong>Pattern</strong> (1-way, 2-way (opposite), 3-way, 4-way, Round 360°) and the <strong>Throw data</strong> (an estimate by the free-jet formula, or a maker's catalog line).</li><li><strong>Airflow override</strong> (cfm) replaces the design airflow.</li><li><strong>Inspect fitting</strong> opens a preview of the boot or box you can turn and tilt, with its known connection sizes.</li></ol>
@@ -56,7 +56,7 @@
 <p><strong>Limits.</strong> Suggested sizes aim at about 500 fpm face velocity for supplies and 350 fpm for returns at 70% free area, as the Duct design card says. They are the app's starting point: check them against the maker's data for throw, noise and pressure drop. <strong>Size unsized registers</strong> and <strong>Resize all</strong> are in <strong>Design conditions</strong>, <strong>Duct design</strong>, <strong>Registers and layout</strong>.</p>
 <p><strong>What prints next to a register</strong> is set in <strong>Options</strong>, <strong>Register annotations</strong>: tag, size, airflow, model, neck size, face velocity and room name, stacked or on one line, below, right or above (see <a href="options.html">Options and tables</a>).</p>
 <p><strong>Commercial.</strong> A return grille has <strong>Returns through the ceiling plenum (no duct)</strong> (see <a href="commercial.html">Commercial</a>).</p>
-<h2>Draw ducts</h2>
+<h2 id="draw-ducts">Draw ducts</h2>
 <p><strong>What it is for.</strong> Draw the trunks and branches from the unit to the registers and grilles.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Supply duct</strong> (1) and <strong>Return duct</strong> (2). <strong>Flex</strong> next to them draws flex; X turns it on and off. Both editions.</p>
 <p><strong>Steps.</strong></p>
@@ -65,63 +65,66 @@
 <p><strong>Settings for new ducts.</strong> <strong>Options</strong>, <strong>Duct drawing</strong>: <strong>Duct type</strong>, <strong>Size (blank = by airflow)</strong>, <strong>Elevation reference</strong> (Centerline, Bottom of duct, Top of duct), <strong>Elevation above floor (blank = auto)</strong>, <strong>Angle snap</strong>, <strong>Branch takeoff at tees</strong>, <strong>Elbows</strong> (Radius, Mitered square throat, Mitered turning vanes), <strong>Snap registers, air handlers and duct ends</strong>, <strong>Snap onto ducts (makes tee)</strong>, <strong>Snap grid</strong> and <strong>Match the height of the duct you start from</strong>. They apply to ducts drawn from then on; change any duct later in its Selection card.</p>
 <p><strong>Avoid clashes.</strong> With <strong>Avoid clashes while drawing</strong> on (Design conditions, Duct design, Materials), new ducts are moved over, under or around equipment and other ducts.</p>
 <p><strong>Touch screens</strong> keep the Finish, Back and Cancel buttons and get no pointer tag.</p>
-<h2>Edit a duct</h2>
+<h2 id="edit-a-duct">Edit a duct</h2>
 <p><strong>Where.</strong> Select the duct on the <strong>Layout</strong>. Its <strong>Selection</strong> card. Both editions.</p>
 <p><strong>What is in the card.</strong></p>
 <ul><li><strong>Connectors</strong>: what each end is joined to, with <strong>Disconnect</strong> and <strong>Connect into…</strong>. Alt-drag an end grip to pull it free; drag an open end onto a register, air handler or duct end to join it.</li><li><strong>Convert</strong>: this section or the whole run (junction to register) to <strong>Flex</strong>, <strong>Hard round</strong> or <strong>Rectangular</strong>.</li><li><strong>Fittings</strong>: <strong>Add square-to-round</strong> splits the duct and makes the downstream part round.</li><li><strong>Size</strong>: <strong>Auto size</strong> or <strong>Set by me</strong>, the <strong>Shape</strong> (round, rectangular, square, flat oval, oval, triangle, trapezoid, parallelogram, rhombus), <strong>Width</strong>, <strong>Height</strong> or <strong>Or round</strong>. The card says the automatic size, its velocity, friction and gauge (for example "Gauge 26 ga per IRC M1601.1.1").</li><li><strong>Size change</strong>: split the duct at a distance from its upstream end and give the downstream part a <strong>New size</strong>; a reducer or square-to-round is drawn at the change.</li><li><strong>Height to duct center (blank = auto)</strong> in ft above the floor.</li><li><strong>Elbows</strong>, <strong>Transition</strong> (Square → round → flex, with the round stub and flex length), <strong>Role</strong> (Auto, Trunk, Branch), <strong>Length override (0 = measured)</strong>, <strong>Material</strong>, <strong>Insulation</strong> and <strong>Joint</strong>.</li><li>The section's footage, friction, duct loss and fitting loss, <strong>Split here for a flex section</strong>, and <strong>Delete</strong>.</li></ul>
-<h2>Elbows on the plan</h2>
+<h2 id="elbows-on-the-plan">Elbows on the plan</h2>
 <p>Where a duct run turns between two ducts of the same kind, the plan and the PDF plan draw a radius elbow, narrowing from one size to the other when they differ. The radius is a drawing default, not a design value: a centerline radius of 1.5 x the width for round duct and 1.0 x the width for rectangular duct (common smooth-radius elbows; replace them with your shop's). A short piece gets a tighter elbow, down to a square throat. The pressure drop and the fitting list still come from the duct calculation's elbow equivalent lengths.</p>
-<h2>Duct pieces (Pieces)</h2>
+<p><strong>Elbow radius.</strong> <strong>Options</strong>, <strong>Duct drawing</strong>, <strong>Elbow radius (drawing)</strong>: the default, or 0.5, 1.0, 1.5 or 2.0 x the duct width. It changes the drawing only: the duct calculation's elbow equivalent lengths do not change.</p>
+<p><strong>In 3D.</strong> Where two pieces of the same shape meet at a radius elbow, the 3D view sweeps the elbow around the turn, narrowing from one size to the other, instead of a mitered corner. Mitered elbows stay mitered.</p>
+<p><strong>Corner tees.</strong> Where three or more rigid ducts of one kind meet with no two in line (a turn with a branch at the same junction), they are drawn as one box fitting with joint lines, each duct stopping at it. A trunk end with takeoffs keeps its end cap, and a fitting too big for the pieces beside it is left as before.</p>
+<h2 id="duct-pieces-pieces">Duct pieces (Pieces)</h2>
 <p><strong>What it is for.</strong> Drop fittings on the plan: into a duct, at a duct end, or loose on open floor to connect later.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Pieces</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick <strong>Pieces</strong>. Drag a piece onto the plan, or pick one and click where it goes.</li><li>Drop it on an opening ring to snap it in place. On an installed duct end it joins the run at once, lined up with the fitting and matched to the opening's size and center height. Takeoffs go on the side of an installed duct.</li><li>On open floor it lands as a loose piece you can turn, size and connect later. A fitting placed at a loose end lines up end to end and stays loose.</li><li>Set <strong>Straight length</strong>, <strong>Elbow, stub or flex length</strong>, <strong>Reducer size after (blank = one size smaller)</strong> and, for an offset, <strong>Direction</strong> (Rise or Drop).</li></ol>
 <p><strong>The palette.</strong></p>
-<table><thead><tr><th>Group</th><th>Pieces</th></tr></thead><tbody>
+<div class="tw"><table><thead><tr><th>Group</th><th>Pieces</th></tr></thead><tbody>
 <tr><td>Duct and elbows</td><td>Straight duct section, 90° elbow, 45° elbow, Offset, Flexible duct section, End cap</td></tr>
 <tr><td>Branches and takeoffs</td><td>90° branch tee, 45° lateral wye, Spin-in collar with damper, High-efficiency takeoff (HETO), Conical spin-in takeoff</td></tr>
 <tr><td>Transitions and dampers</td><td>Reducer, Square-to-round transition, Round-to-square transition, Volume damper</td></tr>
 <tr><td>Supply boots and diffusers</td><td>Straight register boot, End-outlet register boot, Side-outlet register boot, Wall stack boot, Round ceiling boot (can), Angle register boot, Toe-kick register boot, Top-neck ceiling diffuser, Branch duct to register (commercial: diffuser)</td></tr>
 <tr><td>Return grille boxes</td><td>Top-outlet return grille box, Side-outlet return grille box, Filter grille box</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p>The palette shows a larger shape preview of each piece. Loose pieces in the materials list take the same names.</p>
 <p><strong>Connect loose pieces.</strong> With the <strong>Supply duct</strong> or <strong>Return duct</strong> tool, the open ends of loose pieces show as rings. Click one to start a duct there, or end a run on one: the piece becomes part of the run, and the run goes on from its other end. A run that ends on a tee's branch, an end cap or a takeoff stops there. Loose pieces laid end to end join as one. The <strong>Connect</strong> button on a loose piece that touches others joins them into a run of their own. A piece end and a duct end within about 3/4 in are joined. Inline pieces such as dampers can connect straight to an open duct end. Undo takes the whole step back.</p>
 <p><strong>Inspect a fitting.</strong> <strong>Inspect fitting</strong> (in a piece's or register's card) opens a preview you can turn and tilt (<strong>Turn view</strong>, <strong>Tilt view</strong>), with its known connection sizes. The previews are drawings of the app's geometry at representative sizes.</p>
-<h2>Plenums</h2>
+<h2 id="plenums">Plenums</h2>
 <p><strong>What it is for.</strong> One click gives a plenum and a whole duct system to adjust.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Plenum</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick <strong>Plenum</strong> and the kind:<ul><li><strong>Supply, on the unit</strong>: <strong>Plenum box</strong>, <strong>Extended plenum</strong>, <strong>Reducing plenum</strong>, <strong>Radial (spider) box</strong>, <strong>Plenum + transition</strong>.</li><li><strong>Return, on the unit</strong>: <strong>Return plenum</strong>, <strong>Filter box</strong>, <strong>Return box + grille</strong>, <strong>Return drop</strong>.</li><li><strong>In the duct run</strong>: <strong>Distribution box</strong>.</li></ul></li><li>Set <strong>Connect the open registers on this floor</strong>, <strong>Branches in flex</strong>, <strong>Trunk both ways when registers are on both sides</strong> and <strong>Trunk length (0 = to the last register)</strong>.</li><li>Click the air handler (or, for a distribution box, a duct, a duct end, a junction or open floor).</li></ol>
 <p><strong>What you get.</strong> The unit's plenum is set, a starter trunk is drawn where the kind has one, and the open registers are connected: off the trunk at the nearest point, or straight off the box for a radial layout. A distribution box shows on the plan and in 3D, its branches count as plenum takeoffs in the duct sizing, it is in the shop and fabrication lists with its size and gauge, and it goes to the modeling program as a box. Its size follows the ducts on it; type a size in its Selection card to fix it.</p>
-<h2>Typicals</h2>
+<h2 id="typicals">Typicals</h2>
 <p><strong>What it is for.</strong> Drop a saved detail, such as a closet air handler setup, into the plan.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Typicals</strong>. Both editions.</p>
 <p><strong>Steps.</strong> Pick a typical (three come built in: a closet air handler, upflow, with a return platform; an attic horizontal air handler with a supply trunk and central return; a bedroom branch, flex to a ceiling register), set the <strong>Rotation</strong>, and click where it goes. Tags are given fresh each time. To save your own, select items with Select, then come back to <strong>Typicals</strong> and save them.</p>
-<h2>Risers between floors</h2>
+<h2 id="risers-between-floors">Risers between floors</h2>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Riser</strong> (I). Both editions.</p>
 <p><strong>Steps.</strong> Pick the floor to run to in the side panel, then click a duct, junction or air handler. Add another floor first if there is only one.</p>
 <p><strong>What you get.</strong> The riser connects the ducts on the two floors. Each floor it passes through gets a floor penetration (below).</p>
-<h2>Takeoffs stay off trunk reducers</h2>
+<h2 id="takeoffs-stay-off-trunk-reducers">Takeoffs stay off trunk reducers</h2>
 <p><strong>What it is for.</strong> A branch takeoff sits on straight duct, never on the sloped side of a reducer (ACCA Manual D; SMACNA HVAC Duct Construction Standards).</p>
 <p><strong>Where.</strong> The <strong>Layout</strong> plan, the PDF plan, the 3D view and the fittings and materials lists. Both editions. There is nothing to set.</p>
 <p><strong>What you get.</strong></p>
 <ul><li>Each trunk reducer starts past the takeoffs at its junction and ends before the next takeoff, with 12 in. or one trunk width of straight duct (whichever is larger) between each takeoff collar and the reducer. Where that does not fit, it comes down to the app's 2 in. takeoff clearance.</li><li>Where the section is still short, a supply reducer is drawn shorter, never steeper than 30° a side and never under 6 in. A return reducer keeps the app's own length.</li><li>Where even that does not fit, the reducer moves, not the takeoff: the bigger size is carried through that one short section (one size step at most, and only to the next takeoff). The plan label reads "carried for fitting clearance", and the Duct sizing table, the duct schedule (.csv) and the shop list note it.</li><li>A size is never carried twice. Where two short sections in a row leave no straight duct for a reducer, the design checks say "A trunk reducer has no straight duct to sit on", with Show: move a takeoff, or keep the trunk one size bigger there.</li><li>A reducer you dragged along the trunk that has to move shows a short message.</li></ul>
 <p><strong>Defaults to replace.</strong> The 12 in. or trunk-width clearance (SMACNA gives no takeoff-to-fitting spacing), the 30° and 6 in. reducer limits (no source section confirmed). The duct calculation (sizes, airflow, pressure drop) does not change.</p>
-<h2>Trunk ends with an end cap</h2>
+<h2 id="trunk-ends-with-an-end-cap">Trunk ends with an end cap</h2>
 <p><strong>What it is for.</strong> Where a trunk ends at a junction that its last two or more branches leave, the trunk runs straight a short way past the junction and ends in an end cap, and each branch leaves the side of that straight end with its own takeoff.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong> plan, the takeoff list and marks, the 3D view, the PDF plan and the materials. Both editions. There is nothing to set.</p>
 <p><strong>What you get.</strong> The straight end reaches 12 in. or one trunk width, whichever is larger, past the widest takeoff collar. Its length is real duct, counted in the materials, the shop list and the fabrication pieces at the trunk size, with one end cap per trunk end.</p>
 <p><strong>Limits.</strong> The 12 in. or trunk-width figure is a default to replace with your own, not a code, ACCA Manual D or SMACNA value: no public source for it was found. Duct sizes, airflow and the calculated lengths and pressure drop do not change.</p>
-<h2>Wall openings and floor penetrations</h2>
+<h2 id="wall-openings-and-floor-penetrations">Wall openings and floor penetrations</h2>
 <p><strong>What it is for.</strong> List the openings someone has to cut and frame for the ducts.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong> plan and 3D view; <strong>Layers</strong>, <strong>Wall openings and floor penetrations</strong>; <strong>Options</strong>, <strong>Wall openings and floor penetrations</strong>. Both editions.</p>
 <p><strong>What you get.</strong></p>
 <ul><li>A wall opening where a duct crosses a room's wall within that room's height. A duct above the ceiling or below the floor makes none; give a duct a height inside the room and its openings appear.</li><li>A floor penetration where a riser passes through a floor.</li><li>The size is the duct's outside size (with outside insulation) plus a clearance each side, wider for a duct that crosses at an angle, to the next whole inch. Each is tagged (WO-1, FP-1) on the plan and framed in 3D. The scope of work letter lists them.</li></ul>
 <p><strong>Limits.</strong> The clearance, 1 in. each side to start with, is a default to replace with what the framing and any fire-stopping detail call for. Fire and smoke dampers at rated walls and floors, and openings for line sets, flues and piping, are not worked out here.</p>
-<h2>Auto-route starter ducts</h2>
+<h2 id="auto-route-starter-ducts">Auto-route starter ducts</h2>
 <p><strong>Where.</strong> The <strong>Layout</strong>, card <strong>Layout tools</strong>: <strong>Auto-route starter ducts</strong>, <strong>Clear supply ducts</strong>, <strong>Clear return ducts</strong>. Both editions.</p>
 <p><strong>What you get.</strong> A trunk through the air handler with a branch to each register, and returns from each grille to the air handler. Treat it as a starting layout.</p>
-<h2>Best duct layout</h2>
+<h2 id="best-duct-layout">Best duct layout</h2>
 <p><strong>What it is for.</strong> Route the trunk and branches from the plan, compare several layouts side by side, and use the one you pick.</p>
 <p><strong>Where.</strong> The <strong>Layout</strong>, <strong>Best duct layout…</strong> in the <strong>Layout tools</strong> card, or on the right-click menu. Both editions.</p>
 <p><strong>Steps.</strong></p>

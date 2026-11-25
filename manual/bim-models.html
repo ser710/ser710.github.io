@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/bim-models.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,56 +15,56 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>BIM models and plan set to 3D</h1>
+<h1 id="bim-models-and-plan-set-to-3d">BIM models and plan set to 3D</h1>
 <p><a href="index.html">Contents</a></p>
 <p>The <strong>BIM models</strong> page opens building models (BIM files, IFC files and snapshots from the Aerion add-in), checks them, shows them in 3D, reads their rooms for the load calculation, and builds a 3D building from a PDF plan set. It can also send changes or a whole new model to the Aerion add-in, which runs in the BIM program. Everything here is in both editions.</p>
 <p>Your original file is only read, never written. Aerion keeps a checksum of each file it opens.</p>
-<h2>Open a model</h2>
+<h2 id="open-a-model">Open a model</h2>
 <p><strong>What it is for.</strong> Bring a building model into Aerion to check it, see it in 3D or read its rooms.</p>
 <p><strong>Where.</strong> <strong>BIM models</strong>, card <strong>BIM models</strong>, <strong>Open a model, IFC or snapshot</strong>, or drop files on the page. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Press <strong>Open a model, IFC or snapshot</strong> and pick a BIM model (.rvt, .rfa or .rte), an IFC file or a snapshot (.json) from the Aerion add-in.</li><li>Read the <strong>What was extracted</strong> card: the counts of levels, grids, elements, families, types, views, sheets and schedules, and anything that could not be read, and why.</li></ol>
 <p><strong>What you get.</strong></p>
-<table><thead><tr><th>File</th><th>What Aerion reads</th></tr></thead><tbody>
+<div class="tw"><table><thead><tr><th>File</th><th>What Aerion reads</th></tr></thead><tbody>
 <tr><td>IFC</td><td>The whole file: levels, grids and every element with its geometry, type, properties, quantities and materials.</td></tr>
 <tr><td>.rvt</td><td>Its header only (version, worksharing, last save, links, preview). For the elements, extract the model with the Aerion add-in and open its snapshot.</td></tr>
 <tr><td>Snapshot (.json)</td><td>What the add-in extracts from the model: every element with its parameters, families and types, materials, views, sheets and schedules.</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p>A file with the same name as a model already on the page is added as its next revision.</p>
 <p><strong>The page's other cards.</strong> <strong>Workflow</strong> (the steps from import to verified output), <strong>Plan</strong> (the active model level by level; click an element to open the <strong>Element inspector</strong>), <strong>Families and types</strong> and <strong>Quantities and schedules</strong> (each downloads as CSV).</p>
-<h2>Your models folder (desktop app)</h2>
+<h2 id="your-models-folder-desktop-app">Your models folder (desktop app)</h2>
 <p><strong>Where.</strong> <strong>BIM models</strong>, card <strong>Your models</strong>. Desktop app only.</p>
 <p><strong>What you get.</strong> The .ifc, .rvt, .dwg and .dxf files in Documents\Aerion\Models, newest first. <strong>Open</strong> opens an IFC file; <strong>Open as Layout underlay</strong> opens a DWG, DXF or .bak (AutoCAD backup) file as the Layout's underlay. A note says how to export .dwf, SketchUp and ArchiCAD files, and the card says how many add-in jobs are waiting in Documents\Aerion\Jobs.</p>
-<h2>See the model in 3D</h2>
+<h2 id="see-the-model-in-3d">See the model in 3D</h2>
 <p><strong>Where.</strong> <strong>BIM models</strong>, card <strong>3D view</strong>, under the plan. Both editions.</p>
 <p><strong>Steps.</strong> Drag to orbit, right-drag or Shift-drag to pan, scroll to zoom; <strong>Fit</strong> frames it. Pick a preset view, a level, the colors, and which disciplines and categories show. Cut the model from above or with a section across it. Select elements to <strong>Isolate</strong>, <strong>Hide</strong> or <strong>Ghost others</strong>. <strong>Measure</strong> two points.</p>
 <p><strong>What you get.</strong> Walls with their door and window openings, floors, roofs, rooms, ducts, pipes and equipment. An IFC file uses its real shapes. Where a model has no shapes, each element is drawn as a box of its true size.</p>
-<h2>Check the model</h2>
+<h2 id="check-the-model">Check the model</h2>
 <p><strong>Where.</strong> <strong>BIM models</strong>, the checks and the <strong>Issues</strong> card. Both editions.</p>
 <p><strong>What you get.</strong> The checks run as soon as a model opens (<strong>Run the checks again</strong> reruns them): levels and grids, geometry, rooms, parameters, clashes, families and schedules, and your own standards. The <strong>Issues</strong> card lists every problem with its severity, the elements and how to fix it. <strong>Show</strong> zooms the plan to it; <strong>Propose fix</strong> puts a fix in the change set for the checks that have one. Each issue can be marked, for example <strong>Accepted as intended</strong>.</p>
 <p><strong>Clash tests and standards.</strong> <strong>Add test</strong> makes your own clash test. <strong>Standards and rules</strong>, <strong>Add rule</strong> checks the model against your office standard; <strong>Save as a template</strong> keeps a rule set.</p>
 <p><strong>Reports.</strong> <strong>Validation report (PDF)</strong>, <strong>Issues (CSV)</strong> and <strong>Model data (.json)</strong>. <strong>Comparison (CSV)</strong> compares two revisions. <strong>What a change affects</strong> lists what depends on a level or a parameter.</p>
-<h2>Change a model and send it to the add-in</h2>
+<h2 id="change-a-model-and-send-it-to-the-add-in">Change a model and send it to the add-in</h2>
 <p><strong>What it is for.</strong> Propose changes, approve them, and have the Aerion add-in apply them to a copy of the model.</p>
 <p><strong>Where.</strong> <strong>BIM models</strong>, cards <strong>Configure the model</strong> and <strong>Change set</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>In <strong>Configure the model</strong>, pick what to change and how, and press <strong>Add to the change set</strong>.</li><li>In <strong>Change set</strong>, check each change's impact (<strong>Check every impact</strong>), and approve or reject it (<strong>Approve all</strong>).</li><li><strong>Send to the add-in</strong> (desktop app) writes the job to Documents\Aerion\Jobs. In a browser, <strong>Save the job for the add-in</strong> downloads it: put it in that folder.</li><li>In the BIM program, press <strong>Run jobs</strong> on the <strong>Aerion</strong> tab.</li><li>Back in Aerion, <strong>Check for results</strong> (desktop app) or <strong>Open a job result</strong>.</li></ol>
 <p><strong>What you get.</strong> Aerion checks each approved change against the reopened model and confirms the original file's checksum is unchanged. The reopened model becomes the next revision.</p>
 <p><strong>Limits.</strong> Nothing changes in any model until you approve a change and the add-in applies it to a copy. A model opened from its header alone cannot be changed: extract a snapshot first.</p>
-<h2>Generate a model</h2>
+<h2 id="generate-a-model">Generate a model</h2>
 <p><strong>What it is for.</strong> Lay out a new building from a few numbers, check it, and have the add-in build it as a new model.</p>
 <p><strong>Where.</strong> <strong>BIM models</strong>, card <strong>Generate a model</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li><strong>Building</strong>: <strong>Name</strong>, <strong>Width (E–W)</strong> and <strong>Length (N–S)</strong> in feet, <strong>Floors</strong>, <strong>Floor-to-floor</strong>, <strong>Level names</strong> and the number they start <strong>from</strong>.</li><li><strong>Grids</strong>: <strong>Spacing E–W</strong>, <strong>Spacing N–S</strong> and the names.</li><li><strong>Openings and rooms</strong>: ground-floor <strong>Doors</strong> and their size, <strong>Window spacing (0 = none)</strong>, window size, <strong>Sill</strong> and <strong>Room names</strong>.</li><li><strong>Types</strong>: the family and type for each part ("Family: Type"), or blank for the template's default.</li><li><strong>Sizes for the preview</strong> and <strong>Parts to generate</strong>.</li><li>Check the <strong>Preview</strong> and its checks. Set the template, an earlier generated model to add to, the <strong>Output file name</strong> and the <strong>Version</strong>.</li><li>Press <strong>Save the job for the add-in</strong> (or send it), then <strong>Run jobs</strong> in the BIM program, and <strong>Open a job result</strong>.</li></ol>
 <p><strong>What you get.</strong> The building as a new model, compared with the counts asked for. <strong>Configurations…</strong>, <strong>Load</strong>, <strong>Save as a template</strong>, <strong>Delete</strong> and <strong>Start over</strong> keep your settings. <strong>Generation history</strong> keeps every job.</p>
 <p><strong>Limits.</strong> The preview sizes only size the checks; the add-in uses the real sizes of the types.</p>
-<h2>Read the rooms for the load calculation</h2>
+<h2 id="read-the-rooms-for-the-load-calculation">Read the rooms for the load calculation</h2>
 <p><strong>What it is for.</strong> Make the load calculation's rooms from a building model instead of drawing them.</p>
 <p><strong>Where.</strong> <strong>BIM models</strong>, card <strong>Rooms for the load calculation</strong>, <strong>Read the rooms from this model</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Open a model (an add-in snapshot, an IFC file, or a building made from a plan set).</li><li>Press <strong>Read the rooms from this model</strong>.</li><li>Check each room's level, area, ceiling height, outside wall length, windows, outside doors, and what is above and below. Untick a room to leave it out; it then counts as outdoors for its neighbors.</li><li>Create the rooms, then <strong>Open the load calculator</strong>.</li></ol>
 <p><strong>What you get.</strong> For each room: outline and area, ceiling height, outside wall length by direction, windows and outside doors with their sizes and positions, and what is above and below. Where the model has thermal values, they come too (window and door U and SHGC, and the closest wall, ceiling and roof constructions from the library). Nothing is added to the project until you create the rooms.</p>
-<h2>Build a 3D building from a plan set (Plan set to 3D)</h2>
+<h2 id="build-a-3d-building-from-a-plan-set-plan-set-to-3d">Build a 3D building from a plan set (Plan set to 3D)</h2>
 <p><strong>What it is for.</strong> Find the walls, doors, windows and rooms on the floor plan sheets, stack the floors and build the 3D building.</p>
 <p><strong>Where.</strong> <strong>BIM models</strong>, card <strong>Plan set to 3D</strong>, <strong>Open a plan set</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
@@ -72,7 +72,7 @@
 <p><strong>With Aerion AI.</strong> <strong>Review sheet with AI</strong> suggests wall traces, doors, windows and room labels on a drawn or scanned sheet, and points out visible elevations, ceiling heights, dimensions and unclear details. Check the overlay, then <strong>Add suggestions</strong> or <strong>Discard</strong>; Undo removes the accepted batch. <strong>Read roof and floor framing</strong> reads a structural sheet. <strong>Align in Layout</strong> places reviewed structural traces on a Layout floor (see <a href="layout-and-3d.html">Layout: 3D, sections, airflow and framing</a>). Only the sheet's picture goes to your configured AI, and only when you ask.</p>
 <p><strong>What it reads.</strong> On a drawn sheet: walls from their two faces, a wall joined across its doors and windows, a door told from a window, and each closed area named from the room name printed in it. Window sizes and sill heights come from the window schedule when the plan carries its marks. Heights come from the level marks on the elevations. Two plans on one sheet are read as two floors. Framing plans in the set are read for which way the members run and which floor they are over.</p>
 <p><strong>Limits.</strong> Curved walls, sloped or stepped floors, and roofs other than a hip over a rectangle are not built (anything else gets a flat placeholder). Text on scans is not read. Heights, wall make-up and insulation are not on a floor plan: confirm them. Other offices draw differently; expect to correct the traces.</p>
-<h2>The Aerion add-in</h2>
+<h2 id="the-aerion-add-in">The Aerion add-in</h2>
 <p><strong>What it is for.</strong> The add-in runs inside the BIM program on a Windows PC. It extracts snapshots, runs the jobs Aerion writes (changes, generated models, the duct design from Reports), and writes the results back.</p>
 <p><strong>Where.</strong> The <strong>Aerion</strong> tab in the BIM program, with <strong>Run jobs</strong>. The folders are Documents\Aerion\Jobs and the results folder beside it.</p>
 <p><strong>Limits.</strong> The add-in is set up once on the PC that runs the BIM program. The desktop app writes the jobs and reads the results in those folders for you; in a browser, move the files by hand.</p>

@@ -14,6 +14,10 @@ const inline = (s) =>
     .replace(/`([^`]+)`/g, "<code>$1</code>")
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, t, h) => '<a href="' + link(h) + '">' + t + "</a>");
+/* heading ids the way GitHub makes them, so links like web-app.md#link-with-my-pc land on the heading */
+const slug = (h) =>
+  h.replace(/\*\*|`/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").trim().toLowerCase()
+    .replace(/[^\w\- ]/g, "").replace(/ /g, "-");
 function md(text) {
   const L = text.replace(/\r/g, "").split("\n");
   const html = [];
@@ -26,15 +30,15 @@ function md(text) {
     if ((m = l.match(/^(#{1,3}) (.*)/))) {
       const n = m[1].length;
       if (n === 1 && !title) title = m[2];
-      html.push("<h" + n + ">" + inline(m[2]) + "</h" + n + ">");
+      html.push("<h" + n + ' id="' + slug(m[2]) + '">' + inline(m[2]) + "</h" + n + ">");
       i++;
     } else if (/^\|/.test(l)) {
       const rows = [];
       while (i < L.length && /^\|/.test(L[i])) rows.push(L[i++]);
       const cells = (r) => r.replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
-      html.push("<table><thead><tr>" + cells(rows[0]).map((c) => "<th>" + inline(c) + "</th>").join("") + "</tr></thead><tbody>");
+      html.push('<div class="tw"><table><thead><tr>' + cells(rows[0]).map((c) => "<th>" + inline(c) + "</th>").join("") + "</tr></thead><tbody>");
       for (const r of rows.slice(2)) html.push("<tr>" + cells(r).map((c) => "<td>" + inline(c) + "</td>").join("") + "</tr>");
-      html.push("</tbody></table>");
+      html.push("</tbody></table></div>");
     } else if (/^\s*(- |\d+\. )/.test(l)) {
       /* a list, items may wrap and may hold one nested list */
       const ord = /^\d+\. /.test(l.trim());
@@ -68,7 +72,7 @@ const page = (title, body, file) => `<!doctype html>
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/${file}">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
