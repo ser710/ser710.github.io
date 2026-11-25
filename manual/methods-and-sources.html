@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/methods-and-sources.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,12 +15,12 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Methods, sources and defaults</h1>
+<h1 id="methods-sources-and-defaults">Methods, sources and defaults</h1>
 <p><a href="index.html">Contents</a></p>
 <p>This page collects how Aerion works things out, where each rule comes from, and which values are defaults for you to replace. It is a reference: each feature's own page says more. The full list of public sources the app was checked against is kept in the app's repository as <code>docs/load-calc-sources.md</code>. Where a value could not be found in a public source, the app labels it a default and this page says so.</p>
 <p>The designer of record checks the method and every input for the job.</p>
-<h2>Residential loads</h2>
-<table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
+<h2 id="residential-loads">Residential loads</h2>
+<div class="tw"><table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
 <tr><td>Structure of the load</td><td>Manual J structure: CLTD walls and ceilings, solar glass gain by orientation, infiltration, internal gains, ventilation, with simplified tables (the Design conditions page's method statement)</td><td>ACCA Manual J</td></tr>
 <tr><td>Order of the lines</td><td>Duct loads are taken on the space loads; ventilation is added after them as an equipment load, not multiplied by the duct factor</td><td>Manual J 8th ed. excerpt, section 3-14; Form J1</td></tr>
 <tr><td>Glass solar</td><td>Hourly average plus the AED excursion; the exposure diversity check flags a peak over 130% of the average</td><td>Manual J (AED check)</td></tr>
@@ -34,52 +34,58 @@
 <tr><td>Construction library</td><td>U-factors by the ASHRAE method</td><td>Title 24 JA4</td></tr>
 <tr><td>Blower heat (Manual J8 mode)</td><td>Estimated from watts per cfm; the note also gives Manual J's 500 W, 1,707 BTU/h default</td><td>ACCA Instructor's Lesson Plan p. 13</td></tr>
 <tr><td>Room airflow</td><td>The larger of the room's heating and cooling share of the blower airflow</td><td>ACCA Instructor's Lesson Plan pp. 34 to 35 (Manual D)</td></tr>
-</tbody></table>
-<p><strong>Defaults in the residential loads.</strong> The duct leakage percents, the radiant barrier cut (40%), the attic temperature from the roof color (outdoor + 32°F x absorptance), the glass share used before windows are drawn, the appliance gains, and the split of the ventilation load between several systems by floor area (Manual J gives no rule for that). Replace them with the job's figures.</p>
-<h2>Equipment (Manual S)</h2>
-<table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
+<tr><td>Garage temperature</td><td>Cooling: outdoor + 5°F. Heating: outdoor</td><td>Cooling: ASHRAE Standard 152 design default (LBNL-40588, section 3.2). Heating: ASHRAE Fundamentals 2021, ch. 17 (uninsulated garages at outdoor temperature)</td></tr>
+<tr><td>Attic temperature</td><td>Cooling: the project's attic design temperature (120°F when blank). Heating: outdoor</td><td>ASHRAE Fundamentals 2021, ch. 17, Table 6 note (120°F attic at 95°F outdoor); ch. 17 for heating</td></tr>
+<tr><td>Unconditioned basement</td><td>Cooling: indoor (no load). Heating: halfway between indoor and outdoor</td><td>ASHRAE Fundamentals 2021, ch. 18 (may be neglected for cooling); ch. 17 (mean of indoor and outdoor)</td></tr>
+<tr><td>Other unconditioned room (named unconditioned or unfinished, not a basement)</td><td>Cooling: outdoor - 5°F. Heating: halfway between indoor and outdoor</td><td>ASHRAE Fundamentals 2021, ch. 18 (heat gain through interior surfaces); ch. 17</td></tr>
+<tr><td>Door into a garage or other unconditioned room</td><td>A partition: door area x the project's exterior door U x the difference to that space's temperature, sensible only; its area comes off a partition wall to the same space</td><td>ACCA Manual J 8th ed. (garage partitions); ASHRAE Fundamentals 2021, ch. 17 and 18</td></tr>
+<tr><td>Duct insulation when blank</td><td>R-8</td><td>IECC 2021 R403.3.1</td></tr>
+</tbody></table></div>
+<p><strong>Defaults in the residential loads.</strong> The duct leakage percents, the radiant barrier cut (40%), the attic design temperature a new project starts with (125°F), the attic temperature from the roof color (outdoor + 32°F x absorptance), the vented crawl space temperatures (halfway between indoor and outdoor for cooling, 30% of the way from outdoor to indoor for heating: no public source gives one figure), the door U-factor (the project's exterior door, 0.35 in a new project; IECC 2021 Table R303.1.3(2) gives 0.50 for an unrated wood door and 0.60 for insulated metal), the glass share used before windows are drawn, the appliance gains, and the split of the ventilation load between several systems by floor area (Manual J gives no rule for that). Replace them with the job's figures.</p>
+<h2 id="equipment-manual-s">Equipment (Manual S)</h2>
+<div class="tw"><table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
 <tr><td>Size limits, 2018 and 2021 IRC</td><td>Manual S (2014): 90% to 115% single-speed, 120% two-speed, 130% variable-capacity; sensible at least 90%, latent at least 100%; heat pump up to load + 15,000 BTU/h in a heating-dominated climate with a sensible heat ratio of 0.95 or more</td><td>ACCA HVAC Blog (Escobar, May 2014); <code>docs/load-calc-sources.md</code> item 10</td></tr>
 <tr><td>Size limits, 2024 IRC</td><td>Manual S-2023 with proposed Addendum c: single-speed 120% at 24,000 BTU/h or less, else 115%; two-speed 125%; variable-capacity 130%; dry climate single-speed load + 6,000 BTU/h</td><td>ACCA Proposed Addendum c to Manual S-2023 (2025), Tables N2.3.1, N2.3.2, N2.3.4</td></tr>
 <tr><td>Capacity at design</td><td>From the maker's expanded table at the design outdoor and indoor conditions; straight-line between printed rows; never past the table</td><td>ACCA Manual S-2023 N1.7 and N1.12; DOE Building America Solution Center</td></tr>
 <tr><td>Entering wet bulb</td><td>From the indoor design temperature and humidity at the job's elevation</td><td>ASHRAE Handbook, Fundamentals (2021), ch. 1, eq. 3, 6, 20, 22 and 33</td></tr>
 <tr><td>Balance point and backup</td><td>Maker's heating capacity against a straight load line to zero at 65°F; backup = design loss minus heat pump capacity at design; 1 kW = 3,412.14 BTU/h</td><td><code>docs/load-calc-sources.md</code> (Expanded equipment performance); PNNL cold-climate heat pump sizing guide</td></tr>
 <tr><td>High wall units</td><td>Nominal cooling against the room's total cooling load, 90% to 115%</td><td>ACCA Manual S cooling range</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><strong>Defaults in the equipment checks.</strong> The 65°F balance temperature, room air as the entering air, the 10% design airflow against equipment airflow check, and the 350 to 450 cfm per ton usual range (check against the maker's blower data). A compressor lockout counts only with a source.</p>
-<h2>Ducts (Manual D)</h2>
-<table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
+<h2 id="ducts-manual-d">Ducts (Manual D)</h2>
+<div class="tw"><table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
 <tr><td>Sizing</td><td>ASHRAE round-duct friction equation with equivalent-length fittings; sizes rounded up to the next whole inch at the friction rate</td><td>Manual D method</td></tr>
 <tr><td>Friction rate</td><td>Available static x 100 / longest total effective length, unless you fix a rate</td><td>ACCA Manual D</td></tr>
 <tr><td>Flex and other materials</td><td>The metal friction rate times the material factor</td><td>Tables page factors (starter values)</td></tr>
 <tr><td>Gauges</td><td>IRC Table M1601.1.1 up to 20 in.; the app's SMACNA table above that or by choice</td><td>IRC M1601.1.1; SMACNA HVAC Duct Construction Standards</td></tr>
 <tr><td>Takeoffs on straight duct</td><td>Reducers kept clear of takeoffs</td><td>ACCA Manual D; SMACNA HVAC Duct Construction Standards</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><strong>Defaults in the duct design.</strong> The velocity limits, the component pressure drops, the minimum round sizes, the fitting equivalent lengths and the flex factors (starter values: replace them with the Manual D appendix numbers and the flex compression correction), the 12 in. or trunk-width clearance at takeoffs and trunk ends (no public source found), the reducer slope and length limits (no source section confirmed), the elbow drawing radius, the register face velocity targets used for suggested sizes, the hanger spacings and the shop allowances. The minimum rectangular width and height are your choice; Manual D and SMACNA set none.</p>
-<h2>Room pressure and return pathways</h2>
-<table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
+<h2 id="room-pressure-and-return-pathways">Room pressure and return pathways</h2>
+<div class="tw"><table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
 <tr><td>Flow through an opening</td><td>Q = 4005 x Cd x A x sqrt(dP), A in ft², dP in in. w.c.</td><td>ASHRAE Handbook, Fundamentals, ch. 16</td></tr>
 <tr><td>Two grilles in series</td><td>Each about 1.41 times the single opening</td><td>Same equation</td></tr>
-<tr><td>Target, homes</td><td>±3 Pa, ±5 Pa for bedrooms with 150 cfm or more; a program target, not code</td><td>ENERGY STAR Certified Homes v3 / 3.1</td></tr>
+<tr><td>Target, homes</td><td>±3 Pa, ±5 Pa for bedrooms with 150 cfm or more; a program target, not code</td><td>ENERGY STAR National Rater Field Checklist v3.1/3.2/3.3 Rev. 14, item 6.2 and footnote 25 (bedrooms only)</td></tr>
 <tr><td>Return no more than supply</td><td>Flagged in homes</td><td>IRC 2021 M1602.2 item 2</td></tr>
 <tr><td>Transfer openings</td><td>Sized by Manual D in the code</td><td>IRC 2021 M1602.2 item 3</td></tr>
 <tr><td>Return pathways</td><td>Half the target to each wall grille; a third each to the duct route and the two ends of a ceiling transfer</td><td>ENERGY STAR HVAC Quality Installation Guidebook, room pressure balancing detail</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><strong>Defaults.</strong> The 32 in. door, 3/4 in. undercut and discharge coefficient of 0.6; equal shares between pathways. Commercial has no target unless you enter one.</p>
-<h2>Air filters</h2>
+<h2 id="air-filters">Air filters</h2>
 <p>Each filter's drop is read from its own published data: straight-line on log-log axes between published points, the power law through the nearest two points beyond them, and the median exponent for a filter with one point. The face velocity limits used to pick a comparison size (300, 350 and 450 fpm by depth) are the app's way to compare, not a rating. The <strong>Sources and method</strong> card on the Equipment page lists every source.</p>
-<h2>Commercial loads and outdoor air</h2>
-<table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
+<h2 id="commercial-loads-and-outdoor-air">Commercial loads and outdoor air</h2>
+<div class="tw"><table><thead><tr><th>Item</th><th>How the app does it</th><th>Source</th></tr></thead><tbody>
 <tr><td>Load method</td><td>Radiant time series, ASHRAE's tabulated nonsolar and solar series, column by mass, floor covering and glass share</td><td>ASHRAE Fundamentals 2021, ch. 18, Tables 19 and 20</td></tr>
 <tr><td>Sol-air</td><td>alpha / ho 0.15 light, 0.30 dark</td><td>ASHRAE RTS supplement, p. 4</td></tr>
 <tr><td>Outdoor air</td><td>Vbz = Rp x Pz + Ra x Az, Voz = Vbz / Ez</td><td>ASHRAE 62.1 ventilation rate procedure; IMC 403</td></tr>
-<tr><td>Multiple-zone systems</td><td>System ventilation efficiency for VAV; a warning for constant-volume units serving several zones</td><td>ASHRAE 62.1; Trane Engineers Newsletter 49-3</td></tr>
+<tr><td>Multiple-zone systems</td><td>Any unit serving several zones, VAV or constant volume: Vot = Vou / Ev, Ev = 1 + Xs - the largest Zpz; a unit serving one zone: Vot = Voz</td><td>ASHRAE 62.1 multiple-zone recirculating system; Trane Engineers Newsletter 49-3 (<code>docs/load-calc-sources.md</code> items 13 and 21)</td></tr>
 <tr><td>Zone air distribution effectiveness</td><td>1.0 cool air from the ceiling; 0.8 warm air from the ceiling with a ceiling return</td><td>ASHRAE 62.1-2019 errata, Table 6-4</td></tr>
 <tr><td>Toilet exhaust</td><td>50 or 70 cfm per fixture, the higher where heavy use is expected</td><td>IMC Table 403.3.1.1; ASHRAE 62.1 Table 6-4 (<code>docs/load-calc-sources.md</code> item 13)</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><strong>Defaults.</strong> The conduction time series (the app's own curve for the construction mass), carpet unless No carpet is chosen, the split of fan heat among the units by their peak sensible load, the latent share of a duct table by floor area, and the occupancy defaults.</p>
-<h2>Codes</h2>
+<h2 id="codes">Codes</h2>
 <p>Each code check names its section: the IRC, IECC, IMC, IBC, the Florida Building Code, Energy Conservation (8th edition, 2023), the Washington and Oregon codes, and the NEC sections on the Controls page. The code data in the app is reviewed every 6 months (<strong>Options</strong>, <strong>Code data</strong>). A building department can adopt or amend a code at any time; the edition in effect on the permit application date governs.</p>
-<h2>Drawing defaults</h2>
+<h2 id="drawing-defaults">Drawing defaults</h2>
 <p>These shape the drawing only and change no number: the 4 ft cut height and units guess for a 3D model underlay, the high wall unit's drawn size (32 x 9 x 12 in., mounted 7 ft to the bottom), the schematic framing (16 in. on center, 6/12 roof pitch, lumber sizes and fallback heights), and the 1 in. clearance each side of a wall opening.</p>
 </main>
 <footer><div class="wrap">

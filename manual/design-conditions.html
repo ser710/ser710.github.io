@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/design-conditions.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,17 +15,17 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Design conditions</h1>
+<h1 id="design-conditions">Design conditions</h1>
 <p><a href="index.html">Contents</a></p>
 <p>The <strong>Design conditions</strong> page holds the inputs every load and duct size depends on: outdoor and indoor design temperatures, the envelope assemblies, infiltration, people, ventilation, the permit jurisdiction and the duct design inputs. Rooms can override the envelope. This page covers the first cards; the <strong>Duct design</strong> card on the same page is in <a href="ducts.html">Ducts and duct sizing</a>.</p>
-<h2>Look up a job by ZIP code</h2>
+<h2 id="look-up-a-job-by-zip-code">Look up a job by ZIP code</h2>
 <p><strong>What it is for.</strong> Fill in the location data from the job's ZIP code.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Design conditions</strong>, <strong>Project ZIP</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Type the ZIP code in <strong>Project ZIP</strong>.</li><li>Leave <strong>Set design conditions</strong> and <strong>Set utility rates</strong> ticked to fill those, or clear one.</li><li>Press <strong>Look up</strong>.</li></ol>
 <p><strong>What you get.</strong> Latitude, elevation (for the altitude correction), the county's climate zone, the state's code rules and utility rates.</p>
 <p><strong>Limits.</strong> It needs internet. Check every value it fills against the jurisdiction's design conditions.</p>
-<h2>Pick the location and design temperatures</h2>
+<h2 id="pick-the-location-and-design-temperatures">Pick the location and design temperatures</h2>
 <p><strong>What it is for.</strong> Set the outdoor and indoor conditions the loads are worked at.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Design conditions</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
@@ -33,14 +33,14 @@
 <p><strong>What you get.</strong> The loads follow at once. The <strong>Whole house</strong> card (commercial: <strong>Whole building</strong>) shows cooling total, sensible, latent, heating, tons, sensible ratio, floor area and BTU/ft².</p>
 <p><strong>Limits.</strong></p>
 <ul><li>The card says it: the presets are starter values only. Confirm them against your jurisdiction's Manual J Table 1A before submitting (commercial: against the ASHRAE climatic design conditions for the site).</li><li>Daily range: ACCA's Outdoor Design Conditions Guide puts each city in a class: Low under 16°F, Medium 16 to 25°F, High over 25°F. Picking a city does not set the daily range number. A design check says when the number is in a different class from the city's.</li><li>The city list has no latitudes. When the latitude is still the default for a city outside Florida, a note says to enter it: the latitude sets the sun's position on the glass.</li></ul>
-<h2>Turn the house to face its lot (Front faces)</h2>
+<h2 id="turn-the-house-to-face-its-lot-front-faces">Turn the house to face its lot (Front faces)</h2>
 <p><strong>What it is for.</strong> Say which way the front of the house (commercial: the building) faces, so the sun loads match the lot.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, <strong>Front of the house faces</strong> (commercial: <strong>Front of the building faces</strong>). The same choice is on the <strong>Home survey</strong> page and, as <strong>Front faces</strong>, at the bottom of the plan on the <strong>Layout</strong>. All three stay in step. Both editions.</p>
 <p><strong>Steps.</strong> Pick N, NE, E, SE, S, SW, W or NW.</p>
 <p><strong>What you get.</strong></p>
 <ul><li>Every wall, window, door and skylight facing, and the roof azimuth, turn by the change, in 45° steps. ACCA Manual J glass and wall gains are by facing, so the sun loads change with it.</li><li>The plan does not move. A FRONT tag shows on the plan edge on the front side.</li><li>The compass used to fill wall exposures from the plan turns too.</li><li>The load report and the permit report say "Front faces" next to the location.</li><li>One undo step puts it back.</li></ul>
 <p><strong>Limits.</strong> Unset means "as drawn", shown as S. To size for any lot, use the <strong>Orientation check</strong> on the Load calculator (see <a href="rooms-and-loads.html">Rooms and loads</a>).</p>
-<h2>Set the duct loads</h2>
+<h2 id="set-the-duct-loads">Set the duct loads</h2>
 <p><strong>What it is for.</strong> Say how the duct gain and loss are worked out.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Design conditions</strong>, below the temperatures. Both editions.</p>
 <p><strong>Steps.</strong></p>
@@ -48,32 +48,32 @@
 <p><strong>What you get.</strong> The <strong>Duct loads from the layout</strong> card gives each system's supply and return duct surface, its gain and loss, where the ducts are, their R-value and leakage, and their share of the load.</p>
 <p><strong>How ducts are charged (residential).</strong> With the attic as the duct location, a duct counts as in the attic only when it is drawn on a floor that has a room with an attic ceiling. With a vented crawlspace, only on a floor with a room over the crawlspace. Where only part of a floor is under the attic, that share of the floor's duct surface is charged (by floor area: this app's default, since the app does not know which room each duct runs over). Ducts on the other floors are inside the house and gain nothing. The gain is worked out again until it settles, in two or three passes. The design checks say which floors' ducts were taken as inside.</p>
 <p><strong>Limits.</strong> The leakage percents are defaults to replace with the job's tested or specified figures.</p>
-<h2>Pick the envelope assemblies</h2>
+<h2 id="pick-the-envelope-assemblies">Pick the envelope assemblies</h2>
 <p><strong>What it is for.</strong> Set the walls, ceilings, floors, slab, doors and glass for the whole project.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Envelope</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>For each part, pick an assembly from the construction library: <strong>Wall construction</strong>, <strong>Attic ceiling</strong>, <strong>Roof deck / cathedral ceiling</strong>, <strong>Floor over garage, basement or outdoors</strong>, <strong>Floor over vented crawl</strong>, <strong>Slab on grade</strong>, <strong>Exterior doors</strong> and <strong>Default window glazing</strong>.</li><li>Or leave a pick on <strong>Custom</strong> and type the value below it: <strong>Wall R-value</strong>, <strong>Ceiling R-value</strong>, <strong>Floor R-value</strong>, <strong>Slab edge F-factor</strong>, <strong>Window U-factor</strong>, <strong>Window SHGC</strong>, <strong>Door U-factor</strong>.</li><li>Set the <strong>Interior/exterior shading factor</strong>.</li></ol>
 <p><strong>What you get.</strong> The library's U-factors are Title 24 JA4 values worked by the ASHRAE method, as the card says. Rooms can override walls, ceilings and floors on the Load calculator.</p>
 <p><strong>Source for the slab default.</strong> The uninsulated slab edge F-factor in the library, 0.73 BTU/h·ft·°F, is from ASHRAE Interpretation IC 90.1-2007-27; insulated values are from EPA's ENERGY STAR F-Factor guidance (see <a href="methods-and-sources.html">Methods and sources</a>).</p>
-<h2>Set infiltration</h2>
+<h2 id="set-infiltration">Set infiltration</h2>
 <p><strong>What it is for.</strong> Set the air leakage for cooling and heating.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Envelope</strong>, below the glass. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Type <strong>Infiltration, cooling</strong> and <strong>Infiltration, heating</strong> in ACH. Or press a quick pick: <strong>Tight (0.20)</strong>, <strong>Average (0.35)</strong> or <strong>Leaky (0.60)</strong>.</li><li>Or work it from a blower door: pick a tightness (<strong>Very tight 1.5</strong>, <strong>Tight 3</strong>, <strong>Average new construction 5</strong>, <strong>Semi-loose 7</strong>, <strong>Loose 10</strong>) or type the <strong>Blower door result</strong> (ACH50), set the <strong>N-factor (LBL, about 14 to 22)</strong> and press <strong>Use blower door for infiltration</strong>.</li></ol>
 <p><strong>Limits.</strong> The quick picks and tightness classes are starting values. The strict Manual J8 mode on the <strong>Manual J8</strong> page uses Table 5A infiltration instead (see <a href="code-and-energy.html">Code check, energy code and Manual J8</a>).</p>
-<h2>Set the roof</h2>
+<h2 id="set-the-roof">Set the roof</h2>
 <p><strong>What it is for.</strong> Set the roof's direction, pitch and color, which drive roof-deck ceilings, skylights and, if you choose, the attic temperature.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Roof</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Type the <strong>Roof azimuth (direction the main slope faces)</strong> in degrees true, or press N, NE, E, SE, S, SW, W or NW.</li><li>Type the <strong>Roof pitch</strong> (in/12) and check the <strong>Site latitude</strong>.</li><li>Pick the <strong>Roof material</strong>, or <strong>Use roof color below</strong> and pick the <strong>Roof color</strong>.</li><li>Tick <strong>Radiant barrier in attic (cuts attic ceiling gain 40%)</strong> if there is one.</li><li>Tick <strong>Set attic temperature from roof (outdoor + 32°F × absorptance)</strong> to work the attic temperature from the roof color, or leave it clear to use the <strong>Attic design temperature</strong>.</li><li>Set the <strong>Skylight U-factor</strong> and <strong>Skylight SHGC</strong> defaults.</li></ol>
 <p><strong>What you get.</strong> A line with the peak roof solar at that azimuth and pitch (July clear-sky sun path at the site latitude). Rooms can override the roof on the Load calculator. Vented attic ceilings use the attic design temperature.</p>
 <p><strong>Limits.</strong> The 40% radiant barrier cut and the attic temperature formula are the app's own, as labelled; check them against the method your jurisdiction accepts.</p>
-<h2>Set people</h2>
+<h2 id="set-people">Set people</h2>
 <p><strong>What it is for.</strong> Set the heat each person adds.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>People</strong>. Both editions (commercial people gains follow the occupancy type).</p>
 <p><strong>Steps.</strong> Type <strong>Sensible per person</strong> and <strong>Latent per person</strong> (BTU/h).</p>
 <p><strong>Source.</strong> 230 BTU/h sensible and 200 BTU/h latent per person, and the number of people as the bedrooms plus one, are Manual J's (Form J1 line 13; ACCA Instructor's Lesson Plan p. 12; ENERGY STAR HVAC Design Report footnote 19). A design check adds up the people in the rooms and says when they differ from the bedrooms plus one.</p>
-<h2>Set mechanical ventilation (residential)</h2>
+<h2 id="set-mechanical-ventilation-residential">Set mechanical ventilation (residential)</h2>
 <p><strong>What it is for.</strong> Set the whole-house ventilation rate and its load.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Mechanical ventilation</strong>. Residential edition. (Commercial outdoor air is on the <strong>Commercial loads</strong> page; see <a href="commercial.html">Commercial</a>.)</p>
 <p><strong>Steps.</strong></p>
@@ -81,17 +81,17 @@
 <p><strong>What you get.</strong> The <strong>Ventilation and air changes</strong> card: the required continuous cfm, the fan size, ventilation and infiltration ACH, total ACH, the conditioned volume and the ventilation load. A <strong>Local exhaust (62.2)</strong> table lists the bath and kitchen exhaust, intermittent or continuous.</p>
 <p><strong>Limits.</strong></p>
 <ul><li>The load assumes the fan runs at the design hour and the outdoor air passes through the equipment.</li><li>With an HRV, the latent ventilation load is not reduced. Not set, the unit is taken as an ERV and the design checks say so.</li><li>Manual J carries the ventilation load on the equipment, not on a room. On a job with several systems, the app shares it by floor area (this app's default: Manual J gives no rule for that). Check the system that really takes the outdoor air.</li></ul>
-<h2>Pick the permit jurisdiction</h2>
+<h2 id="pick-the-permit-jurisdiction">Pick the permit jurisdiction</h2>
 <p><strong>What it is for.</strong> Load the state's codes, license and permit rules, so the code checks use the editions the state adopted.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Permit jurisdiction</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick the <strong>State</strong>.</li><li>For a California job, tick <strong>Use Title 24 checks and permit report</strong> in the <strong>Title 24 (California)</strong> card (residential).</li></ol>
 <p><strong>What you get.</strong> The <strong>Code check</strong> and <strong>Energy code</strong> pages use that state's editions (see <a href="code-and-energy.html">Code check, energy code and Manual J8</a>). With no state picked, the checks use the 2021 IRC and IECC numbering and say so.</p>
 <p><strong>Limits.</strong> A building department can adopt or amend a code at any time. The edition in effect on the permit application date governs: confirm it with the building department.</p>
-<h2>Read the method statement</h2>
+<h2 id="read-the-method-statement">Read the method statement</h2>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Method and limits</strong> (residential). Both editions have a version of it.</p>
 <p><strong>What it says.</strong> The residential load follows the Manual J structure (CLTD walls and ceilings, solar glass gain by orientation, infiltration, internal gains, ventilation) with simplified tables. Duct sizing uses the ASHRAE round-duct friction equation with equivalent-length fittings (the Manual D method). The equipment checks use the Manual S sizing window. It is a design aid, not an ACCA-approved program. For more, see <a href="methods-and-sources.html">Methods and sources</a>.</p>
-<h2>What is different in the commercial edition</h2>
+<h2 id="what-is-different-in-the-commercial-edition">What is different in the commercial edition</h2>
 <ul><li>The <strong>Whole building</strong> card replaces Whole house.</li><li>An <strong>Outdoor air (ASHRAE 62.1)</strong> table lists each space's people, Rp, Ra, Vbz, Ez and Voz, with their total. The building's figure is labelled as the units' outdoor air intake.</li><li>A wall color choice (<strong>Light</strong>, or <strong>Dark or not known</strong>) sets the wall sol-air temperature; the roof follows the roof color or material.</li><li>A card <strong>Energy code: Washington and Oregon</strong> picks the commercial energy code for those states (see <a href="commercial.html">Commercial</a>).</li><li>The duct location list reads <strong>Unconditioned space above the ceiling or attic</strong> and <strong>Conditioned space or return-air ceiling plenum</strong>.</li></ul>
 </main>
 <footer><div class="wrap">

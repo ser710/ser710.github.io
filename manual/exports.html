@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Files from and to other programs · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/exports.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1 id="files-from-and-to-other-programs">Files from and to other programs</h1>
+<p>Aerion opens the files you get from architects, engineers and suppliers, and saves files the other programs on the job open. Everything happens inside Aerion: there is nothing to download or set up, in the desktop app or in a web browser.</p>
+<h2 id="open-a-file-from-another-program">Open a file from another program</h2>
+<p>Press <strong>Open file</strong> at the top (beside Open), or drop the file anywhere on Aerion. Aerion sees what kind of file it is and opens it in the right place.</p>
+<div class="tw"><table><thead><tr><th>What you have</th><th>Where it goes</th></tr></thead><tbody>
+<tr><td>PDF plan set</td><td>Plans &amp; markup</td></tr>
+<tr><td>AutoCAD DWG (R13, 1994, to today) or DXF, also binary DXF</td><td>Layout underlay of the current floor</td></tr>
+<tr><td>Scan or picture of a plan (PNG, JPG)</td><td>Layout underlay; set its scale</td></tr>
+<tr><td>IFC from Revit, ArchiCAD, Tekla and other BIM programs</td><td>BIM models page</td></tr>
+<tr><td>SketchUp: File &gt; Export &gt; 3D Model &gt; COLLADA (.dae); SketchUp for Web: STL</td><td>Layout &gt; Import 3D model, cut to a plan</td></tr>
+<tr><td>OBJ, glTF, GLB, STL from any 3D program</td><td>Layout &gt; Import 3D model</td></tr>
+<tr><td>gbXML from load and energy programs or BIM programs</td><td>Rooms on their floors, with windows and doors</td></tr>
+<tr><td>Supply house price list (CSV or Excel)</td><td>Estimate &gt; Import price sheet</td></tr>
+<tr><td>AHRI Directory export (CSV or Excel)</td><td>Equipment database</td></tr>
+<tr><td>Aerion project file (.json)</td><td>Opens the project</td></tr>
+</tbody></table></div>
+<p>An <strong>.aerion</strong> file written by <strong>Project file in a folder</strong> (see <a href="saving.html">Saving</a>) opens with <strong>Open</strong> at the top, not with <strong>Open file</strong> or by dropping it.</p>
+<p>Files Aerion cannot read, and what to do:</p>
+<ul><li>SketchUp's own .skp file: only SketchUp's program library reads it, and it cannot run in Aerion. In SketchUp use File &gt; Export &gt; 3D Model &gt; COLLADA (.dae).</li><li>Revit .rvt: in Revit export IFC (or use the Aerion add-in).</li><li>DWF or DWFx: save the drawing as DWG, DXF or PDF.</li><li>FBX or 3DS: export GLB, OBJ, DAE or STL.</li><li>TIFF scans: save them as PDF or PNG.</li></ul>
+<p>After a gbXML opens, check each room's wall, ceiling and floor construction: gbXML carries the shape and the openings, and Aerion's own construction choices are used until you change them.</p>
+<h2 id="export-for-other-programs">Export for other programs</h2>
+<p>On the Report page, under Export, the card <strong>Export for other programs</strong> has a button for each program:</p>
+<div class="tw"><table><thead><tr><th>Button</th><th>File</th><th>Notes</th></tr></thead><tbody>
+<tr><td>AutoCAD, BricsCAD, DraftSight (DWG)</td><td>.dwg (AutoCAD 2000 format)</td><td>Full size, 1 unit = 1 inch, floors side by side</td></tr>
+<tr><td>Any CAD program (DXF)</td><td>.dxf (R12)</td><td>The same plan</td></tr>
+<tr><td>Revit, ArchiCAD, Navisworks, Tekla, BIM viewers (IFC)</td><td>.ifc (IFC4)</td><td>In Revit: Insert &gt; Link IFC, or Open &gt; IFC</td></tr>
+<tr><td>SketchUp (DAE)</td><td>.dae</td><td>SketchUp: File &gt; Import, pick COLLADA</td></tr>
+<tr><td>3D viewers, Blender, web (GLB)</td><td>.glb</td><td>Metres</td></tr>
+<tr><td>3D programs (OBJ)</td><td>.zip with .obj and .mtl</td><td>Metres</td></tr>
+<tr><td>3D printing (STL)</td><td>.stl</td><td>Millimetres at full size: scale it down in the slicer</td></tr>
+<tr><td>Load and energy programs (gbXML)</td><td>.gbxml.xml</td><td>Spaces, surfaces, U-factors, zones, Aerion's room loads</td></tr>
+<tr><td>Bluebeam and PDF markup (PDF with layers)</td><td>.pdf</td><td>36 x 24 sheet, each layer can be hidden, measures in feet</td></tr>
+<tr><td>Illustrator, Inkscape, web (SVG)</td><td>.svg</td><td>The plan with its layers</td></tr>
+<tr><td>Excel, estimating, accounting (XLSX)</td><td>.xlsx</td><td>Bill of materials, room loads, duct schedule, equipment</td></tr>
+<tr><td>Ordering and field service (CSV)</td><td>.csv</td><td>The bill of materials</td></tr>
+</tbody></table></div>
+<p>The CAD layers: A-WALL (outside walls), A-WALL-INT, A-ROOM (room outlines), A-ROOM-NAME, A-DOOR, A-GLAZ, A-ANNO-DIMS, A-ANNO, M-SUPPLY and M-RETURN with the system tag (for example M-SUPPLY-FAU-1), M-REGISTER, M-EQUIP, M-DUCT-TEXT.</p>
+<p>The IFC model has the floors, the rooms as spaces with their loads and airflow, walls with their doors and windows, floor slabs, the ducts and fittings at their sizes on their supply and return systems, every register and grille, and the air handlers. Send to the modeling program still builds the ducts as native Revit ducts through the Aerion add-in.</p>
+<p>Wall thickness (6 in outside, 4.5 in inside), window head height (6 ft 8 in) and floor depth (10 in) in these files are drawing defaults, not taken from the design. Change them in the other program when they matter there.</p>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>

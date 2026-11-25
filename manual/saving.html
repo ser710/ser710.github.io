@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saving: automatic saving, project files and backups · Aerion manual</title>
+<link rel="stylesheet" href="../site.css">
+<link rel="canonical" href="https://aerionhvacdesign.com/manual/saving.html">
+<link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../img/logo.svg" alt="">Aerion</a>
+  <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
+</div></header>
+<main class="wrap doc">
+<h1 id="saving-automatic-saving-project-files-and-backups">Saving: automatic saving, project files and backups</h1>
+<p><strong>What it is for.</strong> Choose when Aerion saves your work, keep a project file in a folder without saving it by hand each time, and keep earlier versions to go back to.</p>
+<p><strong>Where.</strong> <strong>Options &gt; Saving</strong>. Both editions. The settings are kept on this computer (each computer and browser has its own).</p>
+<p>If you never open this card, nothing changes: every change is saved as you work, as before.</p>
+<h2 id="save-automatically">Save automatically</h2>
+<p>Pick one:</p>
+<ul><li><strong>Every change (as now)</strong>: the default. Each change is saved on this computer half a second after you make it.</li><li><strong>Every 1 minute</strong>, <strong>Every 5 minutes</strong> or <strong>Every 10 minutes</strong>: changes are saved on that timer.</li><li><strong>Off (save with the Save button or Ctrl+S)</strong>: nothing is saved until you save it.</li></ul>
+<p>When saving is not on every change:</p>
+<ul><li>The top bar says <strong>Unsaved changes</strong> and shows a <strong>Save changes</strong> button. <strong>Ctrl+S</strong> saves too. (With saving on every change, Ctrl+S does what it did before: in the desktop app it opens the save window for a project file.)</li><li><strong>Revert to last save</strong> on the card puts the project back as it was when you last saved it.</li><li>Closing the window or the app with unsaved changes asks first. Opening, starting or duplicating another project, or opening a file, asks too: <strong>OK</strong> saves the changes and goes on, <strong>Cancel</strong> stays on the project.</li><li>Unsaved work is also kept in a <strong>recovery copy</strong> on this computer. If Aerion closes before you save (a crash, a power cut), the next start shows <strong>Unsaved changes found</strong> with <strong>Restore the changes</strong> and <strong>Discard them</strong>. Restored changes are not saved yet: press <strong>Save changes</strong> or Ctrl+S to keep them.</li></ul>
+<h2 id="save-as-a-copy-and-save-project-file-now">Save as a copy and Save project file now</h2>
+<ul><li><strong>Save as a copy</strong> makes a new project from the work as it is now and switches to it. With saving on a timer or off, the original stays as it was last saved.</li><li><strong>Save project file now</strong> writes the project file to the folder below. In a browser that cannot write to a folder it downloads the file instead.</li></ul>
+<h2 id="project-file-in-a-folder">Project file in a folder</h2>
+<p>An <strong>.aerion</strong> project file named after the project, written by itself without asking each time. Open it later with <strong>Open</strong>, like any project file.</p>
+<ul><li><strong>Write the file on each save</strong>: tick it to write the file each time the project is saved. With saving on every change, the file is written at most once a minute.</li><li><strong>Also write it every</strong>: Off, 5, 10, 15 or 30 minutes, while you are changing the project.</li></ul>
+<p>Where the file goes:</p>
+<ul><li><strong>Desktop app</strong>: <code>Documents\Aerion\Projects</code>, or the folder you pick with <strong>Choose folder</strong>. <strong>Show folder</strong> opens it in File Explorer. Aerion writes only into that folder and never writes over a file it did not write itself: if another file has the same name, the project file is called, say, <code>Smith house (2).aerion</code>.</li><li><strong>Chrome or Edge</strong>: <strong>Pick a folder</strong> once. The browser may ask again for permission after it restarts; press <strong>Save project file now</strong> to allow it.</li><li><strong>Other browsers</strong>: the card says this works in the desktop app and in Chrome or Edge. <strong>Save project file now</strong> downloads the file.</li></ul>
+<p>The <strong>Save</strong> button in the top bar and <strong>Save file</strong> on the Projects page still open the normal save window, as before.</p>
+<h2 id="backup-copies">Backup copies</h2>
+<p>Earlier versions of each project, kept on this computer.</p>
+<ul><li><strong>Keep</strong>: Off, or the last 5, 10 or 20 versions of each project.</li><li><strong>While working, every</strong>: 5, 10, 15 or 30 minutes.</li></ul>
+<p>A backup is taken each time the project is saved (with saving on a timer or off) and every few minutes while you work. The list shows each backup's time and size (backups taken between saves say "while working"):</p>
+<ul><li><strong>Restore</strong> opens the backup as a new project, named with the backup's date and time. The original project is not changed.</li><li><strong>Download</strong> saves the backup as a project file.</li></ul>
+<h2 id="limits">Limits</h2>
+<ul><li>The recovery copy and the backups are kept in this browser's (or the desktop app's) own storage on this computer. Clearing the browser's site data removes them. Keep project files for jobs that matter.</li><li>A backup that is the same as the one before is not kept twice.</li><li>Settings are per computer. A project file does not carry them.</li></ul>
+</main>
+<footer><div class="wrap">
+  <span>Aerion HVAC Design Studio is part of Epic Stuff, Things &amp; Co. © 2026 Epic Stuff, Things &amp; Co. All rights reserved.</span>
+  <nav><a href="./">Manual</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a><a href="../refunds.html">Refunds</a></nav>
+</div></footer>
+</body>
+</html>

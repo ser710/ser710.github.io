@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/commercial.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,11 +15,11 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Commercial</h1>
+<h1 id="commercial">Commercial</h1>
 <p><a href="index.html">Contents</a></p>
 <p>This page covers what is different in the commercial edition, Aerion Commercial. The tools on the other pages of this manual work in both editions unless they say otherwise. The commercial edition words the screens for commercial work: spaces and diffusers instead of rooms and registers, "whole building" instead of "whole house", and ASHRAE, IMC and SMACNA references instead of the residential manuals.</p>
-<h2>Where the commercial edition differs</h2>
-<table><thead><tr><th>Area</th><th>Residential</th><th>Commercial</th></tr></thead><tbody>
+<h2 id="where-the-commercial-edition-differs">Where the commercial edition differs</h2>
+<div class="tw"><table><thead><tr><th>Area</th><th>Residential</th><th>Commercial</th></tr></thead><tbody>
 <tr><td>Room list</td><td>Load calculator</td><td>Spaces, plus the Commercial loads page</td></tr>
 <tr><td>Room editor</td><td>Type, People and equipment</td><td>Occupancy type, Occupancy (people, lighting, equipment)</td></tr>
 <tr><td>Loads</td><td>Manual J structure, design hour</td><td>ASHRAE radiant time series, hourly, worst month per zone</td></tr>
@@ -30,15 +30,15 @@
 <tr><td>Home survey, Energy code page</td><td>yes</td><td>no</td></tr>
 <tr><td>Room pressure target</td><td>ENERGY STAR target by default</td><td>none unless you enter one</td></tr>
 <tr><td>Plenum returns</td><td>none</td><td>ceiling grilles marked as plenum returns</td></tr>
-</tbody></table>
-<h2>Spaces and occupancy</h2>
+</tbody></table></div>
+<h2 id="spaces-and-occupancy">Spaces and occupancy</h2>
 <p><strong>What it is for.</strong> Each room is a zone. Its occupancy sets the people density, the people and area outdoor air rates, the lighting and equipment, and their hourly schedules.</p>
 <p><strong>Where.</strong> The <strong>Spaces</strong> page, the room editor; and the <strong>Zones</strong> card on <strong>Commercial loads</strong>. Commercial edition.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick the <strong>Occupancy type</strong> (office space, open office, conference / meeting, lobby, reception, corridor, toilet room (exhausted), storage, break room, telecom / IT, retail, restaurant, classroom, health club, medical office, place of worship, warehouse, dwelling unit, multifamily corridor, laundry and others).</li><li>Leave <strong>People (blank = occupancy density)</strong>, <strong>Lighting (blank = occupancy default)</strong> and <strong>Equipment (blank = occupancy default)</strong> blank, or type the job's figures.</li><li>Set the ceiling, construction, below-grade walls, partitions, windows, doors and skylights as in the residential editor (see <a href="rooms-and-loads.html">Rooms and loads</a>). A space with a roof has its own <strong>Roof azimuth</strong> and <strong>Roof pitch</strong> if they differ from the project's.</li></ol>
 <p><strong>What you get.</strong> The space's outdoor air (Vbz and Voz by ASHRAE 62.1), and its loads by the hour. The <strong>Zones</strong> card lists every zone with its area, occupancy, people, lighting and equipment W/ft², outdoor air, peak sensible and latent, when the peak falls, cfm and heating.</p>
 <p><strong>Limits.</strong> The occupancy defaults are starting values. Medical exam rooms say to check ASHRAE 170. Toilet rooms need exhaust and get no outdoor air here, as the outdoor air card says.</p>
-<h2>Commercial loads: rooftop units</h2>
+<h2 id="commercial-loads-rooftop-units">Commercial loads: rooftop units</h2>
 <p><strong>What it is for.</strong> Size each rooftop unit on its own zones and pick a catalog model.</p>
 <p><strong>Where.</strong> <strong>Commercial loads</strong>, card <strong>Rooftop units</strong>. Commercial edition. The selected unit also shows on <strong>Equipment</strong>, <strong>Equipment inputs</strong>, with <strong>Open Commercial loads</strong>.</p>
 <p><strong>Steps.</strong></p>
@@ -46,19 +46,20 @@
 <p><strong>What you get.</strong> Each unit is sized on the coincident peak of its own zones plus its duct gain, its share of the fan heat and its own outdoor air (less any energy recovery), and takes the smallest catalog model whose total and sensible capacity cover it. The unit's airflow is split among its zones by peak sensible load. The cabinet, curb and the downflow supply and return curb openings come from the catalog and set the unit on the plan and in 3D.</p>
 <p><strong>Limits.</strong></p>
 <ul><li>The card says it: the ratings are catalog values at AHRI conditions (95°F outdoor, 80°F dry bulb / 67°F wet bulb entering). Confirm capacity at the actual mixed-air entering condition in the maker's selection software, and the cabinet, curb and openings on the submittal drawing. The card names its source document.</li><li><strong>Latent.</strong> The design checks give each unit's latent load and the catalog latent capacity at its rating point, and say to confirm the selection in the maker's selection software. A model with no sensible rating gets a warning that its sensible and latent capacity are not checked.</li><li><strong>Heating</strong> is not checked: the catalog data has cooling ratings only. One note lists each unit's heating load to check against the maker's data.</li></ul>
-<h2>Commercial loads: block load, outdoor air and the system</h2>
+<h2 id="commercial-loads-block-load-outdoor-air-and-the-system">Commercial loads: block load, outdoor air and the system</h2>
 <p><strong>Where.</strong> <strong>Commercial loads</strong>, cards <strong>Block load</strong>, <strong>Outdoor air, ASHRAE 62.1 ventilation rate procedure</strong>, <strong>System</strong> and <strong>Method and settings</strong>. Commercial edition.</p>
 <p><strong>What you get.</strong></p>
 <ul><li><strong>Block load</strong>: the building's sensible load by the hour on the design day, the block peak and its parts (equipment, people, lighting, glass solar, roof, walls, glass conduction, doors).</li><li><strong>Outdoor air</strong>: for each zone, the occupancy, area, people, Rp, Ra, Vbz, Ez and Voz (Vbz = Rp x Pz + Ra x Az; Voz = Vbz / Ez), the sum of Voz, and the units' outdoor air intake.</li><li><strong>System</strong>: cooling (block plus outdoor air) in tons and BTU/h with the sensible heat ratio, supply airflow and cfm per ton, the outdoor air intake and its load, heating, the block space sensible against the sum of the zone peaks (the diversity), ft² per ton and outdoor air per ft². <strong>Load report (PDF)</strong> prints it.</li></ul>
 <p><strong>The building's outdoor air</strong> is what its units take in: each rooftop unit's intake, and the sum of the zones' Voz for any other system. A room no unit serves is left out of the total and listed in one design check note; one with people should get a supply outlet. A room no one occupies (no people, such as a shaft or storage room) that no unit serves gets no supply airflow and is not flagged.</p>
-<p><strong>Multiple-zone constant-volume units.</strong> ASHRAE 62.1 treats a constant-volume unit serving several zones as a multiple-zone recirculating system, which needs the system ventilation efficiency (Trane Engineers Newsletter 49-3). The app uses the sum of Voz. A design check works the intake out with the efficiency the app uses for its VAV units (Ev = 1 + Xs - the largest zone fraction, Vot = Vou / Ev) and warns when that is more than the sum, naming the critical zone.</p>
-<h2>Method and settings</h2>
+<p><strong>Multiple-zone constant-volume units.</strong> ASHRAE 62.1 treats a constant-volume unit serving several zones as a multiple-zone recirculating system, which needs the system ventilation efficiency (Trane Engineers Newsletter 49-3; <code>docs/load-calc-sources.md</code> items 13 and 21). The app works such a unit's intake the same way as a unit with VAV boxes: Vou = the sum of the rooms' Vbz, Ev = 1 + Xs - the largest zone fraction (Zpz), Vot = Vou / Ev. Each room's primary air is its share of the unit's design supply, by its peak sensible load. A unit serving one room takes Vot = Voz.</p>
+<ul><li>The design checks give each such unit's Ev and its critical room, with the sum of the rooms' Voz beside it, for example "RTU-1 serves 2 rooms at constant volume: outdoor air 324 cfm = Vou 298 / Ev 0.92 ... The sum of the rooms' Voz is 372 cfm."</li><li>The unit's intake can come out above or below the sum of Voz. A room that needs as much outdoor air as its share of the supply, or more, is held at a fraction of 1 (so the unit takes at most 100% outdoor air), and the design checks name it: it needs more supply air.</li><li>Because the design supply follows the cooling peak, a change that moves the cooling peak (the roof color, say) can move the units' outdoor air, and with it the heating load.</li></ul>
+<h2 id="method-and-settings">Method and settings</h2>
 <p><strong>Where.</strong> <strong>Commercial loads</strong>, card <strong>Method and settings</strong>. Commercial edition.</p>
 <p><strong>Steps.</strong> Pick or type:</p>
 <ul><li><strong>Load method</strong>: <strong>ASHRAE radiant time series (RTS)</strong>. (The list also shows ACCA Manual N, marked as needing a data pack in a later release.)</li><li><strong>Construction mass</strong> (light, medium, heavy) and <strong>Floor covering</strong> (carpet, or no carpet).</li><li><strong>Design month</strong>: check May to October and take the worst month per zone, or one month only.</li><li><strong>Schedules</strong>: use the occupancy schedules (diversity by the hour), or everything on every hour.</li><li><strong>Size equipment on</strong>: the block (coincident) peak plus outdoor air, or the sum of the zone peaks plus outdoor air.</li><li><strong>System airflow</strong>: constant volume (sum of the zone peaks) or VAV (block peak).</li><li><strong>Supply-air ΔT</strong> (room minus supply), <strong>Zone air distribution effectiveness Ez</strong>, <strong>Infiltration, cooling</strong> and <strong>Infiltration, heating</strong> (cfm per ft² of exterior wall) and <strong>Fan heat</strong>.</li></ul>
 <p><strong>Method and sources.</strong> Times are solar time. The outdoor temperature follows the ASHRAE daily range profile from the design dry bulb and daily range; months away from July are taken 2°F cooler per month, as the card says. The radiant time series values are ASHRAE's tabulated ones (ASHRAE Fundamentals 2021, chapter 18, Tables 19 and 20), picked by construction mass, floor covering and each zone's glass as a share of its exterior wall (the nearest of the 10%, 50% and 90% columns; a zone with no exterior wall uses the interior zone column). Carpet unless No carpet is chosen is this app's default. The roof sol-air temperature follows the roof color or material (ASHRAE: alpha / ho 0.15 for a light surface, 0.30 for a dark one).</p>
 <p><strong>Limits.</strong> The wall and roof conduction time series is the app's own generated curve for the construction mass, a default: ASHRAE tabulates conduction series for numbered wall and roof types, and the app has no mapping from its constructions to those types. The screen and the report say so. Zone air distribution effectiveness: ceiling supply of cool air is 1.0, and of warm air with a ceiling return 0.8 (ASHRAE 62.1-2019 errata, Table 6-4); check the value for the job's diffusers.</p>
-<h2>Plenum returns</h2>
+<h2 id="plenum-returns">Plenum returns</h2>
 <p><strong>What it is for.</strong> On many commercial floors the return air goes up through ceiling grilles into the ceiling plenum, with no duct behind the grille. Room pressure and the airflow simulation count these grilles as returns.</p>
 <p><strong>Where.</strong> Select a return grille on the <strong>Layout</strong>: <strong>Returns through the ceiling plenum (no duct)</strong> in its card. Commercial edition.</p>
 <p><strong>Steps.</strong> Tick <strong>Returns through the ceiling plenum (no duct)</strong> on each ceiling grille that returns to the plenum.</p>
@@ -66,26 +67,26 @@
 <ul><li><strong>Room pressure.</strong> With the door shut, a room with a plenum grille sends its air through the grille and under the door together, split by their areas. The room editor says when a room returns to the ceiling plenum.</li><li><strong>Airflow simulation.</strong> Each plenum grille takes its share of the floor's supply that the ducted returns do not take back, by face area. The return table names each grille. The card and the room editor use the same numbers.</li><li>A plenum grille with no size is taken as the app's 24x24, with a note.</li><li>The design checks do not call a marked plenum grille "not connected", and a repeated check says how many were found.</li></ul>
 <p><strong>Limits.</strong></p>
 <ul><li>Only a grille that is ticked is a plenum return. A grille that is neither connected nor ticked stays "not connected", takes no air, and the room's pressure still shows. Older saved projects whose unducted ceiling grilles were never marked show them as not connected: tick the box on those grilles.</li><li>The grilles' own airflow, the return sizing and the schedules do not change.</li><li>A room with no return grille drawn in it still pushes its supply under the door. Where a room has a ceiling return grille, draw it in that room.</li></ul>
-<h2>Commercial code checks</h2>
+<h2 id="commercial-code-checks">Commercial code checks</h2>
 <p><strong>Where.</strong> <strong>Code check</strong> and the design checks. Commercial edition. Each check names its section and says to verify the edition the jurisdiction adopted.</p>
 <ul><li><strong>Plenum materials (IMC 2021 602.2, 602.2.1).</strong> A reminder, since the app does not know the materials: what is exposed in a ceiling return plenum must be noncombustible or listed with a flame spread index of 25 or less and a smoke-developed index of 50 or less (ASTM E84 / UL 723), with the code's exceptions.</li><li><strong>Return air smoke detectors (IMC 2021 606.2.1).</strong> A unit whose return airflow is over 2,000 cfm needs one. Return airflow is the ducted return when the unit has one, otherwise its supply less its outdoor air. On such a unit, the equipment settings in its card have <strong>Smoke detection covers the areas (606.4)</strong>: tick it when area smoke detectors on the fire alarm system cover every area the unit serves.</li><li><strong>Shaft dampers (IMC 2021 607.5.5).</strong> Each duct riser between floors is taken as passing through a shaft and needs listed fire and smoke dampers where the ducts leave the shaft. A riser counts as protected when every floor it joins has a fire/smoke damper. The listed exceptions are named.</li><li><strong>Interior exit stairs (IBC 2021 1023.5 and 1023.6).</strong> Supply outlets, ducted returns and ducts serving other spaces inside an exit stair (a room named Stair) are flagged, and so is a plenum return grille there. On a stair that is not an exit stairway, tick <strong>Not an interior exit stair</strong> on the room.</li><li><strong>Plenum returns in toilet rooms and kitchens.</strong> A plenum return grille in a toilet room (IMC 2021 403.2.1 item 4, Table 403.3.1.1 note g) or in a kitchen with cooking (403.2.1 item 3, note b) is flagged.</li><li><strong>Rooftop units.</strong> Latent capacity and heating, as above.</li></ul>
-<h2>VAV boxes, fire dampers and exhaust fans</h2>
+<h2 id="vav-boxes-fire-dampers-and-exhaust-fans">VAV boxes, fire dampers and exhaust fans</h2>
 <p><strong>Where.</strong> The <strong>Layout</strong>, right-click menu. Commercial edition.</p>
 <ul><li>On a duct: put a <strong>VAV box</strong> or a <strong>fire damper</strong> on it.</li><li>In a room: place an <strong>exhaust fan</strong>. A room's exhaust fans are taken out of its room pressure.</li><li>VAV boxes, fire dampers and exhaust fans move with the arrow keys like other items. Best duct layout keeps VAV boxes where they are and routes each zone from its box.</li></ul>
-<h2>Washington and Oregon commercial energy codes</h2>
+<h2 id="washington-and-oregon-commercial-energy-codes">Washington and Oregon commercial energy codes</h2>
 <p><strong>What it is for.</strong> Check every unit against the Washington or Oregon commercial energy code.</p>
 <p><strong>Where.</strong> <strong>Design conditions</strong>, card <strong>Energy code: Washington and Oregon</strong>. Commercial edition.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Pick the state and code: Washington 2021 WSEC-C, Seattle 2021, or the 2024 WSEC-C (proposed, takes effect May 3, 2027); or Oregon 2025 OEESC (ASHRAE 90.1-2022 with Oregon amendments).</li><li>Pick the climate zone and the occupancy, and tick what the model cannot show (a DOAS, an exempt use, the fossil fuel path, 8,000 hours a year). Type the heat recovery effectiveness and the DOAS fan W/cfm.</li><li>Read the checklist in the card. <strong>Checklist PDF</strong> saves it; it also goes into the report.</li></ol>
 <p><strong>What it checks.</strong> For every unit: the heating source, economizer, energy recovery, fan control, DOAS, demand control ventilation, duct insulation and testing, commissioning and the additional efficiency credits, from the code's own tables and with its exceptions.</p>
 <p><strong>Limits.</strong> The 2024 Washington text is proposed. Some table values (90.1-2022 energy recovery and demand control ventilation) are pointed to, not reproduced: the rows give the inputs and name the tables.</p>
-<h2>Test and balance</h2>
+<h2 id="test-and-balance">Test and balance</h2>
 <p><strong>What it is for.</strong> Enter the readings from the test and balance report and compare them with the design.</p>
 <p><strong>Where.</strong> <strong>Reports</strong>, card <strong>Test and balance</strong>. Commercial edition.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Fill in the <strong>Balancer</strong>: name, company, AABC or NEBB certification number, test date, permit number.</li><li>Enter the <strong>Building</strong> pressure to outdoors (in. w.c.).</li><li>For each unit, enter the supply airflow, outdoor airflow, total external static, fan power and duct leakage at test pressure.</li><li>Press <strong>Preview TAB summary</strong> or <strong>TAB summary (PDF)</strong>.</li></ol>
 <p><strong>What you get.</strong> A results table with each test, its source and target, the measured value and a status: supply airflow within ±10% of the design (IECC C408.2.2.1, AABC / NEBB), outdoor airflow at least the design outdoor air (ASHRAE 62.1, IMC 403), total external static at or under the unit's rating, the duct leakage test for sections designed above 3 in. w.c. (SMACNA leakage class 4 or less), and the building positive to outdoors.</p>
-<h2>Annual energy</h2>
+<h2 id="annual-energy">Annual energy</h2>
 <p><strong>What it is for.</strong> Compare up to four system alternatives over a year, with their energy and cost.</p>
 <p><strong>Where.</strong> The <strong>Annual energy</strong> page. Commercial edition.</p>
 <p><strong>Steps.</strong></p>

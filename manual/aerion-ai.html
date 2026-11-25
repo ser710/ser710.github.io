@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../site.css">
 <link rel="canonical" href="https://aerionhvacdesign.com/manual/aerion-ai.html">
 <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
-<style>.doc table{border-collapse:collapse;margin:12px 0;width:100%}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
+<style>.doc .tw{overflow-x:auto;margin:12px 0}.doc table{border-collapse:collapse;width:100%}.doc p,.doc li,.doc td{overflow-wrap:anywhere}.doc th,.doc td{border:1px solid rgba(128,128,128,.35);padding:6px 8px;text-align:left;vertical-align:top}.doc code{font-family:"IBM Plex Mono",monospace}</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -15,17 +15,17 @@
   <nav class="links"><a href="./">Manual</a><a href="../#features">Features</a><a href="../#pricing">Pricing</a></nav>
 </div></header>
 <main class="wrap doc">
-<h1>Aerion AI</h1>
+<h1 id="aerion-ai">Aerion AI</h1>
 <p><a href="index.html">Contents</a></p>
 <p>Aerion AI reads the open design and answers questions about it, runs one-click tasks, and in Agent mode can make approved changes. It is a paid add-on on top of the Aerion subscription, $10 a month. Everything here is in both editions; some tasks show only in the edition they apply to.</p>
-<h2>Get the AI add-on</h2>
+<h2 id="get-the-ai-add-on">Get the AI add-on</h2>
 <p><strong>What it is for.</strong> Turn Aerion AI on for your license.</p>
 <p><strong>Where.</strong> <strong>AI</strong> in the top bar, and <strong>Options</strong>, card <strong>Aerion AI</strong>. Both editions.</p>
 <p><strong>Steps.</strong></p>
 <ol><li>Open the AI panel (<strong>AI</strong>) and press <strong>Get the AI add-on</strong>, or press <strong>See the AI add-on</strong> on Options. Checkout opens with your license's email filled in.</li><li>After paying, press <strong>Check again</strong> in the panel. Aerion fetches a new license key with the AI on it.</li></ol>
 <p><strong>What you get.</strong> Questions go to Aerion's AI service through the license server, which checks the key, that the add-on is paid, and the month's allowance. No AI key is in the app. The server keeps nothing that is asked or answered, only the month's usage count.</p>
 <p><strong>Limits.</strong> The add-on has a monthly allowance. Without the add-on, the AI cards on Options are not there and the AI settings do nothing.</p>
-<h2>Ask a question or run a task</h2>
+<h2 id="ask-a-question-or-run-a-task">Ask a question or run a task</h2>
 <p><strong>What it is for.</strong> Get a review, an explanation or a draft from the design as it stands.</p>
 <p><strong>Where.</strong> <strong>AI</strong> in the top bar. The panel says it reads your design and never changes it (in Ask mode). Both editions.</p>
 <p><strong>Steps.</strong></p>
@@ -33,12 +33,29 @@
 <p><strong>One-click tasks.</strong></p>
 <ul><li><strong>Review this design</strong>, <strong>Explain the design checks</strong>, <strong>Ask about the selection</strong>, <strong>Check equipment sizing</strong>, <strong>Draft general notes</strong>, <strong>Homeowner summary</strong>.</li><li><strong>Scope of work letter</strong> (the letter in clear professional wording), <strong>Installer notes</strong> (units and where, duct sizes run by run, registers, special items), <strong>What is left to finish</strong>, <strong>Permit submittal list</strong> (what the submittal needs, what the project has, what is missing), <strong>Ways to lower the cost</strong> (three options with what each gives up), <strong>Email to the customer</strong>, <strong>Walk-through script</strong> and <strong>Maintenance plan</strong>.</li></ul>
 <p><strong>What the AI sees.</strong> The loads, systems, ducts, registers and design checks, and also high wall units, room pressure, the feet of duct by insulation, outdoor units and line sets, ventilation and exhaust, thermostats, the client and company details that are filled in, what the proposal includes and excludes, and the scope of work facts. The scope letter's full text goes only with the tasks and questions that use it.</p>
-<p><strong>Limits.</strong> Check every number the AI gives against the design. An empty reply says why (the AI declined, or ran out of room). The panel's footer says how much smaller the data was sent (the token saver writes lists as tables and lets the AI service reuse the data between questions on the same design; it changes how the data is written, not what it says).</p>
-<h2>Agent mode: let Aerion AI do the work</h2>
-<p><strong>What it is for.</strong> One-click jobs that check the design or make small, approved changes.</p>
+<p><strong>Limits.</strong> Check every number the AI gives against the design. An empty reply says why (the AI declined, or ran out of room). The panel's footer says how much smaller the data was sent (the token saver writes lists as tables and lets the AI service reuse the data between questions on the same design; it changes how the data is written, not what it says). When the AI gives an engineering rule or a number that is not in your project, it is told to name the standard it comes from (ACCA Manual J, S, D or T, ASHRAE, SMACNA) or to call it a rule of thumb to confirm.</p>
+<h2 id="ai-speed-faster-answers">AI speed: faster answers</h2>
+<p><strong>What it is for.</strong> Get an answer sooner. Nobody can retrain the AI model from inside Aerion; what makes it answer faster is how Aerion uses it. Each part below can be turned off.</p>
+<p><strong>Where.</strong> The AI panel, and <strong>Options</strong>, card <strong>AI speed</strong>. Both editions. The card is there when Aerion AI is on.</p>
+<p><strong>What happens when you ask.</strong></p>
+<ul><li><strong>How-to questions are answered from this manual, with no AI.</strong> Type "How do I add a return grille?" or "Where is the price book?" and the panel shows the manual's own words at once, names the page and section (the link opens that section inside the app), and says no AI was used. <strong>Ask Aerion AI instead</strong> sends the question to the AI, with the closest manual sections attached. A question the manual does not clearly cover goes to the AI as before. Questions about your design ("Can I use flex for the trunk?") are never answered this way.</li><li><strong>The same question is not asked twice.</strong> Ask the same thing again on an unchanged design and the earlier answer is shown, saying so, with <strong>Ask again</strong>. Change anything in the design and the question goes to the AI. The last 40 answers are kept in memory only, until the page is closed.</li><li><strong>The answer shows as it is written.</strong> You read the first words while the rest is still coming, and <strong>Stop</strong> keeps what has arrived.</li><li><strong>A quick question sends only what it needs.</strong> "What is the cooling load of Bedroom 2?" sends the design conditions, that room and the systems, not every duct. The AI is told which parts it was given, so it says when it needs another. Reviews, one-click tasks, agents, a follow-up to what was just said, and any question that asks for a judgment (should, why, do I need, what size, is it enough, compare) always get the whole design.</li><li><strong>The right model for the task.</strong> A short lookup or a how-to goes to the fast model (Claude Haiku 5.5). Design questions, reviews and writing go to your main model. Plans, 3D sheets and framing are read by your main model and never by the fast one, unless you pick it.</li><li><strong>Agents take fewer trips.</strong> A named agent that starts by reading the review figures gets them with its task, so the AI does not spend a trip asking for them.</li></ul>
+<p><strong>The settings (Options, AI speed).</strong></p>
+<ul><li><strong>Answer "how do I..." questions from the manual first (no AI used)</strong></li><li><strong>Do not ask the AI the same question twice on an unchanged design</strong></li><li><strong>Send only the parts of the project a quick question needs</strong></li><li><strong>Show the answer as it is written</strong></li><li><strong>Quick questions</strong>, <strong>Design questions, reviews and writing</strong>, <strong>Plans and drawings</strong>: the model for each. Automatic is the fast model for quick questions and your main model for the rest.</li></ul>
+<p><strong>What you get.</strong> The panel's footer says how the last answer came: from the manual, from a moment ago, or from the AI with the seconds it took (and the seconds to the first words when it was shown as written).</p>
+<p><strong>Limits.</strong></p>
+<ul><li>Showing the answer as it is written, and the three model choices, apply when your questions go straight to Anthropic with a key (your own copy, or <strong>Your own AI key</strong> with Anthropic picked). The add-on's AI service picks its own model and answers in one piece; so do the AI on this PC and another AI company's key. The card says which applies to you. The manual answers, the remembered answers and the smaller questions work everywhere.</li><li>The fast model is good at looking a value up and explaining the app. It is not the one to trust with a design judgment, which is why those questions do not go to it.</li><li>A manual answer is only as current as the manual in your version of the app.</li><li>If your account does not have the model picked for a kind of question, Aerion asks again with your main model and leaves that pick alone until you change a setting.</li></ul>
+<h2 id="teach-aerion-ai-your-preferences">Teach Aerion AI your preferences</h2>
+<p><strong>What it is for.</strong> Tell Aerion AI how you work, once, so every answer follows it: the equipment brands you install, your usual design temperatures, the duct materials you use, how you like a customer email to sound.</p>
+<p><strong>Where.</strong> <strong>Options</strong>, card <strong>Teach Aerion AI</strong>. Both editions. The card is there when Aerion AI is on.</p>
+<p><strong>Steps.</strong></p>
+<ol><li>Type your standing preferences in the box, one item a line. For example: "We install Carrier and Goodman." or "Flex duct runs stay under 15 ft."</li><li>Click outside the box. The card says how many items are saved.</li><li>Clear the box to remove them.</li></ol>
+<p><strong>What this is, plainly.</strong> Aerion AI does not learn from your jobs, and nobody can retrain the AI model from here. What you write is sent along with every question, ahead of your project, so the answer follows it. That is all the teaching there is. Aerion AI is told these are your own preferences, not values from a standard, and the open project wins where the two disagree.</p>
+<p><strong>Limits.</strong> Up to 40 items, 300 characters each. They are kept on this computer only, not in the project file, and go only where your questions already go. Do not put a password or an API key there. A preference is not a design value with a source: check a number the AI gives against the standard it names.</p>
+<h2 id="agent-mode-let-aerion-ai-do-the-work">Agent mode: let Aerion AI do the work</h2>
+<p><strong>What it is for.</strong> One-click jobs that check the design or make small, approved changes. To switch it on, open the AI panel and press <strong>Agent</strong> beside <strong>Ask</strong>.</p>
 <p><strong>Where.</strong> The AI panel, Agent mode. Both editions. Part of the Aerion AI add-on.</p>
 <p><strong>The jobs.</strong></p>
-<table><thead><tr><th>Group</th><th>Job</th><th>Edition</th><th>What it does</th></tr></thead><tbody>
+<div class="tw"><table><thead><tr><th>Group</th><th>Job</th><th>Edition</th><th>What it does</th></tr></thead><tbody>
 <tr><td>Check</td><td>QA/QC review</td><td>both</td><td>Every cross-check before the design goes out, ending in a punch list (must fix before permit, should fix, for the designer's judgment) and PASS or NOT READY</td></tr>
 <tr><td>Check</td><td>Estimate review</td><td>both</td><td>Unpriced lines, example labor hours, the price at full and half labor, the proposal options</td></tr>
 <tr><td>Check</td><td>Outdoor air review</td><td>commercial</td><td>Rooftop units short on latent capacity, and the intake a constant-volume unit serving several zones needs</td></tr>
@@ -49,16 +66,16 @@
 <tr><td>Fix</td><td>Aim supply terminals</td><td>both</td><td>Previews each requested throw direction and asks before applying</td></tr>
 <tr><td>Send out</td><td>Get ready for permit</td><td>both</td><td>Sizes unsized ducts and ends with the QA/QC punch list</td></tr>
 <tr><td>Send out</td><td>Proposal paperwork</td><td>both</td><td>Rebuilds the scope letter when it has not been edited, sets full or half labor only when your note asks for it, drafts the customer email, lists what is missing</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><strong>Steps.</strong></p>
 <ol><li>Switch the panel to Agent mode and press a job.</li><li>Read each batch of changes it proposes and approve it, unless you turned <strong>Ask before each change</strong> off.</li><li><strong>Undo agent changes</strong> puts everything the run changed back.</li></ol>
 <p><strong>Rules every job follows.</strong> Only the fields the job names, each within its range. Each change is checked first, and a refused one comes back with a plain reason. Nothing is deleted. The design is recalculated and the design checks come back with the result. A Check job cannot change the design even if the AI asks: its tool list is cut down, and any other tool is refused before it runs.</p>
 <p><strong>Limits.</strong></p>
 <ul><li>The Proposal paperwork job always asks before it sets the labor level, even with <strong>Ask before each change</strong> off, and it never writes over a scope letter you edited.</li><li>Once Balance room pressure enters a transfer opening, the room counts it as "already in", so the scope letter stops listing that room's opening: draw and scope each one, as the agent's report says.</li><li>How well a given AI model carries a job out is that model's own. Check the result.</li></ul>
-<h2>AI help elsewhere in the app</h2>
+<h2 id="ai-help-elsewhere-in-the-app">AI help elsewhere in the app</h2>
 <ul><li><strong>Improve the wording</strong> on the scope of work letter: the AI rewrites the letter in plain, professional wording from the same facts. It changes no number, size, count or model and adds nothing; the result goes in the box to read first, and Undo puts the letter back (see <a href="reports-and-letters.html">Reports and letters</a>).</li><li><strong>Review sheet with AI</strong> on the Plan reader and in Plan set to 3D, and <strong>Read framing with AI</strong> on a structural sheet (see <a href="plans.html">Plans and the plan reader</a>).</li><li><strong>AI layout review</strong> in Best duct layout (see <a href="duct-layout.html">Layout: equipment, registers and ducts</a>).</li></ul>
 <p>In each, only what that tool needs (a picture of the sheet, or the route figures and your priorities) goes to your configured AI, and only when you press the button.</p>
-<h2>Aerion AI on this PC</h2>
+<h2 id="aerion-ai-on-this-pc">Aerion AI on this PC</h2>
 <p><strong>What it is for.</strong> Send Aerion AI's questions to an AI service running on your own computer instead of the online AI service.</p>
 <p><strong>Where.</strong> <strong>Options</strong>, card <strong>Aerion AI on this PC</strong>. In a customer copy the card is there only while the license has the AI add-on.</p>
 <p><strong>Steps.</strong></p>
@@ -66,7 +83,7 @@
 <p><strong>Model names with a space.</strong> You can type the name the way it is said. Spaces are sent as dashes, and quote marks are left out: "my office model" is sent as <code>my-office-model</code>. If the AI service on this computer still refuses the name, the message says to type the name the way the computer's list of models shows it. In a command window, <code>ollama list</code> shows that list.</p>
 <p><strong>What you get.</strong> Every Aerion AI question (the panel, the one-click tasks, Improve the wording) goes to the AI service on this computer only (127.0.0.1, port 11434): no key, no internet, nothing leaves the PC, and it does not count against the add-on's monthly allowance. The panel says which AI is answering. In the desktop app the request goes through the app itself, which only ever sends it to this computer.</p>
 <p><strong>Limits.</strong> The card says it: a model that fits on a desktop is weaker than the online AI service. Use it for wording and explaining, and check any number it gives. The local service must take the same message format Aerion AI uses.</p>
-<h2>Your own AI key</h2>
+<h2 id="your-own-ai-key">Your own AI key</h2>
 <p><strong>What it is for.</strong> Use your own account with an AI company, billed to you, instead of the add-on's allowance.</p>
 <p><strong>Where.</strong> <strong>Options</strong>, card <strong>Your own AI key</strong>. In a customer copy, with the AI add-on.</p>
 <p><strong>Steps.</strong></p>
