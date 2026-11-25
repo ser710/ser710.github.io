@@ -57,16 +57,23 @@
   function show(j) {
     const app = /complete/i.test(j.plan) ? "both" : /commercial/i.test(j.plan) ? "com" : "res";
     const dl = S.download || {}, links = [];
+    const web = [];
     if ((app === "res" || app === "both") && dl.res) links.push('<a class="btn p" href="' + esc(dl.res) + '">Download Aerion HVAC Design Studio</a>');
     if ((app === "com" || app === "both") && dl.com) links.push('<a class="btn p" href="' + esc(dl.com) + '">Download Aerion Commercial</a>');
-    if (app === "res" || app === "both") links.push('<a class="btn" href="app/">Open in your browser</a>');
-    if (app === "com" || app === "both") links.push('<a class="btn" href="app/commercial.html">Open Commercial in your browser</a>');
+    if (app === "res" || app === "both") web.push('<a class="btn" href="app/">Open Aerion in the browser</a>');
+    if (app === "com" || app === "both") web.push('<a class="btn" href="app/commercial.html">Open Aerion Commercial in the browser</a>');
     out.innerHTML =
       "<p>Your " + esc(j.plan || "Aerion") + " plan is ready. This is your license key:</p>" +
       '<div class="keybox"><span class="key" id="key">' + esc(j.key) + '</span><button class="btn" id="copy" type="button">Copy</button></div>' +
       '<p class="muted">Save it somewhere safe. If you lose it, reply to your receipt email and we will send it again.</p>' +
-      (links.length ? '<div class="cta" style="margin-top:16px">' + links.join("") + "</div>" : '<p>Reply to your receipt email for the installer download link.</p>') +
-      '<ol class="steps2"><li>Install Aerion and open it.</li><li>Go to <b>Options › License</b>.</li><li>Enter <b>' + esc(j.email) + "</b> as the purchase email, paste the key, and click <b>Activate</b>.</li></ol>" +
+      "<h2>Windows PC</h2>" +
+      (links.length ? '<div class="cta" style="margin-top:12px">' + links.join("") + "</div>" : '<p>Reply to your receipt email for the installer download link.</p>') +
+      '<ol class="steps2"><li>Run the installer. Aerion opens when it is installed.</li><li>Go to <b>Options › License</b>.</li><li>Enter <b>' + esc(j.email) + "</b> as the purchase email, paste the key, and click <b>Activate</b>.</li></ol>" +
+      "<h2>Phone or tablet</h2>" +
+      '<div class="cta" style="margin-top:12px">' + web.join("") + "</div>" +
+      '<ol class="steps2"><li>Open it on the phone or tablet (' + (app === "com" ? "aerionhvacdesign.com/app/commercial.html" : app === "both" ? "aerionhvacdesign.com/app, or /app/commercial.html for Commercial" : "aerionhvacdesign.com/app") + ").</li>" +
+      "<li>Put it on the home screen. iPhone and iPad, in Safari: tap Share (the square with an arrow up), then <b>Add to Home Screen</b>, then <b>Add</b>. Android, in Chrome: tap the ⋮ menu, then <b>Install app</b> (or Add to Home screen), then <b>Install</b>.</li>" +
+      "<li>Link it to your PC: on the PC, open <b>Options › Link a phone or tablet</b> and scan the code with the phone's camera. Your plan includes one phone or tablet.</li></ol>" +
       (S.portal ? '<p class="muted" style="margin-top:18px">To cancel, change your card or get receipts, use <a href="' + esc(S.portal) + '">your billing page</a>.</p>' : "");
     document.getElementById("copy").onclick = async function () {
       try { await navigator.clipboard.writeText(j.key); this.textContent = "Copied"; } catch (e) { getSelection().selectAllChildren(document.getElementById("key")); }
