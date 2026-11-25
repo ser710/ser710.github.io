@@ -1,11 +1,16 @@
 {
-  "version": "1.5.68",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.68/Aerion-HVAC-Design-Studio-Setup-1.5.68.exe",
-  "sha256": "a46cbce2c03cb9a6da37909f8bdbbb861cad3863c6a34f8e0c5b2abeba69c8fc",
-  "size": 130190781,
-  "notes": "Read all pages with AI: in Plan set to 3D, Read roof and floor framing can now read every page of your plan set for framing, framing sheets first, with a table of what each page has. Also: an updated website.",
-  "date": "2026-11-24",
+  "version": "1.5.69",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.69/Aerion-HVAC-Design-Studio-Setup-1.5.69.exe",
+  "sha256": "107d9040edd5c933fd3e1e26af1fabc8b227da1fe7fe8fd9fe948b78dc13c757",
+  "size": 130607336,
+  "notes": "Your PC and your phone linked: link one phone or tablet from the PC and your jobs stay in step on both. Aerion in the web browser at aerionhvacdesign.com/app. Files from other programs open with nothing to install (DWG, DXF, IFC, SketchUp DAE, glTF, OBJ, STL, gbXML, Excel), and one-click exports for AutoCAD, Revit and BIM, SketchUp, energy programs and estimating. Saving options: auto-save on or off, backups, a project file in a folder. Faster AI answers. Engineering values checked against their sources. The load calculator's Cooling numbers no longer cut off.",
+  "date": "2026-11-25",
   "history": [
+    {
+      "version": "1.5.69",
+      "date": "2026-11-25",
+      "notes": "Your PC and your phone linked: link one phone or tablet from the PC and your jobs stay in step on both. Aerion in the web browser at aerionhvacdesign.com/app. Files from other programs open with nothing to install (DWG, DXF, IFC, SketchUp DAE, glTF, OBJ, STL, gbXML, Excel), and one-click exports for AutoCAD, Revit and BIM, SketchUp, energy programs and estimating. Saving options: auto-save on or…"
+    },
     {
       "version": "1.5.68",
       "date": "2026-11-24",
@@ -150,11 +155,6 @@
       "version": "1.5.38",
       "date": "",
       "notes": "Insulation thickness, wall openings and floor penetrations, the model in 3D, full or half labor"
-    },
-    {
-      "version": "1.5.37",
-      "date": "",
-      "notes": "Scope of work letter, more Aerion AI, duct insulation on the plan"
     }
   ]
 }
