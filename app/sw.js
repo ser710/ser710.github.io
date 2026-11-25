@@ -6,7 +6,7 @@
    - Everything else (the license server, the AI service, price feeds, maps): straight to the network, never kept.
    A new web copy has a new tag, so the browser installs this worker again and the old copy is thrown away. */
 "use strict";
-const TAG = "1.5.71-113ab44393",
+const TAG = "1.5.72-0d48c87f0f",
   CACHE = "aerion-web-" + TAG,
   RT = "aerion-web-rt";
 const CORE = ["manifest.webmanifest", "commercial.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-180.png", "icons/icon-commercial-192.png", "icons/icon-commercial-512.png", "icons/icon-commercial-180.png"];

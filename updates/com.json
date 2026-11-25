@@ -1,11 +1,16 @@
 {
-  "version": "1.5.71",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.71/Aerion-Commercial-Setup-1.5.71.exe",
-  "sha256": "b46e1f2a51511624ada70c0e2d8aaea78c79ea651b8f3fa489b2faa81fac2dfd",
-  "size": 130622468,
-  "notes": "New projects no longer fill in a designer name you did not give: Designer starts blank, or uses your saved default or the name on your license. IFC exports for Revit, ArchiCAD and Navisworks: ducts stop at their fittings and every connection is recorded, with openings where ducts pass through walls and floors. Open file opens .aerion project files. Linking a phone clears Not activated at once. Fixes: the Open file window, room names on a phone and the backups table no longer cut off.",
+  "version": "1.5.72",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.72/Aerion-Commercial-Setup-1.5.72.exe",
+  "sha256": "cddf3f36bd88fa6a094dd97a6e23f87c012d0c6e3370ecc83046f6047f9b1d84",
+  "size": 130623860,
+  "notes": "Put Aerion on your phone or tablet's home screen: Options › This browser shows the steps for your device (iPhone or iPad in Safari, Android in Chrome, a computer in Chrome or Edge), with an Install button where the browser offers one.",
   "date": "2026-11-25",
   "history": [
+    {
+      "version": "1.5.72",
+      "date": "2026-11-25",
+      "notes": "Put Aerion on your phone or tablet's home screen: Options › This browser shows the steps for your device (iPhone or iPad in Safari, Android in Chrome, a computer in Chrome or Edge), with an Install button where the browser offers one."
+    },
     {
       "version": "1.5.71",
       "date": "2026-11-25",
@@ -150,11 +155,6 @@
       "version": "1.5.41",
       "date": "",
       "notes": "Aerion AI on this PC"
-    },
-    {
-      "version": "1.5.40",
-      "date": "",
-      "notes": "The AI add-on's checkout link comes from the license server"
     }
   ]
 }
