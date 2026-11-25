@@ -65,6 +65,7 @@ figure{margin:0}
 .steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .steps .card{position:relative;padding-top:46px}
 .steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:16px;left:20px;font-family:"IBM Plex Mono",monospace;color:var(--accent);font-weight:700}
+.get{margin-top:0}.get .card ol{margin:10px 0 12px;padding-left:20px;color:var(--muted);font-size:14.5px;line-height:1.6}.get .card li{margin:0 0 6px}.get a,details a{overflow-wrap:anywhere}.get .card li b,.get .card p b{color:var(--text)}
 details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:0 0 10px}
 summary{cursor:pointer;font-weight:600}
 details p{color:var(--muted);margin:10px 0 0}
