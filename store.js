@@ -15,7 +15,7 @@ window.AERION_STORE = {
     "complete-year": "https://buy.stripe.com/00w3cx8gu8GXc8N13nbEA0n",
   },
   portal: "https://billing.stripe.com/p/login/8x2fZjgN00ar6Oth2lbEA00",
-  download: { res: "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.72/Aerion-HVAC-Design-Studio-Setup-1.5.72.exe", com: "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.72/Aerion-Commercial-Setup-1.5.72.exe" },
+  download: { res: "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.73/Aerion-HVAC-Design-Studio-Setup-1.5.73.exe", com: "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.73/Aerion-Commercial-Setup-1.5.73.exe" },
 };
 (function () {
   const S = window.AERION_STORE;

@@ -1,11 +1,16 @@
 {
-  "version": "1.5.72",
-  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.72/Aerion-Commercial-Setup-1.5.72.exe",
-  "sha256": "cddf3f36bd88fa6a094dd97a6e23f87c012d0c6e3370ecc83046f6047f9b1d84",
-  "size": 130623860,
-  "notes": "Put Aerion on your phone or tablet's home screen: Options › This browser shows the steps for your device (iPhone or iPad in Safari, Android in Chrome, a computer in Chrome or Edge), with an Install button where the browser offers one.",
-  "date": "2026-11-25",
+  "version": "1.5.73",
+  "url": "https://github.com/ser710/ser710.github.io/releases/download/aerion-1.5.73/Aerion-Commercial-Setup-1.5.73.exe",
+  "sha256": "50d27b932c4db2b97399d0604ab6f7a497410657a1d86df7b293700b230c355a",
+  "size": 130692715,
+  "notes": "Revit add-in: Aerion tab > Aerion IFC to Revit brings in the building (walls, floors, doors, windows, rooms) and connected ducts, fittings and air terminals from an Aerion IFC, so Tab selects a whole duct run. Roof framing now matches the roof: hip and jack rafters, valleys, ridge board, rafters under the sheathing. The IFC export can include the building framing, a ceiling under each room and the roof, and flags ducts that run through joists.",
+  "date": "2026-11-26",
   "history": [
+    {
+      "version": "1.5.73",
+      "date": "2026-11-26",
+      "notes": "Revit add-in: Aerion tab > Aerion IFC to Revit brings in the building (walls, floors, doors, windows, rooms) and connected ducts, fittings and air terminals from an Aerion IFC, so Tab selects a whole duct run. Roof framing now matches the roof: hip and jack rafters, valleys, ridge board, rafters under the sheathing. The IFC export can include the building framing, a ceiling under each room and th…"
+    },
     {
       "version": "1.5.72",
       "date": "2026-11-25",
@@ -150,11 +155,6 @@
       "version": "1.5.42",
       "date": "",
       "notes": "Add-on customers can use their own AI key"
-    },
-    {
-      "version": "1.5.41",
-      "date": "",
-      "notes": "Aerion AI on this PC"
     }
   ]
 }
